@@ -29,7 +29,7 @@ FireFly - Это российский сервер со своим видень�
 В сборке имеется:
 --------------------------
 
-** ВРЕМЕННО НЕ УСТАНОВЛЕНО! Temp. not install now.
+** ВРЕМЕННО НЕ УСТАНОВЛЕНО! Temp. not install now. **
 * [Epoch AntiHack & AdminTools](https://github.com/BigEgg17/Epoch-Antihack-Admin-Tools) Ver: 1.0.4 Compiled by BigEgg17
 * [DZAI](https://github.com/oiad/DZAI) Ver: 2.2.6 by oiad
 * [DZMS](https://github.com/worldwidesorrow/DZMS-DayZMissionSystem) Ver: 2.1+ Updates: worldwidesorrow
