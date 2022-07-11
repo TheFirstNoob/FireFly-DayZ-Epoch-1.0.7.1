@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<!-- Пример заполнения -->
+
+<BEAdmins>
+	<!-- 
+	Администрация и резервные слоты.
+	
+	name : Укажите НикНейм Администрации и игрока для резервного слота.
+	guid : Напишите GUID.
+	group : Укажите группу. Например 0 Администрация. 1 - Модерация. 2 - Друзья. 3 - VIP.
+	groupname : Укажите сообщение которое будет выдаваться при заходе игрока на сервер. Оставьте пустым и тогда ничего писаться не будет.
+	
+	Внимание: <..id= > Любые ID начинается с 0, далее если вы начали <VIP id=>, то и заканчивайте </VIP>.
+	-->
+	
+	<admin id="0">
+		<name>[BE]First</name>
+		<guid>e6a3ca25f1cf4e8e0d4f7aa128ba41bb</guid>
+		<group>0</group>
+		<groupname>Admin Connected</groupname>
+	</admin>
+	
+	<!-- 
+	<admin id="1">
+		<name>Ник</name>
+		<guid>GUID</guid>
+		<group>1</group>
+		<groupname>Moder</groupname>
+	</admin>
+	-->
+	
+</BEAdmins>

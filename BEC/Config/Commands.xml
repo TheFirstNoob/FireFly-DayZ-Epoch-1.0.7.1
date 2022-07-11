@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<!-- 
+
+	Файл Commands.xml отвечает за использование команд внутри игры.
+	Их могут использовать как игроки, так и Администрация, модерация, VIP и другие игроки исходя от файла Admins.xml в параметре group.
+	Например узнать время работы, локальное время, провести какое-то голосование, забанить кого-то, кикнуть и так далее.
+	Список приведен ниже.
+	
+	P.S. Я этим не пользуюсь, поэтому какая команда, за что отвечает пока не могу сказать.
+
+	ПРИМЕРЫ ВНУТРИИГРОВЫХ КОМАНД
+	
+	name  : Напишите название команды (Это не переменная, просто наименование которое вам хочется!).
+	group : Укажите группу для доступа к какой-то команде. Группу указываем из Admins.xml!
+	cmd   : Укажите RCON команду (Обычно это Арма Команды и BattEye команды!
+	time  : Укажите время для доступности команды. Оставьте пустым и команды будут доступны постоянно!
+	text  : Укажите какой текст будет высвечиваться при выполнении команды. Например Кик - причина кика!
+	desc  : Укажите описание команды. Просто помощь для вас.
+	
+	P.S group 100 - Публичный доступ. То есть всем!
+	
+	Данные команды нужно вписывать в <cmd> </cmd> тег:
+	########################
+	# Арма команды
+	########################
+
+	#Missions
+	#Mission 
+	#Reassign
+	#Restart
+	#Shutdown
+	#Lock
+	#Unlock
+	
+	########################
+	# BattlEye команды
+	########################
+	kick
+	ban
+	maxping
+	say
+	
+	########################
+	# BEC команды
+	########################
+	kid |
+	bid |
+	grant
+	degrant
+	warn
+	makeroom
+	help
+	pinfo
+	ainfo
+	uptime
+	external
+	loadadmins
+	loadcommands
+
+	
+	########################################################################
+	# Публичные команды:
+	########################################################################
+	help
+	uptime
+	pinfo
+	ainfo
+
+	
+-->
+
+<BeCommands>	
+	
+	<!-- Выключение сервера. -->
+	<command id="0">
+		<name>!sht</name>
+		<group>1</group>
+		<cmd>#shutdown</cmd>
+		<time></time>
+		<text></text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: [!sht] или [!sht N] или [!sht info] или [!sht abort] :: ИНФОРМАЦИЯ -> Выключает консольное окно сервера. Используйте: !sht N, N - Через какое время отключить сервер, !sht abort, - Отменяет таймер выключения сервера, !sht info, - Узнать через какое время отключиться сервер.</desc>
+	</command>
+	
+	<!-- Использовать Стандартное Арма меню. -->
+	<command id="1">
+		<name>!mis</name>
+		<group>1</group>
+		<cmd>#missions</cmd>
+		<time></time>
+		<text></text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !mis :: ИНФОРМАЦИЯ -> Использует стандартное управление сервером внутри игры. НЕ ИСПОЛЬЗУЙТЕ НИКОГДА - ЗАПРЕЩЕНО (Кикнет PV #0)!</desc>
+	</command>	
+	
+	<!-- Рестарт сервера. -->
+	<command id="2">
+		<name>!res</name>
+		<group>4</group>
+		<cmd>#restart</cmd>
+		<time></time>
+		<text></text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !res :: ИНФОРМАЦИЯ -> Полный перезапуск сервера.</desc>
+	</command>	
+	
+	<!-- Перезапустить миссию на сервере. -->
+	<command id="3">
+		<name>!rea</name>
+		<group>4</group>
+		<cmd>#reassign</cmd>
+		<time></time>
+		<text></text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !rea :: ИНФОРМАЦИЯ -> Перезапускает миссию на сервере. Кикает всех в лобби</desc>
+	</command>		
+	
+	<!-- Заблокировать доступ к серверу. -->
+	<command id="4">
+		<name>!lck</name>
+		<group>3</group>
+		<cmd>#lock</cmd>
+		<time></time>
+		<text></text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !lck :: ИНФОРМАЦИЯ -> Блокирует доступ к серверу, но сервер продолжает работать.</desc>
+	</command>	
+
+	<!-- Разблокировать доступ к серверу. -->
+	<command id="5">
+		<name>!ulck</name>
+		<group>3</group>
+		<cmd>#unlock</cmd>
+		<time></time>
+		<text></text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !ulck :: ИНФОРМАЦИЯ -> Открывает доступ к серверу.</desc>
+	</command>
+	
+	<!-- Максимальный Пинг. -->
+	<command id="6">
+		<name>!mp</name>
+		<group>3</group>
+		<cmd>maxping</cmd>
+		<time></time>
+		<text>150</text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: [!mp] или [!mp N] :: ИНФОРМАЦИЯ -> Устанавливаем максимальное значение Пинга на сервере. N - запрос Пинга через N-ое время, Стандарт = 150</desc>
+	</command>		
+	
+	<!-- Изменить файл миссии (YourMission.pbo). -->
+	<command id="7">
+		<name>!cm</name>
+		<group>4</group>
+		<cmd>#mission</cmd>
+		<time></time>
+		<text></text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !cm + название файла (без .pbo)  :: ИНФОРМАЦИЯ -> Меняет миссию (Ядро). Используется только PBO!</desc>
+	</command>	
+	
+
+	<!-- Забанить навсегда -->
+	<command id="8">
+		<name>!bpl</name>
+		<group>0</group>
+		<cmd>ban</cmd>
+		<time>0</time>
+		<text>Вы забанены на этом сервере : _name_</text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !bpl + имя :: ИНФОРМАЦИЯ -> Навсегда банит игрока на сервере.</desc>
+	</command>	
+	
+	<!-- Забанить на 1 час -->
+	<command id="9">
+		<name>!btk</name>
+		<group>1</group>
+		<cmd>ban</cmd>
+		<time>60</time>
+		<text>Вы временно забанены! _name_ : Время бана: _time_</text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !btk + имя :: ИНФОРМАЦИЯ -> Забанить на 1 час.</desc>
+	</command>	
+	
+	<!-- Забанить на 10 минут -->
+	<command id="10">
+		<name>!bst</name>
+		<group>2</group>
+		<cmd>ban</cmd>
+		<time>10</time>
+		<text>Вы временно забанены! _name_ : Время бана: _time_</text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !bst + имя :: ИНФОРМАЦИЯ -> Забанить на 10 минут.</desc>
+	</command>	
+	
+	<!-- Кикнуть.-->
+	<command id="11">
+		<name>!kpl</name>
+		<group>3</group>
+		<cmd>kick</cmd>
+		<time></time>
+		<text>Кикнут Администрацией: _name_</text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !kpl + имя :: ИНФОРМАЦИЯ -> Кикает игрока.</desc>
+	</command>
+
+	<!-- 
+		Некоторые параметры можно подключить к другим. 
+		Например параметр время <time>15</time> мы можем подключить к тексту, которое покажет игроку.
+		<text></text> Вы забанены _time (Переменная _time покажет что написано в <time>
+		Тоже самое и в <name> - Это просто описание или текст.
+	-->
+	
+	<!-- Забанить по GUID -->
+	<command id="12">
+		<name>!bid</name>
+		<group>0</group>
+		<cmd>bid</cmd>
+		<time>0</time>
+		<text>Admins Decision!</text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !bid id :: ИНФОРМАЦИЯ -> Банить игрока по GUID.</desc>
+	</command>
+	
+	<!-- Кикнуть по GUID -->
+	<command id="13">
+		<name>!kid</name>
+		<group>1</group>
+		<cmd>kid</cmd>
+		<time></time>
+		<text>Кикнут Администратором!</text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !kid id :: ИНФОРМАЦИЯ -> Кикает игрока по GUID.</desc>		
+	</command>		
+
+	
+	<!-- Выдать предупреждение игроку -->
+	<command id="14">
+		<name>!wrn</name>
+		<group>3</group>
+		<cmd>warn</cmd>
+		<time></time>
+		<text>Вы предупреждены: _name_</text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !wrn + имя :: ИНФОРМАЦИЯ -> Выдает предупреждение игроку.</desc>
+	</command>
+	
+	<!-- Добавить игрока в Admin.xml-->
+	<!-- В <text> укажите группу -->
+	<command id="15">
+		<name>!ata</name>
+		<group>2</group>
+		<cmd>grant</cmd>
+		<time></time>
+		<text>4</text>			
+		<desc>ИСПОЛЬЗОВАНИЕ :: !ata + имя :: ИНФОРМАЦИЯ -> Добавляет игрока в группу 4.</desc>
+	</command>
+	
+	<!-- Удалить игрока из Admin.xml -->
+	<!-- В <text> укажите группу -->
+	<!-- <text> - оставьте пустым, чтобы удалить везде -->
+	<command id="16">
+		<name>!rta</name>
+		<group>2</group>
+		<cmd>degrant</cmd>
+		<time></time>
+		<text></text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !rta name :: ИНФОРМАЦИЯ -> Удаляет игрока в группы.</desc>		
+	</command>	
+
+	<!-- Кикает последних игроков. --> 
+	<command id="17">
+		<name>!mr</name>
+		<group>2</group>
+		<cmd>makeroom</cmd>
+		<time></time>
+		<text></text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !mr N :: ИНФОРМАЦИЯ -> N - количество последних игроков, которое будет кикнуто.</desc>
+	</command>		
+
+	<!-- Помощь (Показывает доступные команды) -->
+	<command id="18">
+		<name>!help</name>
+		<group>100</group>
+		<cmd>help</cmd>
+		<time></time>
+		<text></text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: [!help] или [!help !command] :: ИНФОРМАЦИЯ -> Показывает список доступных команд.</desc>
+	</command>
+	
+	<!-- Информация (Внутриигровая. Время захода, GUID и т.п.) -->
+	<command id="19">
+		<name>!pinf</name>
+		<group>100</group>
+		<cmd>pinfo</cmd>
+		<time></time>
+		<text></text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !pinfo + имя :: ИНФОРМАЦИЯ -> Показывает Информацию игроку (Внутриигровая. Время захода, GUID и т.п.).</desc>
+	</command>
+	
+	<!-- Показать администрацию в Сети -->
+	<command id="20">
+		<name>!ainf</name>
+		<group>100</group>
+		<cmd>ainfo</cmd>
+		<time></time>
+		<text></text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !ainf :: ИНФОРМАЦИЯ -> Show Admins online.</desc>
+	</command>
+
+	<!-- Показывает время работы сервера (Время с запуска сервера) -->
+	<command id="21">
+		<name>!upt</name>
+		<group>100</group>
+		<cmd>uptime</cmd>
+		<time></time>
+		<text></text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !upt :: ИНФОРМАЦИЯ -> Показывает время работы сервера.</desc>
+	</command>	
+	
+	<!-- Отправить глобальное сообщение через BattlEye -->
+	<command id="22">
+		<name>!say</name>
+		<group>10</group>
+		<cmd>say</cmd>
+		<time></time>
+		<text></text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: [!say Hello] Отправить глобальное сообщение через BattlEye :: ИНФОРМАЦИЯ -> Можно использовать сообщение в ЛС через [!say name !Hello].</desc>
+	</command>
+	
+	<!-- Перезагрузка файла admins.xml -->
+	<command id="23">
+		<name>!raf</name>
+		<group>0</group>
+		<cmd>loadadmins</cmd>
+		<time></time>
+		<text></text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !raf :: ИНФОРМАЦИЯ -> Перезагружает файл admins.xml.</desc>
+	</command>		
+
+	<!-- Перезагрузка файла commands.xml -->
+	<command id="24">
+		<name>!rcf</name>
+		<group>0</group>
+		<cmd>loadcommands</cmd>
+		<time></time>
+		<text></text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !rcf :: ИНФОРМАЦИЯ -> Перезагружает файл commands.xml.</desc>
+	</command>
+	
+	<!-- Показать время на сервере (Обычно показывается внутриигровое время установленое в HiveExt) -->
+	<command id="25">
+		<name>!time</name>
+		<group>0</group>
+		<cmd>systime</cmd>
+		<time></time>
+		<text></text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !time :: ИНФОРМАЦИЯ -> Показать время на сервере.</desc>
+	</command>	
+
+	<!-- Выполнить bat скрипт -->
+	<command id="26">
+		<name>!math</name>
+		<group>2</group>
+		<cmd>external</cmd>
+		<time></time>
+		<text>Config\Script_Example.bat</text>
+		<desc>ИСПОЛЬЗОВАНИЕ :: !math Int+Int :: ИНФОРМАЦИЯ -> Выполняет команду из CMD (Название самого bat файла)!.</desc>
+	</command>
+
+
+</BeCommands>

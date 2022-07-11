@@ -1,0 +1,2 @@
+@echo off
+start "arma2" /min /high arma2oaserver.exe -port=2302 "-config=D:\SteamLibrary\steamapps\common\Arma 2 Operation Arrowhead\DZE_Server_Config\24_napf.cfg" "-cfg=D:\SteamLibrary\steamapps\common\Arma 2 Operation Arrowhead\DZE_Server_Config\basic.cfg" "-profiles=D:\SteamLibrary\steamapps\common\Arma 2 Operation Arrowhead\DZE_Server_Config" -name=server "-mod=@DayZ_Epoch;@DayZ_Epoch_Server;"
