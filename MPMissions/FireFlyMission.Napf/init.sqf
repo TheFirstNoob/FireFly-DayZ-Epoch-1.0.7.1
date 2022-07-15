@@ -1,22 +1,5 @@
 #include "configVariables.sqf" // ВСЕ ПАРАМЕТРЫ И ЗНАЧЕНИЯ КОНФИГУРАЦИИ СЕРВЕРА НАХОДЯТСЯ В ЭТОМ ФАЙЛЕ!!!
 
-if (isServer) then
-{
-	dayZ_instance 	= 	24; 	// ID NAPF Не трогать! 24.
-	spawnArea 		= 	1400; 	// Distance around markers to find a safe spawn position
-	spawnShoremode 	= 	1; 		// Random spawn locations  1 = on shores, 0 = inland
-};
-
-// ФОРМАТ: [[[3D Позиция (X,Y,Z), Радиус], [3D Позиция (X,Y,Z), Радиус]]; 
-// Отключает Спавн Лута и Зомби, а так же защищает игроков в указанных зонах. Обычно для Трейд-Зон.
-DZE_SafeZonePosArray =
-[
-	 [[3164,12179,0],	85]		// ТЗ Церковь
-	,[[9670,2955,0],	120]	// ТЗ Гора
-	,[[10580,13110,0],	80]		// ТЗ Бункер
-	,[[13155,6395,0],	90]		// ТЗ Сторож
-];
-
 enableRadio false;
 enableSentences false;
 //setTerrainGrid 25;
