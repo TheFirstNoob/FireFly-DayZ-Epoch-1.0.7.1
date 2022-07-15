@@ -216,7 +216,7 @@ class FSM
           to="End";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
           condition=/*%FSM<CONDITION""">*/"DZE_Weather == 1"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"[СЕРВЕР]: [FSM]: [server_weather.fsm]: Выбрано: Статичная Летняя погода"";"/*%FSM</ACTION""">*/;
+          action=/*%FSM<ACTION""">*/"diag_log ""[СЕРВЕР]: [FSM]: [server_weather.fsm]: Выбрано: Статичная Летняя погода"";"/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
         /*%FSM<LINK "Dynamic">*/
@@ -227,7 +227,7 @@ class FSM
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
           condition=/*%FSM<CONDITION""">*/"DZE_Weather == 2" \n
            ""/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"[СЕРВЕР]: [FSM]: [server_weather.fsm]: Выбрано: Динамическая Летняя погода"";" \n
+          action=/*%FSM<ACTION""">*/"diag_log ""[СЕРВЕР]: [FSM]: [server_weather.fsm]: Выбрано: Динамическая Летняя погода"";" \n
            "" \n
            "_bypassOvercast = _minOvercast == _maxOvercast; // if values are the same then bypass." \n
            "_bypassFog = _minFog == _maxFog; // if values are the same then bypass."/*%FSM</ACTION""">*/;

@@ -28,7 +28,7 @@ epoch_eventIsAny 	=
 
 sched_event_init 	=
 {
-	diag_log formatText ["[СЕРВЕР]: [ИВЕНТЫ]: [ПЛАНИРОВЩИК]: %1 Ивентов спланированы планировщиком",(count EpochEvents)];
+	diag_log formatText ["[СЕРВЕР]: [sched_event.sqf]: [ПЛАНИРОВЩИК]: %1 Ивентов спланированы планировщиком",(count EpochEvents)];
 	""
 };
 
@@ -51,7 +51,7 @@ sched_event 	=
 			{
 				if ((_x select 4) == -1) then
 				{
-					diag_log ("[СЕРВЕР]: [ИВЕНТЫ]: [ЗАПУСК]: " + (_x select 5) + " на " + _datestr);
+					diag_log ("[СЕРВЕР]: [sched_event.sqf]: [ЗАПУСК]: " + (_x select 5) + " на " + _datestr);
 					local _handle 	= 	[] execVM "\z\addons\dayz_server\modules\" + (_x select 5) + ".sqf";
 					EpochEvents 	= 	[EpochEvents,_forEachIndex] call fnc_deleteAt;
 				}
@@ -59,7 +59,7 @@ sched_event 	=
 				{
 					if ([[(_x select 0),(_x select 1),(_x select 2),(_x select 3),(_x select 4)],_date] call epoch_eventIsAny) then
 					{
-						diag_log ("[СЕРВЕР]: [ИВЕНТЫ]: [ЗАПУСК]: " + (_x select 5) + " на " + _datestr);
+						diag_log ("[СЕРВЕР]: [sched_event.sqf]: [ЗАПУСК]: " + (_x select 5) + " на " + _datestr);
 						local _handle 	= 	[] execVM "\z\addons\dayz_server\modules\" + (_x select 5) + ".sqf";
 					};
 				};

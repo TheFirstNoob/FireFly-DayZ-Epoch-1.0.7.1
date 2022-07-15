@@ -170,7 +170,7 @@ dayz_serverObjectMonitor set [count dayz_serverObjectMonitor,_object];
 if (Z_SingleCurrency && {_class in DZE_MoneyStorageClasses && {_coins > 0}}) then
 {
 	_object setVariable ["cashMoney",_coins,true];
-	_key 	= f	ormat["CHILD:309:%1:",_uid] + str _inv + ":" + str _coins + ":";
+	_key 	= 	format["CHILD:309:%1:",_uid] + str _inv + ":" + str _coins + ":";
 	_key call server_hiveWrite;
 };
 

@@ -49,7 +49,7 @@ if (typeName _result == "STRING") exitWith
 	diag_log "[БАЗА ДАННЫХ]: [server_monitor.sqf]: !!!ОШИБКА СОЕДИНЕНИЯ!!! Server_monitor.sqf вышел.";
 };
 
-diag_log "HIVE: Request sent";
+diag_log "[БАЗА ДАННЫХ]: [server_monitor.sqf]: Запрос отправлен";
 
 _myArray 	= 	[];
 _val 		= 	0;
@@ -568,7 +568,7 @@ for "_i" from 0 to 10 do {
 	};
 };
 
-diag_log format["Total Number of spawn locations %1", actualSpawnMarkerCount];
+diag_log format["[СЕРВЕР]: [server_monitor.sqf]: Общее количество точек возрождения: %1", actualSpawnMarkerCount];
 
 if (isDedicated) then {endLoadingScreen;};
 
