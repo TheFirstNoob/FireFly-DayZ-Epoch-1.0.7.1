@@ -1199,6 +1199,14 @@ if (!isNull _cursorTarget && _noChange && !_inVehicle && !_isPZombie && _canDo &
 	s_bank_dialog3 = -1;
 	player removeAction s_player_checkWallet;
 	s_player_checkWallet = -1;
+	player removeAction s_player_gamblefree;
+	s_player_gamblefree = -1;
+	player removeAction s_player_gamble1;
+	s_player_gamble1 = -1;
+	player removeAction s_player_gamble2;
+	s_player_gamble2 = -1;
+	player removeAction s_player_gamble3;
+	s_player_gamble3 = -1;
 	player removeAction s_player_clothes;
 	s_player_clothes = -1;
 	player removeAction s_player_bury_human;
