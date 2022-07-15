@@ -1,55 +1,64 @@
 private ["_VG_ObjID","_characterID","_class","_clientID","_clrinit","_clrinit2","_colour","_colour2","_dam","_damage","_dir","_fuel","_hitpoints","_id","_inventory","_key","_location","_message","_object","_oid","_outcome","_player","_result","_selection","_serverKey","_uid","_worldSpace"];
+_worldSpace 	= 	_this select 0;
+_player 		= 	_this select 1;
+_id 			= 	_this select 2;
+_dir 			= 	_worldSpace select 0;
+_location 		= 	_worldSpace select 1;
+_worldSpace 	= 	[_dir,_location];
+_uid 			= 	_worldSpace call dayz_objectUID2;
+_key 			= 	str formatText["CHILD:801:%1:%2:%3:",_id,_worldSpace,_uid];
 
-_worldSpace = _this select 0;
-_player = _this select 1;
-_id = _this select 2;
-_dir = _worldSpace select 0;
-_location = _worldSpace select 1;
-_worldSpace = [_dir,_location];
-_uid = _worldSpace call dayz_objectUID2;
-_key = str formatText["CHILD:801:%1:%2:%3:",_id,_worldSpace,_uid];
+_result 	= 	_key call server_hiveReadWrite;
+_outcome 	= 	_result select 0;
 
-_result = _key call server_hiveReadWrite;
-_outcome = _result select 0;
-if (_outcome != "PASS") exitWith {diag_log("HIVE VIRTUAL GARAGE SPAWN VEHICLE FAILED TO EXECUTE: " + _key);};
-_class = _result select 1;
-_characterID = _result select 2;
-_inventory = _result select 3;
-_hitpoints = _result select 4;
-_fuel = _result select 5;
-_damage = _result select 6;
-_colour = _result select 7;
-_colour2 = _result select 8;
-_serverKey = _result select 9;
-_VG_ObjID = _result select 10;
-_clientID = owner _player;
+if (_outcome != "PASS") exitWith
+{
+	diag_log("[БАЗА ДАННЫХ]: [server_spawnVehicle.sqf]: [Виртуальный гараж]: Ошибка создания техники при выполнении: " + _key);
+};
+_class 			= 	_result select 1;
+_characterID 	= 	_result select 2;
+_inventory 		= 	_result select 3;
+_hitpoints 		= 	_result select 4;
+_fuel 			= 	_result select 5;
+_damage 		= 	_result select 6;
+_colour 		= 	_result select 7;
+_colour2 		= 	_result select 8;
+_serverKey 		= 	_result select 9;
+_VG_ObjID 		= 	_result select 10;
+_clientID 		= 	owner _player;
 
-if (_VG_ObjID in vg_alreadySpawned) exitWith {
-	diag_log format["VG ERROR: Vehicle with VGObjID = %1 has already been spawned and will not be spawned again. PlayerUID: %2", _VG_ObjID, (getPlayerUID _player)];
+if (_VG_ObjID in vg_alreadySpawned) exitWith
+{
+	diag_log format["[СЕРВЕР]: [server_spawnVehicle.sqf]: [Виртуальный гараж]: [ОШИБКА]: Техника с VGObjID = %1 уже создалась и больше не создастся. PlayerUID: %2", _VG_ObjID, (getPlayerUID _player)];
 };
 
-_key = format["CHILD:388:%1:",_uid];
+_key 	= 	format["CHILD:388:%1:",_uid];
 
 #ifdef OBJECT_DEBUG
-diag_log ("HIVE: WRITE: "+ str(_key));
+diag_log ("[БАЗА ДАННЫХ]: [server_spawnVehicle.sqf]: ЗАПИСЬ: "+ str(_key));
 #endif
 
 _result = _key call server_hiveReadWrite;
 _outcome = _result select 0;
 
-if (_outcome != "PASS") then {
-	diag_log("CUSTOM: failed to get id for : " + str(_uid));
-} else {
-	_VG_ObjID = (toString (18 call VG_RandomizeMyKey)); //new ID
+if (_outcome != "PASS") then
+{
+	diag_log("[СЕРВЕР]: [server_spawnVehicle.sqf]: Ошибка получения ID для: " + str(_uid));
+}
+else
+{
+	_VG_ObjID 	= 	(toString (18 call VG_RandomizeMyKey));
 	vg_alreadySpawned set [(count vg_alreadySpawned), _VG_ObjID];
-	_oid = _result select 1;
+	_oid 		= 	_result select 1;
 
 	#ifdef OBJECT_DEBUG
-	diag_log("CUSTOM: Selected " + str(_oid));
+	diag_log("[БАЗА ДАННЫХ]: [server_spawnVehicle.sqf]: Выбрано " + str(_oid));
 	#endif
 
-	_object = _class createVehicle _location;
-	if (surfaceIsWater _location && {({_x != _object} count (_location nearEntities ["Ship",8])) == 0}) then {
+	_object 	= 	_class createVehicle _location;
+
+	if (surfaceIsWater _location && {({_x != _object} count (_location nearEntities ["Ship",8])) == 0}) then
+	{
 		_object setPos _location;
 	};
 
@@ -67,42 +76,45 @@ if (_outcome != "PASS") then {
 	_object setVariable ["lastUpdate",diag_tickTime];
 	_object setVariable ["VGObjectID",_VG_ObjID, false];
 
-	if (_colour != "0") then {
+	if (_colour != "0") then
+	{
 		_object setVariable ["Colour",_colour,true];
-		_clrinit = format ["#(argb,8,8,3)color(%1)",_colour];
+		_clrinit 	= 	format ["#(argb,8,8,3)color(%1)",_colour];
 		_object setVehicleInit "this setObjectTexture [0,"+str _clrinit+"];";
 	};
 
-	if (_colour2 != "0") then {
+	if (_colour2 != "0") then
+	{
 		_object setVariable ["Colour2",_colour2,true];
-		_clrinit2 = format ["#(argb,8,8,3)color(%1)",_colour2];
+		_clrinit2 	= 	format ["#(argb,8,8,3)color(%1)",_colour2];
 		_object setVehicleInit "this setObjectTexture [1,"+str _clrinit2+"];";
 	};
 
 	processInitCommands;
 
-	_characterID = str(_characterID);
+	_characterID 	= 	str(_characterID);
 	_object setVariable ["CharacterID", _characterID, [true,false] select (_characterID == "0")];
 
-	if (_characterID != "0" && !(_object isKindOf "Bicycle")) then {_object setVehicleLock "LOCKED";};
+	if (_characterID != "0" && !(_object isKindOf "Bicycle")) then
+	{
+		_object setVehicleLock "LOCKED";
+	};
 	
 	[_object,_hitpoints] call server_setHitpoints;
-	
 	[_object,"all",true] call server_updateObject;
-	
 	[_object,vg_clearAmmo,false] call fn_vehicleAddons;
 
 	dayz_serverObjectMonitor set [count dayz_serverObjectMonitor,_object];
 
 	_object call fnc_veh_ResetEH;	
 
-	PVDZE_veh_Init = _object;
+	PVDZE_veh_Init 	= 	_object;
 	publicVariable "PVDZE_veh_Init";
 
 	PVDZE_spawnVehicleResult = _characterID;
 
 	if (!isNull _player) then {_clientID publicVariableClient "PVDZE_spawnVehicleResult";};
 	
-	_message = format["%1 (%2) retrieved %3 @%4 %5",if (alive _player) then {name _player} else {"DeadPlayer"},getPlayerUID _player,_class,mapGridPosition _player,getPosATL _player];
+	_message 	= 	format["[СЕРВЕР]: [server_spawnVehicle.sqf]: %1 (%2) извлечено из гаража %3 @%4 %5",if (alive _player) then {name _player} else {"Игрок мертв"},getPlayerUID _player,_class,mapGridPosition _player,getPosATL _player];
 	diag_log _message;
 };

@@ -18,49 +18,57 @@
 #define ODD_DAY_NIGHT_HOURS [0,1,2,3,8,9,10,11,16,17,18,19] // These are the hours of the odd numbered monthly days you wish to have night.
 
 
-sched_sync = {
+sched_sync 	=
+{
 	private ["_date","_hour","_minute"];
-	// RESYNC TIME ON ALL MACHINES EVERY 15 MINUTES
-	// Date format [Year,Month,Day of the month,Hour,Minute]
+
 	if (!isNil "AH_timeOverride") exitWith
 	{
 		objNull
 	};
 
-	_date = ServerCurrentTime; // ServerCurrentTime is set at server start in sched_event and updated every 60 seconds.
-	_day = _date select 2;
-	_hour = _date select 3;
-	_minute = _date select 4;
+	_date 		= 	ServerCurrentTime;
+	_day 		= 	_date select 2;
+	_hour 		= 	_date select 3;
+	_minute 	= 	_date select 4;
 	
 	#ifdef DAY_NIGHT_SCHEDULE
-	_date set[3, 12]; // daytime unless overwritten below.
-	
-	if (_day % 2 == 0) then { // check if day of the month is divisible by 2.
-		if (_hour in EVEN_DAY_NIGHT_HOURS) then {
-			_date set[3, 20]; // set hour to 20.
+		_date set[3, 12];
+		
+		if (_day % 2 == 0) then
+		{
+			if (_hour in EVEN_DAY_NIGHT_HOURS) then
+			{
+				_date set[3, 20];
+			};
+		}
+		else
+		{
+			if (_hour in ODD_DAY_NIGHT_HOURS) then
+			{
+				_date set[3, 20];
+			};
 		};
-	} else {
-		if (_hour in ODD_DAY_NIGHT_HOURS) then {
-			_date set[3, 20]; // set hour to 20.
-		};
-	};
 	#endif
 	
-	if(dayz_ForcefullmoonNights) then {
-		_date = [2012,8,2,(_date select 3),_minute];
+	if(dayz_ForcefullmoonNights) then
+	{
+		_date 	= 	[2012,8,2,(_date select 3),_minute];
 	};
 	
-	dayz_storeTimeDate = _date; // dayz_storeTimeDate is used to set the date on client connections.
+	dayz_storeTimeDate 	= 	_date;
 
 	setDate _date;
-	dayzSetDate = _date;
+	dayzSetDate 	= 	_date;
 	publicVariable "dayzSetDate";
-	diag_log [ __FILE__, "TIME SYNC: Local Time set to:", _date, "Fullmoon:",dayz_ForcefullmoonNights, "Date given by HiveExt.dll:", _date];
+
+	diag_log ["[СЕРВЕР]: [sched_sync.sqf]: [ПЛАНИРОВЩИК]: [СИНХРОНИЗАЦИЯ ВРЕМЕНИ]: Локальное время установлено:", _date, "Полная луна:",dayz_ForcefullmoonNights, "Дата указана от HiveExt.dll:", _date];
 
 	objNull
 };
 
-sched_fps = {
-	diag_log format["SERVER FPS: %1  PLAYERS: %2",round diag_fps,playersNumber west];
+sched_fps 	=
+{
+	diag_log format["[СЕРВЕР]: [sched_sync.sqf]: [ПЛАНИРОВЩИК]: СЕРВЕРНЫЙ FPS: %1 / ИГРОКОВ: %2",round diag_fps,playersNumber west];
 	objNull
 };

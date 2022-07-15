@@ -1,19 +1,18 @@
 /*
-Created exclusively for ArmA2:OA - DayZMod.
-Please request permission to use/alter/distribute from project leader (R4Z0R49)
+	Создано специально для ArmA2:OA - DayZMod.
+	Пожалуйста запросите разрешение для использовать/изменять/распространять у автора: (R4Z0R49)
 */
 
-//// TOGGLE DEBUGS ////
+//// ПЕРЕКЛЮЧЕНИЕ ОТЛАДКИ ////
 
-// comment this out if you don't want any LOGIN related debug
+// закомментируйте это, если вы не хотите видеть отладку по LOGIN
 #define LOGIN_DEBUG
 
-// comment this out if you don't want any VEHICLE/TENT/OBJECT related debug
+// закомментируйте это, если вы не хотите видеть отладку по VEHICLE/TENT/OBJECT
 //#define OBJECT_DEBUG
 
-// comment this out if you don't want any PLAYER (WORLDSPACE/INVENTORY/ETC) related debug
+// закомментируйте это, если вы не хотите видеть отладку по PLAYER (WORLDSPACE/INVENTORY/ETC)
 //#define PLAYER_DEBUG
 
-// comment this out if you don't want any misc SERVER (ZOMBIE, LOOT, CLEANUP) related debug
+// закомментируйте это, если вы не хотите видеть отладку по SERVER (ZOMBIE, LOOT, CLEANUP)
 //#define SERVER_DEBUG
-

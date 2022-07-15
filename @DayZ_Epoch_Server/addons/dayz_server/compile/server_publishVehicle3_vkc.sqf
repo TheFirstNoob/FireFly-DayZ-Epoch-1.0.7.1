@@ -4,126 +4,152 @@ private ["_coins","_activatingPlayer","_object","_worldspace","_location","_dir"
 ,"_hit","_inv","_action","_clearTurrets","_message"];
 #include "\z\addons\dayz_server\compile\server_toggle_debug.hpp"
 
-if (count _this < 6) exitWith {
-	diag_log "Server_PublishVehicle3 error: Wrong parameter format";
-	dze_waiting = "fail";
+if (count _this < 6) exitWith
+{
+	diag_log "[СЕРВЕР]: [Server_PublishVehicle3.sqf VKC]: [ОШИБКА]: Неверно получены данные. Параметров получено меньше, должно быть 6!";
+
+	dze_waiting 	= 	"fail";
 	(owner (_this select 4)) publicVariableClient "dze_waiting";
 };
 
-_object = _this select 0;
-_worldspace = _this select 1;
-_class = _this select 2;
-_keySelected = _this select 3;
-_activatingPlayer = _this select 4;
-_clientKey = _this select 5;
-_action = if (count _this > 6) then {_this select 6} else {""};
-_playerUID = getPlayerUID _activatingPlayer;
-_characterID = _keySelected;
+_object 			= 	_this select 0;
+_worldspace 		= 	_this select 1;
+_class 				= 	_this select 2;
+_keySelected 		= 	_this select 3;
+_activatingPlayer 	= 	_this select 4;
+_clientKey 			= 	_this select 5;
+_action 			= 	if (count _this > 6) then
+						{
+							_this select 6
+						}
+						else
+						{
+							""
+						};
+_playerUID 			= 	getPlayerUID _activatingPlayer;
+_characterID 		= 	_keySelected;
 
-_exitReason = [_this,"PublishVehicle3",(_worldspace select 1),_clientKey,_playerUID,_activatingPlayer] call server_verifySender;
-if (_exitReason != "") exitWith {
+_exitReason 	= 	[_this,"PublishVehicle3",(_worldspace select 1),_clientKey,_playerUID,_activatingPlayer] call server_verifySender;
+
+if (_exitReason != "") exitWith
+{
 	diag_log _exitReason;
-	dze_waiting = "fail";
+
+	dze_waiting 	= 	"fail";
 	(owner _activatingPlayer) publicVariableClient "dze_waiting";
 };
 
 if (!(isClass(configFile >> "CfgVehicles" >> _class)) || isNull _object) exitWith {
-	diag_log ("HIVE-PublishVehicle3 Error: Vehicle does not exist: "+ str(_class));
+	diag_log ("[СЕРВЕР]: [Server_PublishVehicle3.sqf VKC]: [ОШИБКА]: Техника не существует: "+ str(_class));
+
 	dze_waiting = "fail";
 	(owner _activatingPlayer) publicVariableClient "dze_waiting";
 };
 
-_objectID = _object getVariable ["ObjectID","0"];
-_objectUID = _object getVariable ["ObjectUID","0"];
+_objectID 	= 	_object getVariable ["ObjectID","0"];
+_objectUID 	= 	_object getVariable ["ObjectUID","0"];
 
-if (_objectUID == "0") then {
-	_objectUID = "";
+if (_objectUID == "0") then
+{
+	_objectUID 	= 	"";
 	{
-		_x = _x * 10;
-		if (_x < 0) then {_x = _x * -10};
-		_objectUID = _objectUID + str(round(_x));
+		_x 	= 	_x * 10;
+
+		if (_x < 0) then
+		{
+			_x 	= 	_x * -10
+		};
+		_objectUID 	= 	_objectUID + str(round(_x));
 	} forEach getPosATL _object;
-	_objectUID = _objectUID + str(round((getDir _object) + time));
+	_objectUID 		= 	_objectUID + str(round((getDir _object) + time));
 	_object setVariable ["ObjectUID",_objectUID];
 };
 
-_location = [_object] call fnc_getPos;
-_fuel = fuel _object;
-_hitpoints = _object call vehicle_getHitpoints;
-_newHitpoints = [];
-_damage = damage _object;
+_location 		= 	[_object] call fnc_getPos;
+_fuel 			= 	fuel _object;
+_hitpoints 		= 	_object call vehicle_getHitpoints;
+_newHitpoints 	= 	[];
+_damage 		= 	damage _object;
 
-// add items from previous vehicle here
-_weapons = getWeaponCargo _object;
-_magazines = getMagazineCargo _object;
-_backpacks = getBackpackCargo _object;
-_inv = [_weapons,_magazines,_backpacks];
+// Добавим предметы из предыдущую технику
+_weapons 	= 	getWeaponCargo _object;
+_magazines 	= 	getMagazineCargo _object;
+_backpacks 	= 	getBackpackCargo _object;
+_inv 		= 	[_weapons,_magazines,_backpacks];
 
-if (Z_SingleCurrency && {ZSC_VehicleMoneyStorage}) then {
-	_coins = _object getVariable ["cashMoney",0];
+if (Z_SingleCurrency && {ZSC_VehicleMoneyStorage}) then
+{
+	_coins 	= 	_object getVariable ["cashMoney",0];
 };
 
 {
-	_hit = [_object,_x] call object_getHit;
-	if ((_hit select 0) > 0) then {
+	_hit 	= 	[_object,_x] call object_getHit;
+
+	if ((_hit select 0) > 0) then
+	{
 		_newHitpoints set [count _newHitpoints,[(_hit select 1),(_hit select 0)]];
-	} else {
+	}
+	else
+	{
 		_newHitpoints set [count _newHitpoints,[(_hit select 1),0]];
 	};
 } count _hitpoints;
 
 #ifdef OBJECT_DEBUG
-diag_log ("PUBLISH: Attempt " + str(_object));
+	diag_log ("[СЕРВЕР]: [Server_PublishVehicle3.sqf VKC]: [ПУБЛИКАЦИЯ]: Попытка" + str(_object));
 #endif
 
-_dir = _worldspace select 0;
-_uid = _worldspace call dayz_objectUID2;
+_dir 	= 	_worldspace select 0;
+_uid 	= 	_worldspace call dayz_objectUID2;
 
-_key = format["CHILD:308:%1:%2:%3:%4:%5:%6:%7:%8:%9:",dayZ_instance, _class, _damage , _characterID, _worldspace, _inv, _newHitpoints, _fuel,_uid];
+_key 	= 	format["CHILD:308:%1:%2:%3:%4:%5:%6:%7:%8:%9:",dayZ_instance, _class, _damage , _characterID, _worldspace, _inv, _newHitpoints, _fuel,_uid];
 #ifdef OBJECT_DEBUG
-diag_log ("HIVE: WRITE: "+ str(_key));
+	diag_log ("[БАЗА ДАННЫХ]: [Server_PublishVehicle3.sqf VKC]: ЗАПИСЬ:"+ str(_key));
 #endif
 
 _key call server_hiveWrite;
 
-// GET DB ID
-_key = format["CHILD:388:%1:",_uid];
+_key 	= 	format["CHILD:388:%1:",_uid];
 #ifdef OBJECT_DEBUG
-diag_log ("HIVE: WRITE: "+ str(_key));
+	diag_log ("[БАЗА ДАННЫХ]: [Server_PublishVehicle3.sqf VKC]: ЗАПИСЬ:"+ str(_key));
 #endif
-_result = _key call server_hiveReadWrite;
-_outcome = _result select 0;
 
-if (_outcome != "PASS") then {
-	diag_log("HIVE-pv3: failed to get id for : " + str(_uid));
-	_key = format["CHILD:310:%1:",_uid];
+_result 	= 	_key call server_hiveReadWrite;
+_outcome 	= 	_result select 0;
+
+if (_outcome != "PASS") then
+{
+	diag_log("[СЕРВЕР]: [Server_PublishVehicle3.sqf VKC]: Ошибка получения ID для:: " + str(_uid));
+
+	_key 			= 	format["CHILD:310:%1:",_uid];
 	_key call server_hiveWrite;
-	dze_waiting = "fail";
+	dze_waiting 	= 	"fail";
 	(owner _activatingPlayer) publicVariableClient "dze_waiting";
-} else {
-	_oid = _result select 1;
+}
+else
+{
+	_oid 	= 	_result select 1;
 	#ifdef OBJECT_DEBUG
-	diag_log("CUSTOM: Selected " + str(_oid));
+		diag_log("[СЕРВЕР]: [Server_PublishVehicle3.sqf VKC]: Выбрано: " + str(_oid));
 	#endif
 	
-	_colour = _object getVariable ["Colour","0"];
-	_colour2 = _object getVariable ["Colour2","0"];
+	_colour 	= 	_object getVariable ["Colour","0"];
+	_colour2 	= 	_object getVariable ["Colour2","0"];
 
 	deleteVehicle _object;
 	[_objectID,_objectUID,_object] call server_deleteObjDirect;
 
 	uiSleep 3;
 
-	_newobject = _class createVehicle [0,0,0];
-
-	// switch var to new vehicle at this point.
-	_object = _newobject;
+	_newobject 	= 	_class createVehicle [0,0,0];
+	_object 	= 	_newobject;
 
 	_object setVariable ["ObjectID", _oid];
 	_object setVariable ["lastUpdate",diag_tickTime];
 	_object setVariable ["CharacterID", _characterID, true];
 
-	if (Z_SingleCurrency && {ZSC_VehicleMoneyStorage && {_coins > 0}}) then {
+	if (Z_SingleCurrency && {ZSC_VehicleMoneyStorage && {_coins > 0}}) then
+	{
 		_object setVariable ["cashMoney",_coins,true];
 	};
 
@@ -138,41 +164,43 @@ if (_outcome != "PASS") then {
 	_object setVectorUp surfaceNormal _location;
 	_object setDamage _damage;
 	
-	if (_colour != "0") then {
+	if (_colour != "0") then
+	{
 		_object setVariable ["Colour",_colour,true];
-		_clrinit = format ["#(argb,8,8,3)color(%1)",_colour];
+		_clrinit 	= 	format ["#(argb,8,8,3)color(%1)",_colour];
 		_object setVehicleInit "this setObjectTexture [0,"+str _clrinit+"];";
 	};
 
-	if (_colour2 != "0") then {
+	if (_colour2 != "0") then
+	{
 		_object setVariable ["Colour2",_colour2,true];
-		_clrinit2 = format ["#(argb,8,8,3)color(%1)",_colour2];
+		_clrinit2 	= 	format ["#(argb,8,8,3)color(%1)",_colour2];
 		_object setVehicleInit "this setObjectTexture [1,"+str _clrinit2+"];";
 	};
 
 	processInitCommands;
+
 	[_weapons,_magazines,_backpacks,_object] call fn_addCargo;
-	
 	_object setFuel _fuel;	
-	
 	[_object,_newHitpoints] call server_setHitpoints;	
-
 	[_object,"all",true] call server_updateObject;
-	
 	[_object,DZE_clearVehicleAmmo,false] call fn_vehicleAddons;
-
 	_object call fnc_veh_ResetEH;
-	// for non JIP users this should make sure everyone has eventhandlers for vehicles.
-	PVDZE_veh_Init = _object;
+
+	PVDZE_veh_Init 	= 	_object;
 	publicVariable "PVDZE_veh_Init";	
 
-	dze_waiting = "success";
+	dze_waiting 	= 	"success";
 	(owner _activatingPlayer) publicVariableClient "dze_waiting";
 
-	if (_action == "") then {
-		_message = format["PUBLISH: %1(%2) upgraded %3 with UID %4 @%5",(_activatingPlayer call fa_plr2str),_playerUID,_class,_uid,(_location call fa_coor2str)];
-	} else {
-		_message = format["PUBLISH: %1(%2) %6 %3 with UID %4 @%5",(_activatingPlayer call fa_plr2str),_playerUID,_class,_uid,(_location call fa_coor2str),_action];
+	if (_action == "") then
+	{
+		_message 	= 	format["[СЕРВЕР]: [Server_PublishVehicle3.sqf VKC]: [ПУБЛИКАЦИЯ]: Игрок: %1(%2) улучшил %3 с UID %4 @%5",(_activatingPlayer call fa_plr2str),_playerUID,_class,_uid,(_location call fa_coor2str)];
+	}
+	else
+	{
+		_message 	= 	format["[СЕРВЕР]: [Server_PublishVehicle3.sqf VKC]: [ПУБЛИКАЦИЯ]: Игрок: %1(%2) %6 %3 c UID %4 @%5",(_activatingPlayer call fa_plr2str),_playerUID,_class,_uid,(_location call fa_coor2str),_action];
 	};
+
 	diag_log _message;
 };

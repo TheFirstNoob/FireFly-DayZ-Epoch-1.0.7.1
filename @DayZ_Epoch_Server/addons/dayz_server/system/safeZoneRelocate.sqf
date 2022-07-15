@@ -21,6 +21,7 @@ _maxDamage 			= 	0.75; 					// Техника выше или равная эт�
 		if (damage _x >= _maxDamage) then
 		{
 			diag_log format ["[СЕРВЕР]: [SafeZone_Relocate.sqf]: [Релокация техники]: %1 был удален с сервера из-за того, что был слишком поврежден перед перемещением на: @%2 %3",typeOf _x,mapGridPosition _x,getPosATL _x];			
+
 			[_x getVariable["ObjectID","0"],_x getVariable["ObjectUID","0"],_x] call server_deleteObjDirect;
 			deleteVehicle _x;
 		}

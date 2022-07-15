@@ -8,14 +8,19 @@ call compile preprocessFileLineNumbers (PATH+"sched_dzms.sqf");
 call compile preprocessFileLineNumbers (PATH+"sched_wai.sqf");
 call compile preprocessFileLineNumbers (PATH+"sched_event.sqf");
 call compile preprocessFileLineNumbers (PATH+"sched_traps.sqf");
-if (DZE_Bury_Body || DZE_Butcher_Body) then {
+
+if (DZE_Bury_Body || DZE_Butcher_Body) then
+{
 	call compile preprocessFileLineNumbers (PATH+"sched_lootCrates.sqf");
 };
-if (DZE_EVR) then {
+
+if (DZE_EVR) then
+{
 	call compile preprocessFileLineNumbers (PATH+"sched_evr.sqf");
 };
 
-local _list = [
+local _list 	=
+[
 	// period	offset	code <-> ctx				init code ->ctx
 	 [ 60,		0,		sched_event,				sched_event_init ],
 	 [ 60,	 	224,	sched_corpses ],
@@ -29,13 +34,14 @@ local _list = [
 	 [ 30,		60,		sched_traps,				sched_traps_init ]
 ];
 
-if (DZE_Bury_Body || DZE_Butcher_Body) then {
+if (DZE_Bury_Body || DZE_Butcher_Body) then
+{
 	_list set [count _list, [ 60,	 	240,	sched_lootCrates ]];
 };
-if (DZE_EVR) then {
+
+if (DZE_EVR) then
+{
 	_list set [count _list, [ 60,		180,	sched_evr, sched_evr_init ]];
 };	 
 
 _list execFSM ("\z\addons\dayz_code\system\scheduler\scheduler.fsm"); 
-
-//diag_log [ __FILE__, "Scheduler started"];
