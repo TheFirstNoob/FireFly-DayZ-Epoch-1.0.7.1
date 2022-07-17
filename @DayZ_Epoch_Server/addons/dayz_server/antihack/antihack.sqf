@@ -3552,13 +3552,13 @@ _AH_Server = _AH_Server + ("
 		server_maintainArea = {
 			_this call server_maintainArea1;
 
-			local _pobj = _this select 0;
+			local _pobj = objectfromNetID _this select 0;
 			local _objs = _this select 2;
 
 			local _log = if ((_this select 1) == 1) then {
 				format['Поддержано %1 объектов в Локации @ %2', count _objs, mapGridPosition _pobj];
 			} else {
-				format['Поддержано ""%1"" Локация @ %2', typeOf(_objs select 0), mapGridPosition _pobj];
+				format['Поддержано ""%1"" Локация @ %2', typeOf(objectFromNetId(_objs select 0)), mapGridPosition _pobj];
 			};
 			[_pobj, 7, _log] call AH_fnc_log;
 		};
