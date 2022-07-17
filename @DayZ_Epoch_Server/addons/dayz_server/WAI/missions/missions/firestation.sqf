@@ -59,8 +59,8 @@ if (_timeout) exitWith {
 local _loot1 = if (_aiType == "Hero") then {Loot_Firestation1 select 0;} else {Loot_Firestation1 select 1;};
 local _loot2 = if (_aiType == "Hero") then {Loot_Firestation2 select 0;} else {Loot_Firestation2 select 1;};
 [[
-	[_loot1,WAI_CrateLg,[-3.6,-4.4],-30],
-	[_loot2,WAI_CrateLg,[2,-1.1],-30]
+    [_loot1,WAI_CrateMd,[-7,-5],-30],
+    [_loot2,WAI_CrateMd,[-8,-2],-30]
 ],_position,_mission] call WAI_SpawnCrate;
 
 // Spawn Objects
@@ -82,7 +82,7 @@ local _fireStation = _objects select 0;
 [_position,(ceil random 5),_difficulty,"Random","","Random",WAI_FirefighterSkin,"Random",_aiType,_mission] call WAI_SpawnGroup;
 
 // Spawn Vehicle
-local _vehicle = [WAI_ArmedVeh ,[(_position select 0) -9.5, (_position select 1) -6.8],_mission,true,-29] call WAI_PublishVeh;
+local _vehicle = [WAI_ArmedVeh ,[(_position select 0) + 2, (_position select 1) -1.1],_mission,true,-29] call WAI_PublishVeh;
 [_vehicle,(typeOf _vehicle),2] call WAI_LoadAmmo;
 
 //Humvee Patrol
