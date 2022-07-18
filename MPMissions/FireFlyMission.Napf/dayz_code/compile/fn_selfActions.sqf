@@ -77,19 +77,6 @@ if ((_primaryWeapon in Dayz_fishingItems) && !dayz_fishingInprogress && _inVehic
 	s_player_fishing_veh = -1;
 };
 
-/* //Allows drinking from hands at ponds and ambient wells, but may negatively impact performance
-if (_canDo && !_inVehicle && !dayz_isSwimming && ((call fn_nearWaterHole) select 0)) then {
-	if (s_player_Drinkfromhands < 0) then {
-		s_player_Drinkfromhands = player addAction [localize "STR_ACTIONS_DRINK2", "\z\addons\dayz_code\actions\water_fill.sqf","hands", 0.5, false, true];
-	};
-} else {
-	if (s_player_Drinkfromhands >= 0) then {
-		player removeAction s_player_Drinkfromhands;
-		s_player_Drinkfromhands = -1;
-	};
-};
-*/
-
 if (_inVehicle) then {
 	DZE_myVehicle = _vehicle;
 	if ((_vehicleOwnerID != "0") && _canDo) then {
@@ -486,18 +473,7 @@ if (!isNull _cursorTarget && _noChange && !_inVehicle && !_isPZombie && _canDo &
 		player removeAction s_player_studybody;
 		s_player_studybody = -1;
 	};
-/*
-	//Carbomb
-	local _hasCarBomb = "ItemCarBomb" in _magazinesPlayer;
-	if (((_cursorTarget isKindOf "Car") || (_cursorTarget isKindOf "Air") || (_cursorTarget isKindOf "Motorcycle")) && _hasCarBomb) then {
-		if (s_player_attach_bomb < 0) then {
-			s_player_attach_bomb = player addAction [localize "str_bombAttach", "\z\addons\dayz_code\actions\player_attach_bomb.sqf",_cursorTarget, 3, true, true];
-		};
-	} else {
-			player removeAction s_player_attach_bomb;
-			s_player_attach_bomb = -1;
-	};
-*/
+
 	//Repairing Vehicles
 	if (_isVehicle && {!_isMan && _hasToolbox && !_isStatic && {dayz_myCursorTarget != _cursorTarget} && {damage _cursorTarget < 1}}) then {
 		if (s_player_repair_crtl < 0) then {
@@ -1133,8 +1109,6 @@ if (!isNull _cursorTarget && _noChange && !_inVehicle && !_isPZombie && _canDo &
 	s_player_gather = -1;
 	player removeAction s_player_destroytent;
 	s_player_destroytent = -1;
-	// player removeAction s_player_attach_bomb;
-	//  s_player_attach_bomb = -1;
 	{player removeAction _x} count s_player_combi;s_player_combi = [];
 	s_player_lastTarget = [objNull,objNull,objNull,objNull,objNull];
 	{player removeAction _x} count s_player_parts;s_player_parts = [];
