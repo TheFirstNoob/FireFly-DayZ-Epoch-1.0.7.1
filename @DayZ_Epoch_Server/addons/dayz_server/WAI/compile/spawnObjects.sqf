@@ -46,6 +46,7 @@ local _locked = [
 	
 	if (_type in _locked) then {
 		_object setVehicleLock "LOCKED";
+		_object setVariable ["CharacterID", "-1", true]; // Don't allow players to claim the vehicle.
 	};
 	
 	if (count _x > 2) then {
