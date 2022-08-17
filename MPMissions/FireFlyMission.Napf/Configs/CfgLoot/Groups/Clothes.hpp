@@ -1,5 +1,6 @@
 clothes[] = {
-	{Loot_MAGAZINE,	1,	Skin_Bandit1_DZ},
+	{Loot_MAGAZINE,	1,	Skin_Bandit1_DZ}
+	/*
 	{Loot_MAGAZINE,	1,	Skin_Bandit2_DZ},
 	{Loot_MAGAZINE,	1,	Skin_Bandit3_DZ},
 	{Loot_MAGAZINE,	1,	Skin_Bandit4_DZ},
@@ -25,10 +26,12 @@ clothes[] = {
 	{Loot_MAGAZINE,	1,	Skin_INS_Worker2_DZ},
 	{Loot_MAGAZINE,	1,	Skin_INS_Lopotev_DZ},
 	{Loot_MAGAZINE,	1,	Skin_Doctor_DZ},
+	{Loot_MAGAZINE,	1,	Skin_Paramedic_DZ},
 	{Loot_MAGAZINE,	1,	Skin_Assistant_DZ},
 	{Loot_MAGAZINE,	1,	Skin_Worker1_DZ},
 	{Loot_MAGAZINE,	1,	Skin_Worker3_DZ},
 	{Loot_MAGAZINE,	1,	Skin_Worker4_DZ},
+	{Loot_MAGAZINE,	1,	Skin_Garbage_Man_DZ},
 	{Loot_MAGAZINE,	1,	Skin_TK_CIV_Takistani01_EP1_DZ},
 	{Loot_MAGAZINE,	1,	Skin_TK_CIV_Takistani03_EP1_DZ},
 	{Loot_MAGAZINE,	1,	Skin_TK_CIV_Takistani04_EP1_DZ},
@@ -78,13 +81,15 @@ clothes[] = {
 	{Loot_MAGAZINE,	1,	Skin_WorkerW_DZ},
 	{Loot_MAGAZINE,	1,	Skin_DoctorW_DZ},
 	{Loot_MAGAZINE,	1,	Skin_PolicemanW_DZ}
+	*/
 };
 
 ghilliesuits[] = {
-	{Loot_MAGAZINE,	1,	Skin_SniperW_DZ},
+	{Loot_MAGAZINE,	1,	Skin_SniperW_DZ}
+	/*
 	{Loot_MAGAZINE,	1,	Skin_Sniper1_DZ},
 	{Loot_MAGAZINE,	1,	Skin_Sniper1W_DZ},	
-	{Loot_MAGAZINE,	1,	SniperBanditW_DZ},
+	{Loot_MAGAZINE,	1,	Skin_SniperBanditW_DZ},
 	{Loot_MAGAZINE,	1,	Skin_GUE_Soldier_Sniper_DZ},
 	{Loot_MAGAZINE,	1,	Skin_CZ_Soldier_Sniper_EP1_DZ},
 	{Loot_MAGAZINE,	1,	Skin_CZ_Soldier_Sniper_EP1W_DZ},
@@ -154,10 +159,12 @@ ghilliesuits[] = {
 	{Loot_MAGAZINE,	1,	Skin_GhillieFull_Wood14W_DZ},
 	{Loot_MAGAZINE,	1,	Skin_GhillieFull_Wood15W_DZ},
 	{Loot_MAGAZINE,	1,	Skin_GhillieFull_Wood16W_DZ}
+	*/
 };
 
 stalkerclothes[] = {
-	{Loot_MAGAZINE,	1,	Skin_gsc_military_helmet_wdl_DZ},
+	{Loot_MAGAZINE,	1,	Skin_gsc_military_helmet_wdl_DZ}
+	/*
 	{Loot_MAGAZINE,	1,	Skin_gsc_military_helmet_wdlW_DZ},
 	{Loot_MAGAZINE,	1,	Skin_gsc_military_head_wdl_DZ},
 	{Loot_MAGAZINE,	1,	Skin_gsc_military_helmet_grey_DZ},
@@ -169,7 +176,6 @@ stalkerclothes[] = {
 	{Loot_MAGAZINE,	1,	Skin_gsc_scientist2_DZ},
 	{Loot_MAGAZINE,	1,	Skin_gsc_scientist2W_DZ},
 	{Loot_MAGAZINE,	1,	Skin_gsc_scientist2_head_DZ},
-	//{Loot_MAGAZINE,	1,	Skin_gsc_cloth_loner_head_DZ}, has some rpt errors, it is up to server admins to add it, skin still works
 	{Loot_MAGAZINE,	1,	Skin_gsc_eco_stalker_mask_neutral_DZ},
 	{Loot_MAGAZINE,	1,	Skin_gsc_eco_stalker_mask_neutralW_DZ},
 	{Loot_MAGAZINE,	1,	Skin_gsc_eco_stalker_head_neutral_DZ},
@@ -181,13 +187,15 @@ stalkerclothes[] = {
 	{Loot_MAGAZINE,	1,	Skin_gsc_eco_stalker_head_duty_DZ},
 	{Loot_MAGAZINE,	1,	Skin_gsc_eco_stalker_mask_camo_DZ},
 	{Loot_MAGAZINE,	1,	Skin_gsc_eco_stalker_mask_camoW_DZ},
-	{Loot_MAGAZINE,	1,	Skin_gsc_eco_stalker_head_camo_DZ}	
+	{Loot_MAGAZINE,	1,	Skin_gsc_eco_stalker_head_camo_DZ}
+	*/
 };
 
 // These should probably be split up into separate groups.
 militaryclothes[] = {
-	{Loot_GROUP,	1,	ghilliesuits},
-	//{Loot_GROUP,	1,	stalkerclothes},
+	{Loot_GROUP,	1,	ghilliesuits}
+	/*
+	{Loot_GROUP,	1,	stalkerclothes},
 	{Loot_MAGAZINE,	1,	Skin_Camo1_DZ},	
 	{Loot_MAGAZINE,	1,	Skin_Rocket_DZ},
 	{Loot_MAGAZINE,	1,	Skin_Soldier1_DZ},
@@ -282,4 +290,5 @@ militaryclothes[] = {
 	{Loot_MAGAZINE,	1,	Skin_CamoWinter2W_DZ},
 	{Loot_MAGAZINE,	1,	Skin_OperatorW_DZ},
 	{Loot_MAGAZINE,	1,	Skin_GunnerW_DZ}
+	*/
 };

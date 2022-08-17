@@ -1,6 +1,6 @@
 backpacks[] = {
 	{Loot_BACKPACK,		8,		GymBag_Camo_DZE1},
-	//{Loot_BACKPACK,		8,		GymBag_Green_DZE1},
+	{Loot_BACKPACK,		8,		GymBag_Green_DZE1},
 	{Loot_BACKPACK,		6,		School_Bag_DZE1},
 	{Loot_BACKPACK,		5,		Assault_Pack_DZE1},	
 	{Loot_BACKPACK,		6,		Czech_Vest_Pouch_DZE1},

@@ -95,7 +95,7 @@ weaponsUS[] =
 	{Loot_WEAPON,		6,		M14_DZ},
 	{Loot_WEAPON,		6,		MK14_DZ},
 	//{Loot_WEAPON,		6,		Masada_DZ},
-	//{Loot_WEAPON,		6,		Masada_BL_DZ},
+	{Loot_WEAPON,		6,		Masada_BL_DZ},
 	{Loot_WEAPON,		6,		CTAR21_DZ},
 	{Loot_WEAPON,		6,		KAC_PDW_DZ},
 	//{Loot_WEAPON,		6,		M16A2_DZ},
@@ -141,7 +141,7 @@ weaponsEU[] =
 	
 	// Sniper Rifles
 	{Loot_WEAPON,		1,		L115A3_DZ}, // Tan Lapua
-	{Loot_WEAPON,		1,		L115A3_2_DZ}, // Green Lapua
+	//{Loot_WEAPON,		1,		L115A3_2_DZ}, // Green Lapua
 	{Loot_WEAPON,		2,		MK17_Sniper_SD_DZ},
 	{Loot_WEAPON,		2,		MK17_Sniper_DZ},	
 	{Loot_WEAPON,		2,		HK417_Sniper_SD_DZ},
@@ -193,14 +193,14 @@ weaponsEU[] =
 	{Loot_WEAPON,		3,		MK17_CCO_SD_DZ},
 	{Loot_WEAPON,		3,		MK17_Holo_SD_DZ},
 	{Loot_WEAPON,		3,		MK17_ACOG_SD_DZ},
-	//{Loot_WEAPON,		3,		SteyrAug_A3_Green_DZ},
-	//{Loot_WEAPON,		3,		SteyrAug_A3_ACOG_Green_DZ},
-	//{Loot_WEAPON,		3,		SteyrAug_A3_Holo_Green_DZ},	
+	{Loot_WEAPON,		3,		SteyrAug_A3_Green_DZ},
+	{Loot_WEAPON,		3,		SteyrAug_A3_ACOG_Green_DZ},
+	{Loot_WEAPON,		3,		SteyrAug_A3_Holo_Green_DZ},	
 	
 	// Machine Guns
 	//{Loot_WEAPON,		6,		XM8_SAW_DZ},
 	{Loot_WEAPON,		4,		L110A1_DZ},
-	{Loot_WEAPON,		4,		MG36_Camo_DZ},
+	//{Loot_WEAPON,		4,		MG36_Camo_DZ},
 	{Loot_WEAPON,		4,		MG36_DZ},
 	{Loot_WEAPON,		3,		Mk48_DZ},
 	{Loot_WEAPON,		3,		Mk48_DES_CCO_DZ},
@@ -269,7 +269,7 @@ shotgunsingleshot[] = { // Residential Spawns
 	{Loot_WEAPON,		2,		LeeEnfield_DZ},
 	{Loot_WEAPON,		3,		MR43_DZ},
 	{Loot_WEAPON,		3,		Crossbow_DZ},
-	{Loot_WEAPON,		3,		RedRyder},
+	{Loot_WEAPON,		3,		RedRyder_DZ},
 	{Loot_WEAPON,		1,		CZ550_DZ},
 	{Loot_WEAPON,		1,		Mosin_DZ}
 };

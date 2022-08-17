@@ -4,8 +4,6 @@
 
 VanillaSurvival[] =
 {
-//	{Loot_MAGAZINE,		1,		equip_pvc_box},  // Unused
-//	{Loot_MAGAZINE,		1,		ItemBookBible}, // Novelty church item - added directly to church loot
 	{Loot_MAGAZINE,		1,		equip_rope}, //Used for upgrade tents
 	{Loot_MAGAZINE,		1,		equip_rag}, // Used to craft bandages
 	{Loot_MAGAZINE,		1,		equip_string}, // Used in multiple crafting recipes
@@ -17,13 +15,6 @@ VanillaSurvival[] =
 
 VanillaConstruction[] =
 {
-//	{Loot_MAGAZINE,		2,		equip_1inch_metal_pipe}, // Unused
-//	{Loot_MAGAZINE,		2,		equip_2inch_metal_pipe}, // Unused
-//	{Loot_VEHICLE,		2,		WeaponHolder_ItemPickaxeBroken},
-//	{Loot_MAGAZINE,		5,		ItemStone}, // Epoch(Dayz Mod) fences, does not need to be spawned, can be harvested with pickaxes
-//	{Loot_WEAPON,		1,		ItemDIY_wood}, // Vanilla base building
-//	{Loot_WEAPON,		1,		ItemDIY_Gate} // Vanilla base building
-//	{Loot_MAGAZINE,		9,		equip_metal_sheet_rusted}, // Unused
 	{Loot_MAGAZINE,		1,		equip_scrapelectronics}, // Vehicle upgrade
 	{Loot_MAGAZINE,		1,		equip_floppywire}, // Vehicle upgrade
 	{Loot_VEHICLE,		4,		WeaponHolder_ItemPickaxe}, // Get ItemStone from rocks on the map for fence foundations.

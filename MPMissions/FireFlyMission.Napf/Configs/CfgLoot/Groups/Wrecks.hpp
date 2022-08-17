@@ -1,16 +1,16 @@
 Land_iron_vein_wreck[] =
 {
-	//{Loot_MAGAZINE,		1,		PartOre,10,10}
+	{Loot_MAGAZINE,		1,		PartOre,10,10}
 };
 
 Land_silver_vein_wreck[] =
 {
-	//{Loot_MAGAZINE,		1,		PartOreSilver,10,10}
+	{Loot_MAGAZINE,		1,		PartOreSilver,10,10}
 };
 
 Land_gold_vein_wreck[] =
 {
-	//{Loot_MAGAZINE,		1,		PartOreGold,10,10}
+	{Loot_MAGAZINE,		1,		PartOreGold,10,10}
 };
 
 Land_ammo_supply_wreck[] =

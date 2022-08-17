@@ -46,7 +46,7 @@ MilitarySmallRU[] =
 	{Loot_WEAPON,		5,		Makarov_SD_DZ},
 	{Loot_GROUP,		5,		ToolsMilitary},
 	{Loot_GROUP,		3,		militaryclothes},
-	{Loot_MAGAZINE,		1,		PipeBomb}, // Satchel charges are very destructive and should be rare.
+	//{Loot_MAGAZINE,		1,		PipeBomb}, // Satchel charges are very destructive and should be rare.
 	{Loot_GROUP,		30,		AmmoRU},
 	{Loot_GROUP,		15,		AttachmentsRU},
 	{Loot_GROUP,		10,		MedicalLow},
@@ -163,7 +163,7 @@ MilitaryCZ[] =
 
 	//Other
 	{Loot_MAGAZINE,		3,		FoodMRE},
-	{Loot_MAGAZINE,		1,		MAAWS_HEAT}, // MAAWS added exclusively to CZ group. They should be fairly rare.
+	//{Loot_MAGAZINE,		1,		MAAWS_HEAT}, // MAAWS added exclusively to CZ group. They should be fairly rare.
 	{Loot_PILE,			15,		AmmoCZ, 1, 4},
 	{Loot_GROUP,		6,		AttachmentsCZ},
 	{Loot_PILE,			10,		MedicalLow, 1, 2},
@@ -173,15 +173,15 @@ MilitaryCZ[] =
 
 MilitarySmallCZ[] =
 {
-	{Loot_WEAPON,		6,		Sa61_EP1},
+	{Loot_WEAPON,		6,		Sa61_DZ},
 	{Loot_WEAPON,		3,		CZ75P_DZ},
 	{Loot_WEAPON,		3,		CZ75D_DZ},
 	{Loot_WEAPON,		3,		CZ75SP_DZ},
 	{Loot_WEAPON,		2,		CZ75SP_SD_DZ},
 	{Loot_GROUP,		5,		ToolsMilitary},
 	{Loot_GROUP,		3,		militaryclothes},
-	{Loot_MAGAZINE,		1,		PipeBomb},
-	{Loot_MAGAZINE,		1,		MAAWS_HEAT},
+	//{Loot_MAGAZINE,		1,		PipeBomb},
+	//{Loot_MAGAZINE,		1,		MAAWS_HEAT},
 	{Loot_GROUP,		30,		AmmoCZ},
 	{Loot_GROUP,		15,		AttachmentsCZ},
 	{Loot_GROUP,		10,		MedicalLow},
