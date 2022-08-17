@@ -169,7 +169,7 @@ local _unitGroup = [[_position select 0, _position select 1, 0],1,"hard","random
 //				6: Backpack - "Random", "Classname", "none" or Array
 //				7: Gearset - 0,1,2, or "Random"
 //				8: Mission variable from line 5 (_mission)
-};
+
 [[
 	[(_position select 0) - 10, (_position select 1) + 10, 0],
 	[(_position select 0) + 10, (_position select 1) - 10, 0],
