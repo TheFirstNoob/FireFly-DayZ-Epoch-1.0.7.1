@@ -1,6 +1,6 @@
 /* ******************************************************* */
-/*             Created for the Epoch Community             */
-/*                By BigEgg and Movinggun                  */
+/*         Создано специально для Epoch Community          */
+/*               Авторы: BigEgg и Movinggun                */
 /* ******************************************************* */
 
 #include "config.sqf"
@@ -1144,7 +1144,7 @@ _AH_Admin = _AH_Admin + ("
 
 		if (admin_forceTemp) then {admin_tempSpawn = true};
 
-		if ({(_x select 0) == '>> Cache Toggle Configuration'} count _main > 0) then {
+		if ({(_x select 0) == '>> Сохранить текущие параметры'} count _main > 0) then {
 			local _cache = profileNameSpace getVariable ['ATCACHE', []];
 			if (typeName _cache == 'ARRAY' && {count _cache > 0}) then {
 				{_x call AH_fnc_toggle} forEach _cache;
@@ -1212,56 +1212,56 @@ _AH_Admin = _AH_Admin + ("
 
 				_add set [count _add, ['===============================================================', 0, []]];
 				_add set [count _add, ['<< Back', 0, [], {'Log Menu' call admin_back}]];
-				_add set [count _add, ['>> Search', 0, [], admin_search]];
+				_add set [count _add, ['>> Поиск', 0, [], admin_search]];
 				_add set [count _add, ['===============================================================', 0, []]];
 
-				if ((_in select 0) == 'Admin Logs') then {
-					_add set [count _add, ['                              Admin Logs', 0, []]];
+				if ((_in select 0) == 'Логи Администрации') then {
+					_add set [count _add, ['                              Логи Администрации', 0, []]];
 					{admin_logs set [count admin_logs, _x]} count (_in select 1);
 					{_add set [count _add, [_x, 8, []]]} count admin_logs;
 				};
-				if ((_in select 0) == 'Hack Logs') then {
-					_add set [count _add, ['                                Hack Logs', 0, []]];
+				if ((_in select 0) == 'Логи Читеров') then {
+					_add set [count _add, ['                                Логи Читеров', 0, []]];
 					{hack_logs set [count hack_logs, _x]} count (_in select 1);
 					{_add set [count _add, [_x, 8, []]]} count hack_logs;
 				};
-				if ((_in select 0) == 'New Player Logs') then {
-					_add set [count _add, ['                            New Player Logs', 0, []]];
+				if ((_in select 0) == 'Логи Новых Игроков') then {
+					_add set [count _add, ['                            Логи Новых Игроков', 0, []]];
 					{newPlayer_logs set [count newPlayer_logs, _x]} count (_in select 1);
 					{_add set [count _add, [_x, 8, []]]} count newPlayer_logs;
 				};
-				if ((_in select 0) == 'Safe Zone Logs') then {
-					_add set [count _add, ['                            Safe Zone Logs', 0, []]];
+				if ((_in select 0) == 'Логи Безопасных Зон') then {
+					_add set [count _add, ['                            Логи Безопасных Зон', 0, []]];
 					{safeZone_logs set [count safeZone_logs, _x]} count (_in select 1);
 					{_add set [count _add, [_x, 8, []]]} count safeZone_logs;
 				};
-				if ((_in select 0) == 'Trader Logs') then {
-					_add set [count _add, ['                              Trader Logs', 0, []]];
+				if ((_in select 0) == 'Логи Торговли') then {
+					_add set [count _add, ['                              Логи Торговли', 0, []]];
 					{trader_logs set [count trader_logs, _x]} count (_in select 1);
 					{_add set [count _add, [_x, 8, []]]} count trader_logs;
 				};
-				if ((_in select 0) == 'Lock/Unlock Logs') then {
-					_add set [count _add, ['                            Lock/Unlock Logs', 0, []]];
+				if ((_in select 0) == 'Логи Открытий/Закрытий') then {
+					_add set [count _add, ['                            Логи Открытий/Закрытий', 0, []]];
 					{lockUnlock_logs set [count lockUnlock_logs, _x]} count (_in select 1);
 					{_add set [count _add, [_x, 8, []]]} count lockUnlock_logs;
 				};
-				if ((_in select 0) == 'Maintenance Logs') then {
-					_add set [count _add, ['                            Maintenance Logs', 0, []]];
+				if ((_in select 0) == 'Логи Обслуживания') then {
+					_add set [count _add, ['                            Логи Обслуживания', 0, []]];
 					{maintenance_logs set [count maintenance_logs, _x]} count (_in select 1);
 					{_add set [count _add, [_x, 8, []]]} count maintenance_logs;
 				};
-				if ((_in select 0) == 'Player Logs') then {
-					_add set [count _add, ['                              Player Logs', 0, []]];
+				if ((_in select 0) == 'Логи Игроков') then {
+					_add set [count _add, ['                              Логи Игроков', 0, []]];
 					{player_logs set [count player_logs, _x]} count (_in select 1);
 					{_add set [count _add, [_x, 8, []]]} count player_logs;
 				};
-				if ((_in select 0) == 'Surveillance Logs') then {
-					_add set [count _add, ['                            Surveillance Logs', 0, []]];
+				if ((_in select 0) == 'Логи Наблюдений') then {
+					_add set [count _add, ['                            Логи Наблюдений', 0, []]];
 					{surveillance_logs set [count surveillance_logs, _x]} count (_in select 1);
 					{_add set [count _add, [_x, 8, []]]} count surveillance_logs;
 				};
-				if ((_in select 0) == 'Death Logs') then {
-					_add set [count _add, ['                              Death Logs', 0, []]];
+				if ((_in select 0) == 'Логи Смертей') then {
+					_add set [count _add, ['                              Логи Смертей', 0, []]];
 					{death_logs set [count death_logs, _x]} count (_in select 1);
 					{_add set [count _add, [_x, 8, []]]} count death_logs;
 				};
@@ -1276,19 +1276,19 @@ _AH_Admin = _AH_Admin + ("
 		} forEach ['hack_logs', 'newPlayer_logs', 'safeZone_logs', 'trader_logs', 'lockUnlock_logs', 'maintenance_logs', 'player_logs', 'surveillance_logs', 'death_logs'];
 
 		local _get = call {
-			if (_this == 'Admin Logs') exitWith {count admin_logs};
-			if (_this == 'Hack Logs') exitWith {count hack_logs};
-			if (_this == 'New Player Logs') exitWith {count newPlayer_logs};
-			if (_this == 'Safe Zone Logs') exitWith {count safeZone_logs};
-			if (_this == 'Trader Logs') exitWith {count trader_logs};
-			if (_this == 'Lock/Unlock Logs') exitWith {count lockUnlock_logs};
-			if (_this == 'Maintenance Logs') exitWith {count maintenance_logs};
-			if (_this == 'Player Logs') exitWith {count player_logs};
-			if (_this == 'Surveillance Logs') exitWith {count surveillance_logs};
-			if (_this == 'Death Logs') exitWith {count death_logs};
+			if (_this == 'Логи Администрации') exitWith {count admin_logs};
+			if (_this == 'Логи Читеров') exitWith {count hack_logs};
+			if (_this == 'Логи Новых Игроков') exitWith {count newPlayer_logs};
+			if (_this == 'Логи Безопасных Зон') exitWith {count safeZone_logs};
+			if (_this == 'Логи Торговли') exitWith {count trader_logs};
+			if (_this == 'Логи Открытий/Закрытий') exitWith {count lockUnlock_logs};
+			if (_this == 'Логи Обслуживания') exitWith {count maintenance_logs};
+			if (_this == 'Логи Игроков') exitWith {count player_logs};
+			if (_this == 'Логи Наблюдений') exitWith {count surveillance_logs};
+			if (_this == 'Логи Смертей') exitWith {count death_logs};
 		};
 
-		[format['Synchronizing %1, please wait...', toLower _this], 4] call "+_kfc_msg+";
+		[format['Синхронизация %1, пожалуйста подождите...', toLower _this], 4] call "+_kfc_msg+";
 		['LOG_VIEW', [_this, _get]] call AH_fnc_adminReq;
 	};
 
@@ -1310,7 +1310,7 @@ _AH_Admin = _AH_Admin + ("
 		local _rank = player call AH_fnc_rank;
 
 		local _ctrl = _display displayCtrl 1001;
-		_ctrl ctrlSetText format['%1 Menu', _rank];
+		_ctrl ctrlSetText format['%1 Меню', _rank];
 
 		_ctrl = _display displayCtrl 2100;
 		_ctrl ctrlSetEventHandler ['LBSelChanged', '(_this select 1) call AH_fnc_switchMenu;'];
@@ -1367,8 +1367,8 @@ _AH_Admin = _AH_Admin + ("
 			(_display displayCtrl (_x select 0)) ctrlSetText (_x select 1);
 		} count [
 			[1003, 'Информационная панель'],
-			[1004, '*Ctrl + C to Copy'],
-			[1005, '*Double Click to Spectate'],
+			[1004, '*Ctrl + C скопировать'],
+			[1005, '*Дв.Клик для Наблюдения'],
 			[1006, 'Цель:'],
 			[1007, 'UID:'],
 			[1008, 'Техника:'],
@@ -1386,7 +1386,7 @@ _AH_Admin = _AH_Admin + ("
 			[1020, 'ИИ:'],
 			[1021, 'Техники всего:'],
 			[1022, 'Зомби:'],
-			[1023, 'Antihack v1.0.4 | Compiled 4/15/2022 | By BigEgg & MG'],
+			[1023, 'Antihack v1.0.5 | BETA | Авторы: BigEgg & MG'],
 			[1417, 'Напишите код и нажмите ""Enter"" для выполнения!'],
 			[1600, 'X']
 		];
@@ -1478,7 +1478,7 @@ _AH_Admin = _AH_Admin + ("
 
 		[
 			['===============================================================', 0, []],
-			['>> Search Again', 0, [], {admin_options = admin_optionsS; admin_optionsS = nil; call AH_fnc_refresh; call admin_search}],
+			['>> Искать еще раз', 0, [], {admin_options = admin_optionsS; admin_optionsS = nil; call AH_fnc_refresh; call admin_search}],
 			['===============================================================', 0, []]
 		] + _found call AH_fnc_add;
 
@@ -1577,7 +1577,7 @@ _AH_Admin = _AH_Admin + ("
 		local _puid = getPlayerUID _target;
 
 		_this = call AH_fnc_removePrefix;
-		if (_this == 'Teleport to Target') exitWith {
+		if (_this == 'Телепортироваться к Цели') exitWith {
 			local _veh = vehicle _target;
 			local _veh2 = vehicle player;
 
@@ -1594,7 +1594,7 @@ _AH_Admin = _AH_Admin + ("
 			[format['Вы телепортированы к ""%1 (%2)"" @ %3.', _name, _puid, mapGridPosition player], 4] call "+_kfc_msg+";
 			format['Телепортирован к ""%1 (%2)"" @ %3', _name, _puid, mapGridPosition player] call AH_fnc_adminLog;
 		};
-		if (_this == 'Teleport Target to You') exitWith {
+		if (_this == 'Телепортировать Цель к Вам') exitWith {
 			local _veh = vehicle player;
 
 			local _pos = [_veh] call FNC_getPos;
@@ -1608,46 +1608,46 @@ _AH_Admin = _AH_Admin + ("
 			[format['Вы телепортировали ""%1 (%2)"" к себе.', _name, _puid], 4] call "+_kfc_msg+";
 			format['Телепортирован к ""%1 (%2)"" @ %3', _name, _puid, mapGridPosition _target] call AH_fnc_adminLog;
 		};
-		if (_this == 'Heal Target') exitWith {
+		if (_this == 'Вылечить Игрока') exitWith {
 			['TAR_HEAL', [_target]] call AH_fnc_adminReq;
 			[format['Вы вылечили ""%1 (%2).""', _name, _puid], 4] call "+_kfc_msg+";
 			format['Вылечен ""%1 (%2)"" @ %3', _name, _puid, mapGridPosition _target] call AH_fnc_adminLog;
 		};
-		if (_this == 'Adjust Target Bank') exitWith {
-			['Adjusting Bank', 'Количество:', format[""
+		if (_this == 'Изменить БАНК цели') exitWith {
+			['Изменение Банка', 'Количество:', format[""
 				local _qty = parseNumber(ctrlText 1400);
 				if (_qty == 0) exitWith {['Вы должны ввести сумму!', 2] call "+_kfc_msg+"};
 				['TAR_BANK', ['%1%2', _qty]] call AH_fnc_adminReq;
 				['Вы добавили '+([_qty] call BIS_fnc_numberText)+' '+CurrencyName+' в Банк """"%1 (%2).""""', 4] call "+_kfc_msg+";
 				'Добавлено '+([_qty] call BIS_fnc_numberText)+' '+CurrencyName+' в Банк """"%1 (%2)""""' call AH_fnc_adminLog;
-			"", _name, _puid], 'Adjust', format['Цель: %1 (%2)', _name, _puid], format['Текущее: %1', [_target getVariable ["+str _bankvar+", 0]] call BIS_fnc_numberText]] call AH_fnc_display;
+			"", _name, _puid], 'Изменить', format['Цель: %1 (%2)', _name, _puid], format['Текущее: %1', [_target getVariable ["+str _bankvar+", 0]] call BIS_fnc_numberText]] call AH_fnc_display;
 		};
-		if (_this == 'Adjust Target Wallet') exitWith {
-			['Adjusting Wallet', 'Количество:', format[""
+		if (_this == 'Изменить КОШЕЛЕК цели') exitWith {
+			['Изменение Кошелька', 'Количество:', format[""
 				local _qty = parseNumber(ctrlText 1400);
 				if (_qty == 0) exitWith {['Вы должны ввести сумму!', 2] call "+_kfc_msg+"};
 				['TAR_WALLET', ['%1%2', _qty]] call AH_fnc_adminReq;
 				['Вы добавили '+([_qty] call BIS_fnc_numberText)+' '+CurrencyName+' в Кошелек """"%1 (%2).""""', 4] call "+_kfc_msg+";
 				'Добавлено '+([_qty] call BIS_fnc_numberText)+' '+CurrencyName+' в Кошелек """"%1 (%2)""""' call AH_fnc_adminLog;
-			"", _name, _puid], 'Adjust', format['Цель: %1 (%2)', _name, _puid], format['Текущее: %1', [_target getVariable ["+str _cashvar+", 0]] call BIS_fnc_numberText]] call AH_fnc_display;
+			"", _name, _puid], 'Изменить', format['Цель: %1 (%2)', _name, _puid], format['Текущее: %1', [_target getVariable ["+str _cashvar+", 0]] call BIS_fnc_numberText]] call AH_fnc_display;
 		};
-		if (_this == 'Adjust Target Humanity') exitWith {
-			['Adjusting Humanity', 'Amount:', format[""
+		if (_this == 'Изменить ХУМАНИТИ цели') exitWith {
+			['Изменение Хуманити', 'Количество:', format[""
 				local _qty = parseNumber(ctrlText 1400);
 				if (_qty == 0) exitWith {['Вы должны ввести сумму!', 2] call "+_kfc_msg+"};
 				['TAR_HUMANITY', ['%1%2', _qty]] call AH_fnc_adminReq;
 				['Вы добавили '+([_qty] call BIS_fnc_numberText)+' Человечности """"%1 (%2).""""', 4] call "+_kfc_msg+";
 				'Добавлено '+([_qty] call BIS_fnc_numberText)+' Человечности """"%1 (%2)""""' call AH_fnc_adminLog;
-			"", _name, _puid], 'Adjust', format['Цель: %1 (%2)', _name, _puid], format['Текущее: %1', [_target getVariable ['humanity', 0]] call BIS_fnc_numberText]] call AH_fnc_display;
+			"", _name, _puid], 'Изменить', format['Цель: %1 (%2)', _name, _puid], format['Текущее: %1', [_target getVariable ['humanity', 0]] call BIS_fnc_numberText]] call AH_fnc_display;
 		};
-		if (_this == 'Give Target Ammo') exitWith {
-			['Giving Ammo', 'Amount:', format[""
+		if (_this == 'Выдать Патроны Игроку') exitWith {
+			['Выдача Патронов', 'Количество:', format[""
 				local _qty = parseNumber(ctrlText 1400);
 				if (_qty == 0) exitWith {['Вы должны ввести сумму!', 2] call "+_kfc_msg+"};
 				['TAR_AMMO', ['%1%2', _qty]] call AH_fnc_adminReq;
 				['Вы выдали '+([_qty] call BIS_fnc_numberText)+' магазин(ов) к """"%1 (%2).""""', 4] call "+_kfc_msg+";
-				'Выданы '+([_qty] call BIS_fnc_numberText)+' магазин(ов) к """"%1 (%2)""""' call AH_fnc_adminLog;
-			"", _name, _puid], 'Give', format['Цель: %1 (%2)', _name, _puid], ''] call AH_fnc_display;
+				'Выдано '+([_qty] call BIS_fnc_numberText)+' магазин(ов) к """"%1 (%2)""""' call AH_fnc_adminLog;
+			"", _name, _puid], 'Выдать', format['Цель: %1 (%2)', _name, _puid], ''] call AH_fnc_display;
 		};
 		if (_this == 'Spectate') exitWith {
 			if (isNil 'admin_specTarget') then {
@@ -1672,73 +1672,73 @@ _AH_Admin = _AH_Admin + ("
 			[format['Наблюдение за ""%1 (%2).""', _name, _puid], 4] call "+_kfc_msg+";
 			format['Наблюдение за ""%1 (%2)""', _name, _puid] call AH_fnc_adminLog;
 		};
-		if (_this == 'Join Target Vehicle') exitWith {
+		if (_this == 'Переместиться в Технику Игрока') exitWith {
 			if (vehicle _target == _target) exitWith {['Цель не в Технике!', 2] call "+_kfc_msg+"};
 			if (vehicle player != player) exitWith {['Вы в Технике!', 2] call "+_kfc_msg+"};
 			player moveInCargo (vehicle _target);
 			[format['Вы телепортировались в Технику ""%1 (%2).""', _name, _puid], 4] call "+_kfc_msg+";
 			format['Телепортирован в Технику ""%1 (%2)""', _name, _puid] call AH_fnc_adminLog;
 		};
-		if (_this == 'Move Target into Your Vehicle') exitWith {
+		if (_this == 'Переместить Игрока в Вашу Технику') exitWith {
 			if (vehicle _target != _target) exitWith {['Цель в Технике!', 2] call "+_kfc_msg+"};
 			if (vehicle player == player) exitWith {['Вы не в Технике!', 2] call "+_kfc_msg+"};
 			['TAR_MOVINVEH', [_target]] call AH_fnc_adminReq;
 			[format['Вы телепортировали ""%1 (%2)"" в вашу Технику.', _name, _puid], 4] call "+_kfc_msg+";
 			format['Был телепортирован ""%1 (%2)"" в свою Технику', _name, _puid] call AH_fnc_adminLog;
 		};
-		if (_this == 'Repair Target Vehicle') exitWith {
+		if (_this == 'Починить Технику Игрока') exitWith {
 			if (vehicle _target == _target) exitWith {['Цель не в Технике!', 2] call "+_kfc_msg+"};
 			['TAR_REPAIR', [_target]] call AH_fnc_adminReq;
 			[format['Вы починили технику ""%1 (%2).""', _name, _puid], 4] call "+_kfc_msg+";
 			format['Отремонтирована техника ""%1 (%2)""', _name, _puid] call AH_fnc_adminLog;
 		};
-		if (_this == 'Unfreeze Target') exitWith {
+		if (_this == 'Разморозить Игрока') exitWith {
 			if (_target == player) exitWith {['Нельзя применить к себе!', 2] call "+_kfc_msg+"};
 			['TAR_FREEZE', [_target, 0]] call AH_fnc_adminReq;
 			[format['Вы разморозили ""%1 (%2).""', _name, _puid], 4] call "+_kfc_msg+";
 			format['Разморожен ""%1 (%2)""', _name, _puid] call AH_fnc_adminLog;
 		};
-		if (_this == 'Freeze Target') exitWith {
+		if (_this == 'Заморозить Игрока') exitWith {
 			if (_target == player) exitWith {['Нельзя применить к себе!', 2] call "+_kfc_msg+"};
 			['TAR_FREEZE', [_target, 1]] call AH_fnc_adminReq;
 			[format['Вы заморозили ""%1 (%2).""', _name, _puid], 4] call "+_kfc_msg+";
 			format['Заморожен ""%1 (%2)""', _name, _puid] call AH_fnc_adminLog;
 		};
-		if (_this == 'Kill Target') exitWith {
+		if (_this == 'Убить Игрока') exitWith {
 			['TAR_KILL', [_target]] call AH_fnc_adminReq;
 			[format['Вы убили ""%1 (%2).""', _name, _puid], 4] call "+_kfc_msg+";
 			format['Убийство ""%1 (%2)""', _name, _puid] call AH_fnc_adminLog;
 		};
-		if (_this == 'Make Target Commit Suicide') exitWith {
+		if (_this == 'Заставить Игрока сделать Самоубийство') exitWith {
 			['TAR_SUICIDE', [_target]] call AH_fnc_adminReq;
 			[format['Вы заставили ""%1 (%2)"" сделать самоубийство.', _name, _puid], 4] call "+_kfc_msg+";
 			format['Заставил ""%1 (%2)"" сделать самоубийство', _name, _puid] call AH_fnc_adminLog;
 		};
-		if (_this == 'Disconnect Target') exitWith {
+		if (_this == 'Отключить от Сервера Игрока') exitWith {
 			['TAR_DISCONNECT', [_target]] call AH_fnc_adminReq;
 			[format['Вы отключили от сервера ""%1 (%2).""', _name, _puid], 4] call "+_kfc_msg+";
 			format['Отключение от сервера ""%1 (%2)""', _name, _puid] call AH_fnc_adminLog;
 		};
-		if (_this == 'Remove Target Gear') exitWith {
+		if (_this == 'Удалить Инвентарь Игрока') exitWith {
 			['TAR_RMGEAR', [_target]] call AH_fnc_adminReq;
 			[format['Вы очистили инвентарь ""%1 (%2).""', _name, _puid], 4] call "+_kfc_msg+";
 			format['Инвентарь очищен ""%1 (%2)""', _name, _puid] call AH_fnc_adminLog;
 		};
-		if (_this == 'Send Target Up') exitWith {
-			['Launching', 'Дистанция:', format[""
+		if (_this == 'Отправить Игрока в Небо') exitWith {
+			['Отправляем в Небо', 'Высота:', format[""
 				local _qty = parseNumber(ctrlText 1400);
 				if (_qty == 0) exitWith {['Вы должны ввести число!', 2] call "+_kfc_msg+"};
 				['TAR_SENDUP', ['%1%2', _qty]] call AH_fnc_adminReq;
-				['Вы отправили """"%1 (%2)"""" вверх на '+([_qty] call BIS_fnc_numberText)+' метров.', 4] call "+_kfc_msg+";
-				'Sent """"%1 (%2)"""" up '+([_qty] call BIS_fnc_numberText)+' meters' call AH_fnc_adminLog;
-			"", _name, _puid], 'Launch', format['Цель: %1 (%2)', _name, _puid], ''] call AH_fnc_display;
+				['Вы отправили """"%1 (%2)"""" в Небо на '+([_qty] call BIS_fnc_numberText)+' метров.', 4] call "+_kfc_msg+";
+				'Отправлен """"%1 (%2)"""" в Небо на '+([_qty] call BIS_fnc_numberText)+' метров' call AH_fnc_adminLog;
+			"", _name, _puid], 'Отправить', format['Цель: %1 (%2)', _name, _puid], ''] call AH_fnc_display;
 		};
-		if (_this == 'Send Target to Ocean') exitWith {
+		if (_this == 'Отправить Игрока в Океан') exitWith {
 			['TAR_SENDOCEAN', [_target]] call AH_fnc_adminReq;
 			[format['Вы отправили ""%1 (%2)"" в океан.', _name, _puid], 4] call "+_kfc_msg+";
 			format['Отправлен ""%1 (%2)"" в океан', _name, _puid] call AH_fnc_adminLog;
 		};
-		if (_this == 'Eject Target') exitWith {
+		if (_this == 'Высадить Игрока с Техники') exitWith {
 			if (vehicle _target == _target) exitWith {['Цель не в Технике!', 2] call "+_kfc_msg+"};
 			['TAR_EJECT', [_target]] call AH_fnc_adminReq;
 			[format['Вы высадили ""%1 (%2)"" из его Техники.', _name, _puid], 4] call "+_kfc_msg+";
@@ -1767,7 +1767,7 @@ _AH_Admin = _AH_Admin + ("
 		};
 
 		call {
-			if (_this == 'God Mode') exitWith {
+			if (_this == 'Бессмертие') exitWith {
 				if (_enabled) then {
 					if (isNil 'fnc_usec_damageHandler1') then {fnc_usec_damageHandler1 = fnc_usec_damageHandler};
 					if (isNil 'BIS_Effects_EH_Killed1') then {BIS_Effects_EH_Killed1 = BIS_Effects_EH_Killed};
@@ -1809,7 +1809,7 @@ _AH_Admin = _AH_Admin + ("
 					BIS_Effects_EH_Killed = BIS_Effects_EH_Killed1;
 				};
 			};
-			if (_this == 'Vehicle God Mode') exitWith {
+			if (_this == 'Бессмертие для Техники') exitWith {
 				if (_enabled) then {
 					if (_count == 0) then {
 						"+_kfc_atrd_cfg+" set [count "+_kfc_atrd_cfg+", [{
@@ -1823,7 +1823,7 @@ _AH_Admin = _AH_Admin + ("
 					[_this, 2] call _fn_alterLoop;
 				};
 			};
-			if (_this == 'Zombie Shield') exitWith {
+			if (_this == 'Щит от Зомби') exitWith {
 				if (_enabled) then {
 					if (_count == 0) then {
 						"+_kfc_atrd_cfg+" set [count "+_kfc_atrd_cfg+", [{
@@ -1836,7 +1836,7 @@ _AH_Admin = _AH_Admin + ("
 					[_this, 2] call _fn_alterLoop;
 				};
 			};
-			if (_this == 'No Zombie Aggro') exitWith {
+			if (_this == 'Отключить Агрессию Зомби') exitWith {
 				if (_enabled) then {
 					if (isNil 'player_alertZombies1') then {player_alertZombies1 = player_alertZombies};
 					player_alertZombies = {};
@@ -1850,10 +1850,10 @@ _AH_Admin = _AH_Admin + ("
 					player_alertZombies = player_alertZombies1;
 				};
 			};
-			if (_this == 'Invisibility') exitWith {
+			if (_this == 'Невидимость') exitWith {
 				['TOG_INVIS', if (_enabled) then {true} else {false}] call AH_fnc_adminReq;
 			};
-			if (_this == '[Alt + Left Click] Map Teleport') exitWith {
+			if (_this == '[Alt + ЛКМ] Телепорт по карте') exitWith {
 				disableSerialization;
 
 				local _ctrl = (findDisplay 12) displayCtrl 51;
@@ -1874,14 +1874,14 @@ _AH_Admin = _AH_Admin + ("
 							{player reveal _x} count (player nearEntities ['All', 50]);
 
 							[format['Телепортировался в %1.', mapGridPosition player], 4] call "+_kfc_msg+";
-							format['Телепортировано из %1 из %2', _ini, mapGridPosition player] call AH_fnc_adminLog;
+							format['Телепортировано в %1 из %2', _ini, mapGridPosition player] call AH_fnc_adminLog;
 						};
 					""];
 				} else {
 					_ctrl ctrlSetEventHandler ['MouseButtonUp', ''];
 				};
 			};
-			if (_this == 'Player ESP') exitWith {
+			if (_this == 'ESP Игроков') exitWith {
 				if (_enabled) then {
 					if (_count == 0) then {
 						"+_kfc_atrd_cfg+" set [count "+_kfc_atrd_cfg+", [{
@@ -1916,21 +1916,21 @@ _AH_Admin = _AH_Admin + ("
 					for '_x' from 69 to 169 do {_x cutRsc ['Default', 'PLAIN']};
 				};
 			};
-			if (_this == 'Door Admin') exitWith {
+			if (_this == 'Door Manager доступ') exitWith {
 				if (_enabled) then {
 					DZE_doorManagementAdmins set [count DZE_doorManagementAdmins, getPlayerUID player];
 				} else {
 					DZE_doorManagementAdmins = DZE_doorManagementAdmins - [getPlayerUID player];
 				};
 			};
-			if (_this == 'Plot Admin') exitWith {
+			if (_this == 'Plot For Life доступ') exitWith {
 				if (_enabled) then {
 					DZE_PlotManagementAdmins set [count DZE_PlotManagementAdmins, getPlayerUID player];
 				} else {
 					DZE_PlotManagementAdmins = DZE_PlotManagementAdmins - [getPlayerUID player];
 				};
 			};
-			if (_this == 'Instant Build') exitWith {
+			if (_this == 'Быстрое строительство') exitWith {
 				if (_enabled) then {
 					fn_loopAction1 = fn_loopAction;
 					fn_loopAction = {true};
@@ -1939,7 +1939,7 @@ _AH_Admin = _AH_Admin + ("
 					fn_loopAction1 = nil;
 				};
 			};
-			if (_this == 'No Build Restrictions') exitWith {
+			if (_this == 'Строительство без ограничений') exitWith {
 				if (_enabled) then {
 					canbuild1 = canbuild;
 					canbuild = true;
@@ -2029,10 +2029,10 @@ _AH_Admin = _AH_Admin + ("
 					};
 				};
 			};
-			if (_this == 'No Recoil') exitWith {
+			if (_this == 'Отключить отдачу') exitWith {
 				if (_enabled) then {player setUnitRecoilCoefficient 0} else {player setUnitRecoilCoefficient 1};
 			};
-			if (_this == 'Rapid Fire') exitWith {
+			if (_this == 'Быстрая стрельба') exitWith {
 				if (_enabled) then {
 					if (_count == 0) then {
 						"+_kfc_atrd_cfg+" set [count "+_kfc_atrd_cfg+", [{
@@ -2046,7 +2046,7 @@ _AH_Admin = _AH_Admin + ("
 					[_this, 2] call _fn_alterLoop;
 				};
 			};
-			if (_this == 'Unlimited Ammo') exitWith {
+			if (_this == 'Бесконечные патроны') exitWith {
 				if (_enabled) then {
 					if (_count == 0) then {
 						"+_kfc_atrd_cfg+" set [count "+_kfc_atrd_cfg+", [{
@@ -2059,24 +2059,24 @@ _AH_Admin = _AH_Admin + ("
 					[_this, 2] call _fn_alterLoop;
 				};
 			};
-			if (_this == 'Target Spawning') exitWith {
+			if (_this == 'Выдать Определенному Игроку') exitWith {
 				admin_targetSpawn = if (_enabled) then {true} else {false};
 			};
-			if (_this == 'Unit Icons') exitWith {
+			if (_this == 'Иконки Юнитов') exitWith {
 				if (isNil 'admin_unitIcons' && {isNil 'admin_vehicleIcons'}) then {
 					disableSerialization;
 					((findDisplay 12) displayCtrl 51) ctrlSetEventHandler ['Draw', '(_this select 0) call admin_drawIcons;'];
 				};
 				admin_unitIcons = if (_enabled) then {true} else {false};
 			};
-			if (_this == 'Vehicle Icons') exitWith {
+			if (_this == 'Иконки Техники') exitWith {
 				if (isNil 'admin_unitIcons' && {isNil 'admin_vehicleIcons'}) then {
 					disableSerialization;
 					((findDisplay 12) displayCtrl 51) ctrlSetEventHandler ['Draw', '(_this select 0) call admin_drawIcons;'];
 				};
 				admin_vehicleIcons = if (_enabled) then {true} else {false};
 			};
-			if (_this == 'Animal Markers') exitWith {
+			if (_this == 'Маркера Животных') exitWith {
 				if (_enabled) then {
 					if (_count == 0) then {
 						if (isNil 'admin_animals') then {admin_animals = []};
@@ -2093,7 +2093,7 @@ _AH_Admin = _AH_Admin + ("
 					[2, admin_animals, 'Animal'] call admin_marker;
 				};
 			};
-			if (_this == 'Body Markers') exitWith {
+			if (_this == 'Маркера Трупов') exitWith {
 				if (_enabled) then {
 					if (_count == 0) then {
 						if (isNil 'admin_bodies') then {admin_bodies = []};
@@ -2115,7 +2115,7 @@ _AH_Admin = _AH_Admin + ("
 					[2, admin_bodies, 'Body'] call admin_marker;
 				};
 			};
-			if (_this == 'Plot Markers') exitWith {
+			if (_this == 'Маркера Строй.Столбов') exitWith {
 				if (_enabled) then {
 					if (_count == 0) then {
 						if (isNil 'admin_plots') then {admin_plots = []};
@@ -2132,7 +2132,7 @@ _AH_Admin = _AH_Admin + ("
 					[2, admin_plots, 'Plot'] call admin_marker;
 				};
 			};
-			if (_this == 'Vault Markers') exitWith {
+			if (_this == 'Маркера Сейфов') exitWith {
 				if (_enabled) then {
 					if (_count == 0) then {
 						if (isNil 'admin_vaults') then {admin_vaults = []};
@@ -2149,7 +2149,7 @@ _AH_Admin = _AH_Admin + ("
 					[2, admin_vaults, 'Vault'] call admin_marker;
 				};
 			};
-			if (_this == 'Lockbox Markers') exitWith {
+			if (_this == 'Маркера Сейф-Ящиков') exitWith {
 				if (_enabled) then {
 					if (_count == 0) then {
 						if (isNil 'admin_lockbox') then {admin_lockbox = []};
@@ -2166,7 +2166,7 @@ _AH_Admin = _AH_Admin + ("
 					[2, admin_lockbox, 'Lockbox'] call admin_marker;
 				};
 			};
-			if (_this == 'Storage Markers') exitWith {
+			if (_this == 'Маркера Хранилищ') exitWith {
 				if (_enabled) then {
 					if (_count == 0) then {
 						if (isNil 'admin_storage') then {admin_storage = []};
@@ -2183,7 +2183,7 @@ _AH_Admin = _AH_Admin + ("
 					[2, admin_storage, 'Storage'] call admin_marker;
 				};
 			};
-			if (_this == 'Player Markers') exitWith {
+			if (_this == 'Маркера Игроков') exitWith {
 				if (_enabled) then {
 					if (_count == 0) then {
 						if (isNil 'admin_units') then {admin_units = []};
@@ -2216,7 +2216,7 @@ _AH_Admin = _AH_Admin + ("
 					[2, admin_units, 'Unit'] call admin_marker;
 				};
 			};
-			if (_this == 'Vehicle Markers') exitWith {
+			if (_this == 'Маркера Техники') exitWith {
 				if (_enabled) then {
 					if (_count == 0) then {
 						if (isNil 'admin_vehicles2') then {admin_vehicles2 = []};
@@ -2233,22 +2233,22 @@ _AH_Admin = _AH_Admin + ("
 					[2, admin_vehicles2, 'Vehicle'] call admin_marker;
 				};
 			};
-			if (_this == 'Temporary Spawning') exitWith {
+			if (_this == 'Создать Временно') exitWith {
 				admin_tempSpawn = if (_enabled) then {true} else {false};
 			};
-			if (_this == 'TP Forward Keybind') exitWith {
+			if (_this == 'Телепорт прямо') exitWith {
 				admin_tpkeybind = if (_enabled) then {true} else {false};
 			};
-			if (_this == 'Fly Keybind') exitWith {
+			if (_this == 'Полет вверх') exitWith {
 				admin_flykeybind = if (_enabled) then {true} else {false};
 			};
-			if (_this == 'Vehicle Boost') exitWith {
+			if (_this == 'Ускорение техники') exitWith {
 				admin_vehBoost = if (_enabled) then {true} else {false};
 			};
-			if (_this == 'Spawn Bandit Missions') exitWith {
+			if (_this == 'Создать Бандитскую Миссию') exitWith {
 				admin_waibandit = if (_enabled) then {true} else {false};
 			};
-			if (_this == 'Spawn with Mags') exitWith {
+			if (_this == 'Выдать с Патронами') exitWith {
 				admin_wmags = if (_enabled) then {true} else {false};
 			};
 		};
@@ -2332,10 +2332,10 @@ _AH_Admin = _AH_Admin + ("
 
 			admin_bpMenu = [
 				['===============================================================', 0, []],
-				['>> Search', 0, [], admin_search],
-				['Target Spawning', 1, []],
+				['>> Поиск', 0, [], admin_search],
+				['Выдать Определенному Игроку', 1, []],
 				['===============================================================', 0, []],
-				['                              Backpacks', 0, []]
+				['                              Рюкзаки', 0, []]
 			] + _backpacks + [['', 0, []]];
 		};
 		admin_bpMenu call AH_fnc_add;
@@ -2344,7 +2344,7 @@ _AH_Admin = _AH_Admin + ("
 	admin_cache = {
 		profileNameSpace setVariable ['ATCACHE', admin_toggled];
 		saveProfileNameSpace;
-		['Current toggle configuration cached successfully.', 4] call "+_kfc_msg+";
+		['Текущая конфигурация успешно сохранена.', 4] call "+_kfc_msg+";
 	};
 
 	admin_coords = {
@@ -2395,31 +2395,31 @@ _AH_Admin = _AH_Admin + ("
 
 		comment 'Title text';
 		local _ctrl = _display displayCtrl 1001;
-		_ctrl ctrlSetText 'Authorized SQF Injector';
+		_ctrl ctrlSetText 'Разрешенный SQF менеджер';
 
 		comment 'Server button';
 		_ctrl = _display displayCtrl 1700;
-		_ctrl ctrlSetText 'Server';
+		_ctrl ctrlSetText 'Сервер';
 		_ctrl buttonSetAction ""
 			['MENU_CODE', [toArray(ctrlText 1400), 1]] call AH_fnc_adminReq;
-			['Code executed on the server.', 2] call "+_kfc_msg+";
+			['Код выполнен на Сервере.', 2] call "+_kfc_msg+";
 		"";
 
 		comment 'Local button';
 		_ctrl = _display displayCtrl 1701;
-		_ctrl ctrlSetText 'Local';
+		_ctrl ctrlSetText 'Локально';
 		_ctrl buttonSetAction ""
 			call compile ctrlText 1400;
-			format['Executed the following code locally: %1', ctrlText 1400] call AH_fnc_adminLog;
-			['Code executed locally.', 2] call "+_kfc_msg+";
+			format['Выполняемый код будет исполнен только у ВАС: %1', ctrlText 1400] call AH_fnc_adminLog;
+			['Код выполнен Локально.', 2] call "+_kfc_msg+";
 		"";
 
 		comment 'Global button';
 		_ctrl = _display displayCtrl 1702;
-		_ctrl ctrlSetText 'Global';
+		_ctrl ctrlSetText 'Глобально';
 		_ctrl buttonSetAction ""
 			['MENU_CODE', [toArray(ctrlText 1400), 2]] call AH_fnc_adminReq;
-			['Code executed globally.', 2] call "+_kfc_msg+";
+			['Код выполнен Глобально.', 2] call "+_kfc_msg+";
 		"";
 
 		comment 'X button';
@@ -2558,12 +2558,12 @@ _AH_Admin = _AH_Admin + ("
 	};
 
 	admin_killai = {
-		['Killing AI', 'Радиус:', ""
+		['Убийство ИИ', 'Радиус:', ""
 			local _rad = parseNumber(ctrlText 1400);
 			if (_rad == 0) exitWith {['Вы должны указать радиус!', 2] call "+_kfc_msg+"};
 			['TOOL_KILLAI', _rad] call AH_fnc_adminReq;
 			[format['Вы удалили всех ИИ в радиусе %1 метров от своей позиции.', [_rad] call BIS_fnc_numberText], 4] call "+_kfc_msg+";
-		"", 'Kill', '', ''] call AH_fnc_display;
+		"", 'Убить', '', ''] call AH_fnc_display;
 	};
 
 	admin_lock = {
@@ -2622,10 +2622,10 @@ _AH_Admin = _AH_Admin + ("
 
 			admin_magMenu = [
 				['===============================================================', 0, []],
-				['>> Search', 0, [], admin_search],
-				['Target Spawning', 1, []],
+				['>> Поиск', 0, [], admin_search],
+				['Выдать Определенному Игроку', 1, []],
 				['===============================================================', 0, []],
-				['                              Magazines', 0, []]
+				['                       Предметы/Патроны', 0, []]
 			] + _magazines + [['', 0, []]];
 		};
 		admin_magMenu call AH_fnc_add;
@@ -2650,38 +2650,38 @@ _AH_Admin = _AH_Admin + ("
 	};
 
 	admin_nets = {
-		['Removing Camo Nets', 'Радиус:', ""
+		['Удаление камуфляжных сеток', 'Радиус:', ""
 			local _rad = parseNumber(ctrlText 1400);
 			if (_rad == 0) exitWith {['Вы должны указать радиус!', 2] call "+_kfc_msg+"};
 			if (_rad > Z_VehicleDistance) exitWith {[format['Допустимый радиус %1м. Попробуйте еще раз.', Z_VehicleDistance], 2] call "+_kfc_msg+"};
 			local _nets = nearestObjects [player, ['DesertCamoNet_DZ', 'ForestCamoNet_DZ', 'DesertLargeCamoNet_DZ', 'ForestLargeCamoNet_DZ'], _rad];
 			if (count _nets < 1) exitWith {['Камуфляжных сетей в заданном радиусе нет.', 2] call "+_kfc_msg+"};
 			{
-				PVDZ_obj_Destroy = [_x getVariable ['ObjectID', '0'], _x getVariable ['ObjectUID', '0'], player, _x, dayz_authKey];
+				PVDZ_obj_Destroy = [netID player, netID _x, dayz_authKey];
 				publicVariableServer 'PVDZ_obj_Destroy';
 			} count _nets;
 			[format['Вы удалили %1 камуфляжных сетей в радиусе %2 метров от вашей позиции.', count _nets, [_rad] call BIS_fnc_numberText], 4] call "+_kfc_msg+";
 			format['Удаление %1 камуфляжных сетей в радиусе %2 метров от %3', count _nets, [_rad] call BIS_fnc_numberText, mapGridPosition player] call AH_fnc_adminLog;
-		"", 'Remove', '', ''] call AH_fnc_display;
+		"", 'Удалить', '', ''] call AH_fnc_display;
 	};
 
 	admin_poles = {
-		['Removing Plot Poles', 'Радиус:', ""
+		['Удаление Строй.Столбов', 'Радиус:', ""
 			local _rad = parseNumber(ctrlText 1400);
 			if (_rad == 0) exitWith {['Вы должны указать радиус!', 2] call "+_kfc_msg+"};
 			if (_rad > Z_VehicleDistance) exitWith {[format['Допустимый радиус %1м. Попробуйте еще раз.', Z_VehicleDistance], 2] call "+_kfc_msg+"};
 			local _poles = player nearEntities ['Plastic_Pole_EP1_DZ', _rad];
 			if (count _poles < 1) exitWith {['Строй.столбов в заданном радиусе нет.', 2] call "+_kfc_msg+"};
 			{
-				PVDZ_obj_Destroy = [_x getVariable ['ObjectID', '0'], _x getVariable ['ObjectUID', '0'], player, _x, dayz_authKey];
+				PVDZ_obj_Destroy = [netID player, netID _x, dayz_authKey];
 				publicVariableServer 'PVDZ_obj_Destroy';
 			} count _poles;
 			[format['Вы удалили %1 Строй.столбов в радиусе %2 метров от вашей позиции.', count _poles, [_rad] call BIS_fnc_numberText], 4] call "+_kfc_msg+";
 			format['Удаление %1 Строй.столбов в радиусе %2 метров от %3', count _poles, [_rad] call BIS_fnc_numberText, mapGridPosition player] call AH_fnc_adminLog;
-		"", 'Remove', '', ''] call AH_fnc_display;
+		"", 'Удалить', '', ''] call AH_fnc_display;
 	};
 
-	admin_search = {['Search', 'Найти:', '(ctrlText 1400) call AH_fnc_search;', 'Search', '', ''] call AH_fnc_display};
+	admin_search = {['Поиск по ID', 'Поиск:', '(ctrlText 1400) call AH_fnc_search;', 'Найти', '', ''] call AH_fnc_display};
 
 	admin_spawnBp = {
 		if (admin_targetSpawn && {isNull admin_curTarget}) exitWith {['Цель не выбрана!', 2] call "+_kfc_msg+"};
@@ -2788,18 +2788,18 @@ _AH_Admin = _AH_Admin + ("
 		_this = call AH_fnc_removePrefix;
 
 		local _hour = call {
-			if (_this == '12:00 a.m.') exitWith {0};
-			if (_this == '02:00 a.m.') exitWith {2};
-			if (_this == '04:00 a.m.') exitWith {4};
-			if (_this == '06:00 a.m.') exitWith {6};
-			if (_this == '08:00 a.m.') exitWith {8};
-			if (_this == '10:00 a.m.') exitWith {10};
-			if (_this == '12:00 p.m.') exitWith {12};
-			if (_this == '02:00 p.m.') exitWith {14};
-			if (_this == '04:00 p.m.') exitWith {16};
-			if (_this == '06:00 p.m.') exitWith {18};
-			if (_this == '08:00 p.m.') exitWith {20};
-			if (_this == '10:00 p.m.') exitWith {22};
+			if (_this == '00:00') exitWith {0};
+			if (_this == '02:00') exitWith {2};
+			if (_this == '04:00') exitWith {4};
+			if (_this == '06:00') exitWith {6};
+			if (_this == '08:00') exitWith {8};
+			if (_this == '10:00') exitWith {10};
+			if (_this == '12:00') exitWith {12};
+			if (_this == '14:00') exitWith {14};
+			if (_this == '16:00') exitWith {16};
+			if (_this == '18:00') exitWith {18};
+			if (_this == '20:00') exitWith {20};
+			if (_this == '22:00') exitWith {22};
 		};
 
 		['ENV_TIME', _hour] call AH_fnc_adminReq;
@@ -2872,9 +2872,9 @@ _AH_Admin = _AH_Admin + ("
 
 			admin_vehMenu = [
 				['===============================================================', 0, []],
-				['>> Search', 0, [], admin_search]
+				['>> Поиск', 0, [], admin_search]
 			];
-			if (!admin_forceTemp) then {admin_vehMenu set [count admin_vehMenu, ['Temporary Spawning', 1, []]]};
+			if (!admin_forceTemp) then {admin_vehMenu set [count admin_vehMenu, ['Создать Временно', 1, []]]};
 			admin_vehMenu = admin_vehMenu + [
 				['===============================================================', 0, []],
 				['                             Air Vehicles', 0, []]
@@ -2921,11 +2921,11 @@ _AH_Admin = _AH_Admin + ("
 
 			admin_wepMenu = [
 				['===============================================================', 0, []],
-				['>> Search', 0, [], admin_search],
-				['Spawn with Mags', 1, []],
-				['Target Spawning', 1, []],
+				['>> Поиск', 0, [], admin_search],
+				['Выдать с Патронами', 1, []],
+				['Выдать Определенному Игроку', 1, []],
 				['===============================================================', 0, []],
-				['                               Weapons', 0, []]
+				['                               Оружие', 0, []]
 			] + _weapons + [['', 0, []]];
 		};
 		admin_wepMenu call AH_fnc_add;
@@ -2935,10 +2935,10 @@ _AH_Admin = _AH_Admin + ("
 		_this = call AH_fnc_removePrefix;
 
 		local _sky = call {
-			if (_this == 'Clear Weather') exitWith {[0,0,0,0,0,0,'OVERCAST',false]};
-			if (_this == 'Cloudy Weather') exitWith {[0.5,0,0,0,0,0,'OVERCAST',false]};
-			if (_this == 'Rainy Weather') exitWith {[0.8,0,0.25,0,0,0,'OVERCAST',false]};
-			if (_this == 'Stormy Weather') exitWith {[1,0,0.5,0,0,0,'OVERCAST',false]};
+			if (_this == 'Ясно') exitWith {[0,0,0,0,0,0,'OVERCAST',false]};
+			if (_this == 'Облачно') exitWith {[0.5,0,0,0,0,0,'OVERCAST',false]};
+			if (_this == 'Дождь') exitWith {[0.8,0,0.25,0,0,0,'OVERCAST',false]};
+			if (_this == 'Шторм') exitWith {[1,0,0.5,0,0,0,'OVERCAST',false]};
 		};
 
 		['ENV_WEATHER', _sky] call AH_fnc_adminReq;
@@ -3221,16 +3221,16 @@ _AH_Server = _AH_Server + ("
 		if (_id == 'TAR_LOADOUT') exitWith {[_pobj, _param, _id] call _fnc_sendRE};
 		if (_id == 'LOG_VIEW') exitWith {
 			local _get = call {
-				if ((_param select 0) == 'Admin Logs') exitWith {at_adminlogs};
-				if ((_param select 0) == 'Hack Logs') exitWith {at_hacklogs};
-				if ((_param select 0) == 'New Player Logs') exitWith {at_newPlayerlogs};
-				if ((_param select 0) == 'Safe Zone Logs') exitWith {at_safeZonelogs};
-				if ((_param select 0) == 'Trader Logs') exitWith {at_traderlogs};
-				if ((_param select 0) == 'Lock/Unlock Logs') exitWith {at_lockUnlocklogs};
-				if ((_param select 0) == 'Maintenance Logs') exitWith {at_maintenancelogs};
-				if ((_param select 0) == 'Player Logs') exitWith {at_playerlogs};
-				if ((_param select 0) == 'Surveillance Logs') exitWith {at_surveillancelogs};
-				if ((_param select 0) == 'Death Logs') exitWith {at_deathlogs};
+				if ((_param select 0) == 'Логи Администрации') exitWith {at_adminlogs};
+				if ((_param select 0) == 'Логи Читеров') exitWith {at_hacklogs};
+				if ((_param select 0) == 'Логи Новых Игроков') exitWith {at_newPlayerlogs};
+				if ((_param select 0) == 'Логи Безопасных Зон') exitWith {at_safeZonelogs};
+				if ((_param select 0) == 'Логи Торговли') exitWith {at_traderlogs};
+				if ((_param select 0) == 'Логи Открытий/Закрытий') exitWith {at_lockUnlocklogs};
+				if ((_param select 0) == 'Логи Обслуживания') exitWith {at_maintenancelogs};
+				if ((_param select 0) == 'Логи Игроков') exitWith {at_playerlogs};
+				if ((_param select 0) == 'Логи Наблюдений') exitWith {at_surveillancelogs};
+				if ((_param select 0) == 'Логи Смертей') exitWith {at_deathlogs};
 			};
 			AHPV_Logs = [_param select 0, []];
 			{
@@ -3301,17 +3301,16 @@ _AH_Server = _AH_Server + ("
 			comment 'Создает миссии WAI которые выбрал Админ';
 			local _type = [];
 			if (_param select 1) then {
-				h_missionsrunning = h_missionsrunning + 1;
-				wai_h_starttime = diag_tickTime;
-				wai_mission_markers set [(count wai_mission_markers), ('MainHero' + str(count wai_mission_data))];
-				_type = ['MainHero','Bandit'];
+				WAI_HeroRunning = WAI_HeroRunning + 1;
+				WAI_HeroStartTime = diag_tickTime;
+				_type = ['Bandit'];
 			} else {
-				b_missionsrunning = b_missionsrunning + 1;
-				wai_b_starttime = diag_tickTime;
-				wai_mission_markers set [(count wai_mission_markers), ('MainBandit' + str(count wai_mission_data))];
-				_type = ['MainBandit','Hero'];
+				WAI_BanditRunning = WAI_BanditRunning + 1;
+				WAI_BanditStartTime = diag_tickTime;
+				_type = ['Hero'];
 			};
-			wai_mission_data = wai_mission_data + [[0,[],[],[],[],[],[]]];
+			WAI_MarkerReady = false;
+			WAI_MissionData = WAI_MissionData + [[0,[],[],[],[],[]]];
 			_type execVM format ['\z\addons\dayz_server\WAI\missions\missions\%1.sqf', _param select 0];
 		};")}; _AH_Server = _AH_Server + ("
 	};
@@ -3529,16 +3528,16 @@ _AH_Server = _AH_Server + ("
 			};
 
 			local _txt = switch (_status) do {
-				case 0: {'UNLOCKED'};
-				case 1: {'LOCKED'};
-				case 2: {'PACKED'};
-				case 3: {'FAILED unlocking'};
-				case 4: {'LOCKED'};
-				case 5: {'UNLOCKED'};
-				case 6: {'FAILED unlocking'};
+				case 0: {'ОТКРЫТО'};
+				case 1: {'ЗАКРЫТО'};
+				case 2: {'ЗАПАКОВАНО'};
+				case 3: {'НЕУДАЧНАЯ попытка открыть'};
+				case 4: {'ЗАКРЫТО'};
+				case 5: {'ОТКРЫТО'};
+				case 6: {'НЕУДАЧНАЯ попытка открыть'};
 			};
 
-			local _log = format['%1 a %2 located @ %3 and owned by UID: %4 - Правильный код: %5',
+			local _log = format['%1 Тип: %2 на Локации @ %3 и Хозяин UID: %4 - Правильный код: %5',
 				_txt call AH_fnc_grammar,
 				_type,
 				mapGridPosition (_obj getVariable ['OEMPos', getPosATL _obj]),

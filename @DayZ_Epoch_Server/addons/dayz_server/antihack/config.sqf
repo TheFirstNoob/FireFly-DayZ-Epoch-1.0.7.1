@@ -27,7 +27,7 @@ local _headless = []; //---List UIDs of headless clients here. They will be sent
 
 local _apj = true; //---If true, announces when a player has connected or disconnected in systemChat
 local _bvc = false; //---If true, will delete any vehicles not in server traders or the whitelist below
-local _wai = true; //---If true, enables compatibility with Wicked AI (https://github.com/f3cuk/WICKED-AI)
+local _wai = true; //---If true, enables compatibility with Wicked AI version 2.3 (https://github.com/worldwidesorrow/WICKED-AI)
 
 local _vehWhiteList = []; //---Add any additional vehicles that shouldn't be deleted here (special mission vehicles etc...). Only used if _bvc = true
 
@@ -39,7 +39,7 @@ local _votepercent = 0.5; //---Percentage of the server population that must vot
 
 /* **************** Client Configuration ***************** */
 
-local _chat_prefix = "[YouName Server]: "; //---This prefix will appear before all systemChat messages on clients
+local _chat_prefix = "[Name Server]: "; //---This prefix will appear before all systemChat messages on clients
 
 local _viewDistance = 3000; //---Default view distance. This will only be set on login (set to -1 to disable)
 local _grassLevel = 3.125; //---Default grass level. Options are: 3.125 (Highest performance hit), 6.25, 12.5, 25 (multiplayer default), and 50 (No grass). This will only be set on login (set to -1 to disable)
@@ -86,10 +86,10 @@ local _dropWeps = [ //---Will remove these weapons from the player if they try t
 
 /* ********************* Escape Menu ********************* */
 
-local _escTopT = "YouName Server"; //---Text at the top of the escape menu
+local _escTopT = "Name Server"; //---Text at the top of the escape menu
 local _escTopC = [1,1,1,1]; //---Color of the text at the top of the escape menu
 
-local _escMidT = "v1.0.4"; //---Text in the middle of the escape menu
+local _escMidT = "AH&AT v1.0.5"; //---Text in the middle of the escape menu
 
 local _escLUPT = "by BigEgg"; //---Lower-upper text of the escape menu
 local _escLUPC = [1,1,1,1]; //---Color of the lower-upper text of the escape menu
