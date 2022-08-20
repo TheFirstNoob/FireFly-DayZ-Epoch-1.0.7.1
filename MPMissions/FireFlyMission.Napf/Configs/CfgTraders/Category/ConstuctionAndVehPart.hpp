@@ -36,7 +36,7 @@ class Category_500
 	class Smartphone_DZE		{typeW	buyCVP 2500 worth 		sellCVP 500 worth };
 	class Binocular				{typeW	buyCVP 1000 worth 		sellCVP 200 worth };
 	class Binocular_Vector		{typeW	buyCVP 40000 worth 		sellCVP 8000 worth };
-	class NVGoggles				{typeW	buyCVP 50000 worth 		sellCVP 10000 worth };
+	class NVGoggles_DZE			{typeW	buyCVP 50000 worth 		sellCVP 10000 worth };
 	class Handsaw_DZE			{typeW	buyCVP 1000 worth 		sellCVP 200 worth };
 	class ChainSaw				{typeW	buyCVP 20000 worth 		sellCVP 4000 worth };
 	class ChainSawB				{typeW	buyCVP 20000 worth 		sellCVP 4000 worth };
