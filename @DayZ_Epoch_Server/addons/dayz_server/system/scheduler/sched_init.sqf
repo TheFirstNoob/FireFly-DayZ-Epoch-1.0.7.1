@@ -27,7 +27,7 @@ local _list 	=
 	 [ 300,	 	336,	sched_lootpiles_5m,         sched_lootpiles_5m_init ],
 	 [ 90,		60,		sched_dzms,					sched_dzms_init ],
 	 [ 90,		60,		sched_wai,					sched_wai_init ],
-	 [ 6,	 	340,	sched_lootpiles ],
+	 [ 7,	 	340,	sched_lootpiles ],
 	 [ 900,		0,		sched_sync ],
 	 [ 120,		48,		sched_safetyVehicle ],
 	 [ 360,		480,	sched_fps ],

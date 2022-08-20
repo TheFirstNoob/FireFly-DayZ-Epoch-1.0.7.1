@@ -87,7 +87,7 @@ class CfgLoot
 			};
 			
 			lootChance = 0;
-			lootRefreshTimer = 900;
+			lootRefreshTimer = 1200;
 			lootGroup = "";
 			lootPos[] = {};
 		};
