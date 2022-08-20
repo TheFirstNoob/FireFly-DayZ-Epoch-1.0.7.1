@@ -34,7 +34,7 @@ ToolsMilitary[] =
 	{Loot_TOOL,		1,		ItemCompass},
 	{Loot_TOOL,		1,		ItemFlashlightRed},
 	{Loot_TOOL,		1,		Binocular},
-	{Loot_TOOL,		1,		NVGoggles},
+	{Loot_TOOL,		1,		NVGoggles_DZE},
 	{Loot_TOOL,		1,		Binocular_Vector},
 	{Loot_TOOL,		1,		ItemEtool} //Equal to ItemShovel just the military version
 };
