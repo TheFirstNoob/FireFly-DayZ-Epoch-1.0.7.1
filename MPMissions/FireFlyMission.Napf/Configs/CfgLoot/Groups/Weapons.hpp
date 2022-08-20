@@ -140,8 +140,8 @@ weaponsEU[] =
 	{Loot_WEAPON,		5,		M1014_DZ},
 	
 	// Sniper Rifles
-	{Loot_WEAPON,		1,		L115A3_DZ}, // Tan Lapua
-	//{Loot_WEAPON,		1,		L115A3_2_DZ}, // Green Lapua
+	//{Loot_WEAPON,		1,		L115A3_DZ}, // Tan Lapua
+	{Loot_WEAPON,		1,		L115A3_2_DZ}, // Green Lapua
 	{Loot_WEAPON,		2,		MK17_Sniper_SD_DZ},
 	{Loot_WEAPON,		2,		MK17_Sniper_DZ},	
 	{Loot_WEAPON,		2,		HK417_Sniper_SD_DZ},
@@ -233,14 +233,14 @@ weaponsCZ[] =
 	
 	// Assault Rifles
 	{Loot_WEAPON,		6,		SA58_DZ},
-	{Loot_WEAPON,		6,		Sa58V_Camo_CCO_DZ},
-	{Loot_WEAPON,		6,		Sa58V_Camo_ACOG_DZ},
+	//{Loot_WEAPON,		6,		Sa58V_Camo_CCO_DZ},
+	//{Loot_WEAPON,		6,		Sa58V_Camo_ACOG_DZ},
 	{Loot_WEAPON,		6,		SA58_RIS_DZ},
-	{Loot_WEAPON,		6,		CZ805_A1_DZ},
-	{Loot_WEAPON,		6,		CZ805_A1_GL_DZ},
-	{Loot_WEAPON,		6,		CZ805_A2_DZ},
-	{Loot_WEAPON,		6,		CZ805_A2_SD_DZ},
-	{Loot_WEAPON,		3,		CZ805_B_GL_DZ}, // 7.62x51, uses SCAR mags.
+	//{Loot_WEAPON,		6,		CZ805_A1_DZ},
+	//{Loot_WEAPON,		6,		CZ805_A1_GL_DZ},
+	//{Loot_WEAPON,		6,		CZ805_A2_DZ},
+	//{Loot_WEAPON,		6,		CZ805_A2_SD_DZ},
+	//{Loot_WEAPON,		3,		CZ805_B_GL_DZ}, // 7.62x51, uses SCAR mags.
 	
 	// Machine Gun
 	{Loot_WEAPON,		6,		UK59_DZ}
