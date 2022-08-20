@@ -94,7 +94,7 @@ DZE_doorManagement 	= 	true; // Enable Door Management by @DevZupa.
 dayz_groupSystem 	= 	true; // Enable group system
 
 // Кровососы	
-DZE_Bloodsuckers 	= 	true; // Enable bloodsucker spawning.
+DZE_Bloodsuckers 	= 	false; // Enable bloodsucker spawning.
 
 // ПСИ-Штормы
 DZE_EVR 	= 	true; 	// Вкл/Выкл ПСИ-Штормы
@@ -542,7 +542,7 @@ if (!isDedicated) then
 		ZSC_defaultStorageMultiplier 		= 	200; 		// Количество мест для хранения денег для тех объектов, у которых нет слотов для хранения: ["Suitcase","Info_Board_EP1","Laptop_EP1","SatPhone"]
 		ZSC_MaxMoneyInStorageMultiplier 	= 	3500; 		// Множитель хранения денег в Объектах (Сейфы, техника и т.п.) на Количество слотов. НАПРИМЕР: 200 Предметных слотов * 5000 значение равняется 1 миллиону хранимых денег. (200 * 5000 = 1,000,000)
 
-		ZSC_ZombieCoins 	= 	[true,[0,7]]; 		// Зомби имеют деньги при себе? True - Вкл / False - Выкл // Значения 0 - 5: Это От скольки и До скольки денег может быть случайно у Зомби.
+		ZSC_ZombieCoins 	= 	[true,[0,15]]; 		// Зомби имеют деньги при себе? True - Вкл / False - Выкл // Значения 0 - 5: Это От скольки и До скольки денег может быть случайно у Зомби.
 	};
 
 	// Инструменты
