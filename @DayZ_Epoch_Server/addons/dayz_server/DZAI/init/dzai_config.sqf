@@ -8,7 +8,7 @@ diag_log "[DZAI]: Чтение файла конфигурации...";
 	- Ряд функций имеет зависимость от других основных функции. Будьте внимательны где указаны комментарии.
 	
 	НОВОЕ:
-	- Эти функции изначально были в DZAI, но без возможности конфигурации вручную.
+	- Эти функции изначально были в DZAI, но без возможности конфигурации внутри конфиг файла.
 */
 
 /* === DZAI Настройки === */
@@ -119,10 +119,10 @@ DZAI_humanityGain = 0;
 DZAI_radioMsgs = false;
 // НОВОЕ: Расстояние для отправки радио-сообщений игроку (В метрах).
 // ВАЖНО: Не влияет если DZAI_findKiller = false.
-DZAI_TransmitRange = 50;
+DZAI_TransmitRange = 150;
 // НОВОЕ: Расстояние для передачи информации Лидера ИИ своим согруппникам.
 // ВАЖНО: Не влияет если DZAI_findKiller = false.
-DZAI_ReceiveDistance = 150;
+DZAI_ReceiveDistance = 250;
 
 //If enabled, last surviving unit of a group will be granted slightly boosted skills. No effect if unit is spawned alone (Default: false)
 DZAI_lastManStanding = false;
@@ -167,10 +167,10 @@ DZAI_respawnLimit2 = -1; 	//Respawn limit for high level AI found in places with
 DZAI_respawnLimit3 = -1; 	//Respawn limit for very high level AI in places with high-grade military loot (Default: -1)
 
 //Spawn probabilities
-DZAI_spawnChance0 = 0.20;	//Spawn chance for low-skill AI typically found in small towns (Default: 0.40)
-DZAI_spawnChance1 = 0.35;	//Spawn chance for mid-level AI typically found in cities and large towns (Default: 0.60)
-DZAI_spawnChance2 = 0.50;	//Spawn chance for high-level AI typically found in places with military-grade loot (Default: 0.80)
-DZAI_spawnChance3 = 0.65;	//Spawn chance for expert-level AI found in areas with high-grade military loot (Default: 0.90)
+DZAI_spawnChance0 = 0.27;	//Spawn chance for low-skill AI typically found in small towns (Default: 0.40)
+DZAI_spawnChance1 = 0.38;	//Spawn chance for mid-level AI typically found in cities and large towns (Default: 0.60)
+DZAI_spawnChance2 = 0.49;	//Spawn chance for high-level AI typically found in places with military-grade loot (Default: 0.80)
+DZAI_spawnChance3 = 0.60;	//Spawn chance for expert-level AI found in areas with high-grade military loot (Default: 0.90)
 
 
 /*	Dynamic AI Spawning Settings
@@ -268,12 +268,12 @@ DZAI_respawnTMaxL = 3600;
 //Classnames of land vehicle types to use, with the maximum amount of each type to spawn.
 DZAI_vehList =
 [
-	["TT650_Civ_DZE",			3]
+	 ["TT650_Civ_DZE",			3]
 	,["TT650_Ins_DZE",			3]
 	,["ATV_CZ_EP1_DZE",			3]
 	,["Tractor_DZE",			3]
 	,["TractorOld_DZE",			3]
-	,["Tractor_Armored_DZE",	2]
+	,["Tractor_Armored_DZE",	3]
 
 	,["VWGolf_DZE",				2]
 	,["Mini_Cooper_DZE",		2]
@@ -297,15 +297,30 @@ DZAI_vehList =
 	,["Hummer_DZE",				1]
 	,["HMMWV_Ambulance_DZE",	1]
 	,["Ikarus_White_DZE",		1]
+	,["Ikarus_Armored_DZE",		1]
+	
+	,["SUV_Camo",				1]
+	,["SUV_Blue",				1]
+	,["SUV_Green",				1]
+	,["SUV_Yellow", 			1]
+	,["SUV_Red",				1]
+	,["SUV_White", 				1]
+	,["SUV_Pink",				1]
+	,["SUV_Charcoal",			1]
+	,["SUV_Orange",				1]
+	,["SUV_Silver",				1]
+	,["SUV_TK_CIV_EP1_DZE",		1]
 
 	,["BTR40_TK_GUE_EP1_DZE",		1]
 	,["BTR40_TK_INS_EP1_DZE",		1]
 	,["BTR40_MG_TK_GUE_EP1_DZE",	1]
 	,["BTR40_MG_TK_INS_EP1_DZE",	1]
+	,["UAZ_MG_CDF_DZE",				1]
+	,["UAZ_MG_INS_DZE",				1]
 ];
 
 //Difficulty level of land vehicle patrol units. Difficulty level also affects unit loadout and loot. Possible values: 0 to 3 (Default: 3)
-DZAI_vehUnitLevel = 0;
+DZAI_vehUnitLevel = 1;
 
 //Maximum number of gunner units per land vehicle. Limited by actual number of available gunner positions. (Default: 1)
 DZAI_vehGunnerUnits = 1;
@@ -348,7 +363,7 @@ DZAI_launcherTypes = [];
 DZAI_launcherLevels = [1,2,3];								
 
 //Limit of number of launcher-type weapons to add to each AI group. Groups cannot have more launcher weapons than their weapongrade value (Default: 1).
-DZAI_launchersPerGroup = 1;
+DZAI_launchersPerGroup = 0;
 
 
 /*	AI loot quantity settings
@@ -555,7 +570,7 @@ DZAI_Backpacks3 = ["CzechBackpack_DZE1","CoyoteBackpack_DZE1"];
 //AI Food/Medical item types. DZAI_Edibles: Drinkable and edible items. DZAI_Medicals1: List of common medical items to be added to AI inventory. DZAI_Medicals2: List of all medical items available only in hospitals to be added to AI backpack.
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 DZAI_Edibles = ["ItemSodaCoke", "ItemSodaPepsi", "ItemWaterbottle", "FoodCanSardines", "FoodCanBakedBeans", "FoodCanFrankBeans", "FoodCanPasta", "ItemWaterbottleUnfilled","ItemWaterbottleBoiled","FoodmuttonCooked","FoodchickenCooked","FoodBaconCooked","FoodRabbitCooked","FoodbaconRaw","FoodchickenRaw","FoodmuttonRaw","foodrabbitRaw","FoodCanUnlabeled","FoodPistachio","FoodNutmix","FoodMRE"];
-// CUSTOM FNC: Вкл/Выкл выдачу бинта гарантировано в ИИ?
+// NEW: Вкл/Выкл выдачу бинта гарантировано в ИИ?
 DZAI_GuaranteedBandage = false;
 DZAI_Medicals1 = ["ItemBandage", "ItemPainkiller"];
 DZAI_Medicals2 = ["ItemPainkiller", "ItemMorphine", "ItemBandage", "ItemBloodbag", "ItemAntibiotic","ItemEpinephrine"];
