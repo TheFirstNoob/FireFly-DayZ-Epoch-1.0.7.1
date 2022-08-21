@@ -11,4 +11,13 @@ if (!isDedicated) then
 	Player_MaintainVG 		= 	compile preprocessFileLineNumbers "dayz_code\actions\virtualGarage\player_MaintainVG.sqf";
 	// https://github.com/EpochModTeam/DayZ-Epoch/commit/1b08487791b394a2896bbf258be953c434769818
 	fnc_issheltered 		= 	compile preprocessFileLineNumbers "dayz_code\compile\fn_isSheltered.sqf";
+	
+	// FIX EVR hit player inside DZE_SafeZonePosArray with Screen Effects
+	// https://github.com/EpochModTeam/DayZ-Epoch/issues/2187#issuecomment-1221432669
+	fnc_evr1 	= 	fnc_evr;
+	fnc_evr 	=
+	{
+		if (({player distance (_x select 0) < _x select 1} count DZE_SafeZonePosArray) > 0 && _this == "Stage7") exitWith {};
+		_this call fnc_evr1;
+	};
 };
