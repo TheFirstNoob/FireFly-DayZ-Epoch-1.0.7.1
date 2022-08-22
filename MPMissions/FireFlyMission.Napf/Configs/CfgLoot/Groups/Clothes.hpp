@@ -1,5 +1,5 @@
 clothes[] = {
-	{Loot_MAGAZINE,	1,	Skin_Bandit1_DZ}
+	//{Loot_MAGAZINE,	1,	Skin_Bandit1_DZ}
 	/*
 	{Loot_MAGAZINE,	1,	Skin_Bandit2_DZ},
 	{Loot_MAGAZINE,	1,	Skin_Bandit3_DZ},
@@ -85,7 +85,7 @@ clothes[] = {
 };
 
 ghilliesuits[] = {
-	{Loot_MAGAZINE,	1,	Skin_SniperW_DZ}
+	//{Loot_MAGAZINE,	1,	Skin_SniperW_DZ}
 	/*
 	{Loot_MAGAZINE,	1,	Skin_Sniper1_DZ},
 	{Loot_MAGAZINE,	1,	Skin_Sniper1W_DZ},	
@@ -163,7 +163,7 @@ ghilliesuits[] = {
 };
 
 stalkerclothes[] = {
-	{Loot_MAGAZINE,	1,	Skin_gsc_military_helmet_wdl_DZ}
+	//{Loot_MAGAZINE,	1,	Skin_gsc_military_helmet_wdl_DZ}
 	/*
 	{Loot_MAGAZINE,	1,	Skin_gsc_military_helmet_wdlW_DZ},
 	{Loot_MAGAZINE,	1,	Skin_gsc_military_head_wdl_DZ},
@@ -193,7 +193,7 @@ stalkerclothes[] = {
 
 // These should probably be split up into separate groups.
 militaryclothes[] = {
-	{Loot_GROUP,	1,	ghilliesuits}
+	//{Loot_GROUP,	1,	ghilliesuits}
 	/*
 	{Loot_GROUP,	1,	stalkerclothes},
 	{Loot_MAGAZINE,	1,	Skin_Camo1_DZ},	
