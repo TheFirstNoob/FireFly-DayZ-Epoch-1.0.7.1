@@ -104,7 +104,7 @@ AllowedVehiclesList =
 	//,["V3S_Refuel_TK_GUE_EP1_DZ",	_Ratio1]	// V3S (Заправочный)
 	
 	,["VWGolf_DZE",			_Ratio4]	// Хэтчбэг
-	,["Mini_Cooper_DZE",	_Ratio4]	// Миникупер
+	//,["Mini_Cooper_DZE",	_Ratio4]	// Миникупер
 
 	,["TT650_Civ_DZE",	_Ratio5]	// Мотик TT650
 	,["TT650_Ins_DZE",	_Ratio5]	// Мотик TT650

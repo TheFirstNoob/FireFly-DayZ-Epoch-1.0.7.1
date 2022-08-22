@@ -276,7 +276,7 @@ DZAI_vehList =
 	,["Tractor_Armored_DZE",	3]
 
 	,["VWGolf_DZE",				2]
-	,["Mini_Cooper_DZE",		2]
+	//,["Mini_Cooper_DZE",		2]
 	,["Skoda_DZE",				2]
 	,["SkodaBlue_DZE",			2]
 	,["SkodaRed_DZE",			2]

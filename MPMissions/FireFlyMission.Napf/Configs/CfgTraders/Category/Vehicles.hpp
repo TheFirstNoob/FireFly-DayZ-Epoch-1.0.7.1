@@ -38,7 +38,7 @@ class Category_302
 	class GLT_M300_LT_DZE			{typeVeh	buyV 6750 worth 	sellV 1350 worth };
 	class GLT_M300_ST_DZE			{typeVeh	buyV 6750 worth 	sellV 1350 worth };
 	class VWGolf_DZE				{typeVeh	buyV 6750 worth 	sellV 1350 worth };
-	class Mini_Cooper_DZE			{typeVeh	buyV 6750 worth 	sellV 1350 worth };
+	//class Mini_Cooper_DZE			{typeVeh	buyV 6750 worth 	sellV 1350 worth }; 	// Удален. Имеет сломанные стекла.
 	class Volha_1_TK_CIV_EP1_DZE	{typeVeh	buyV 6750 worth 	sellV 1350 worth };
 	class Volha_2_TK_CIV_EP1_DZE	{typeVeh	buyV 6750 worth 	sellV 1350 worth };
 	class VolhaLimo_TK_CIV_EP1_DZE	{typeVeh	buyV 6750 worth 	sellV 1350 worth };
