@@ -1,8 +1,8 @@
 respawn = "BASE";
 respawnDelay = 0;
 respawnDialog = 0;
-onLoadMission = "DayZ Epoch Napf";
-OnLoadIntro = "Welcome to Napf";
+onLoadMission = "FireFly DayZ Epoch Napf 1.0.7.1";
+OnLoadIntro = "Администрация: [BE]First";
 OnLoadIntroTime = 0;
 OnLoadMissionTime = 0;
 disabledAI = 1;
@@ -17,7 +17,7 @@ valuesParam1[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30, 31};
 defValueParam1 = 10; //auto login time limit in seconds, set value to 31 to disable auto login
 textsParam1[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30, "Disabled"};
 
-loadScreen = "";
+loadScreen = "loadingscreen.jpg";
 
 class Header
 {

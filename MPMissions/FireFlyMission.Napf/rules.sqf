@@ -2,9 +2,10 @@ private ["_messages","_timeout"];
 
 _messages =
 [
-	 ["YouServer", "Добро пожаловать "+(name player)]
+	 ["FireFly", "Добро пожаловать "+(name player)]
 	,["Карта", worldName]
-	,["Discord:", "add link"]
+	,["Discord:", "https://discord.gg/8nHMeCH"]
+	,["Сборка", "Доступна в открытом доступе на GitHub"]
 	,["Пожалуйста", "Сообщайте администрации о<br />любых проблемах, недоработках<br />и багах на сервере."]
 ];
  
@@ -18,8 +19,8 @@ _timeout = 5;
 	_titleText 	= 	format[("<t font='TahomaB' size='0.80' color='#a81e13' align='right' shadow='1' shadowColor='#000000'>%1</t><br /><t shadow='1'shadowColor='#000000' font='TahomaB' size='0.60' color='#FFFFFF' align='right'>%2</t>"), _title, _content];
 	[
 		_titleText,
-		[safezoneX + safezoneW - 0.8,0.50],
-		[safezoneY + safezoneH - 0.8,0.7],
+		[safezoneX + safezoneW - 0.8,0.50],     //DEFAULT: 0.5,0.35
+		[safezoneY + safezoneH - 0.8,0.7],      //DEFAULT: 0.8,0.7
 		_timeout,
 		0.5
 	] spawn BIS_fnc_dynamicText;
