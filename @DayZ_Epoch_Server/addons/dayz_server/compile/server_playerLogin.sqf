@@ -176,7 +176,7 @@ _isHiveOk 	= 	(_hiveVer >= dayz_hiveVersionNo);
 
 if (_newPlayer) then
 {
-	_characterCoins = floor(random 50000);
+	_characterCoins = floor(random 35000);
 };
 
 PVCDZ_plr_Login 	= 	[_charID,_inventory,_backpack,_survival,_isNew,dayz_versionNo,_model,_isHiveOk,_newPlayer,_isInfected,_group,_CharacterCoins,_playerCoins,_BankCoins];
