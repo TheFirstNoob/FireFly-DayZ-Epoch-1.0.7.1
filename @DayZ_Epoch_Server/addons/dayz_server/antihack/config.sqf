@@ -11,9 +11,9 @@ local _mod = []; //---Add moderators here - don't forget commas!
 local _admin = []; //---Add admins here - don't forget commas!
 local _headAdmin = []; //---Add head admins here - don't forget commas!
 local _owner = [
-					 ["", "76561198115492831", true, false, true, ""]
-					,["", "76561198115492831", true, false, true, ""]
-					,["", "76561198115492831", true, false, true, ""]
+					 ["", "76561198072428132", true, false, true, ""]
+					,["", "76561197993933487", true, false, true, ""]
+					,["", "76561198062527122", true, false, true, ""]
 	//["", "76561198115492831", true, false, true, "Test"],
 	//[["BigEgg", "FatEgg", "TwinkieDestroyer"], "76561198115492831", true, false, true, ""]
 ]; //---Add owners here - don't forget commas!
@@ -39,7 +39,7 @@ local _votepercent = 0.5; //---Percentage of the server population that must vot
 
 /* **************** Client Configuration ***************** */
 
-local _chat_prefix = "[Name Server]: "; //---This prefix will appear before all systemChat messages on clients
+local _chat_prefix = "[FireFly Server]: "; //---This prefix will appear before all systemChat messages on clients
 
 local _viewDistance = 3000; //---Default view distance. This will only be set on login (set to -1 to disable)
 local _grassLevel = 3.125; //---Default grass level. Options are: 3.125 (Highest performance hit), 6.25, 12.5, 25 (multiplayer default), and 50 (No grass). This will only be set on login (set to -1 to disable)
@@ -86,15 +86,15 @@ local _dropWeps = [ //---Will remove these weapons from the player if they try t
 
 /* ********************* Escape Menu ********************* */
 
-local _escTopT = "Name Server"; //---Text at the top of the escape menu
+local _escTopT = "FireFly Server"; //---Text at the top of the escape menu
 local _escTopC = [1,1,1,1]; //---Color of the text at the top of the escape menu
 
-local _escMidT = "AH&AT v1.0.5"; //---Text in the middle of the escape menu
+local _escMidT = "Сервер: МСК"; //---Text in the middle of the escape menu
 
-local _escLUPT = "by BigEgg"; //---Lower-upper text of the escape menu
+local _escLUPT = "Приятной игры"; //---Lower-upper text of the escape menu
 local _escLUPC = [1,1,1,1]; //---Color of the lower-upper text of the escape menu
 
-local _escLBOT = "for DayZ Epoch"; //---Lower-bottom text of the escape menu
+local _escLBOT = "Автор: [BE]First"; //---Lower-bottom text of the escape menu
 local _escLBOC = [1,1,1,1]; //---Color of the lower-bottom text of the escape menu
 
 local _missionFiles = [ //---List of files within your mission. Antihack will make sure that none have been changed.
