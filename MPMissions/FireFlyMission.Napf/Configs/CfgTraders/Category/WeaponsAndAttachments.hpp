@@ -698,7 +698,7 @@ class Category_112
 	class M200_CheyTac_DZ			{typeW		buyWA 13500 worth 		sellWA 2700 worth };
 	class M200_CheyTac_SD_DZ		{typeW		buyWA -1 worth 			sellWA 15000 worth };
 	class MSR_DZ					{typeW		buyWA 14500 worth 		sellWA 2900 worth };
-	class MSR_SD_DZ					{typeW		buyWA 17000 worth 		sellWA 3400 worth };
+	class MSR_SD_DZ					{typeW		buyWA -1 worth 			sellWA 15000 worth };
 	class MSR_NV_DZ					{typeW		buyWA -1 worth 			sellWA 15000 worth };
 	class MSR_NV_SD_DZ				{typeW		buyWA -1 worth 			sellWA 17500 worth };
 	class XM2010_DZ					{typeW		buyWA 13500 worth 		sellWA 2700 worth };
