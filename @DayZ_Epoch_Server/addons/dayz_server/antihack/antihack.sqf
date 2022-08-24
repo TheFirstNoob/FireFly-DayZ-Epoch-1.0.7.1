@@ -310,7 +310,7 @@ if (_safezones) then {_AH_Global = _AH_Global + ("
 				[format['Вы находились в Торговой зоне всего %1 секунд.', round _time], 4] call "+_kfc_msg+";
 			};
 		")}; _AH_Global = _AH_Global + ("
-		['Protection disabled!', 4] call "+_kfc_msg+";
+		['Защита Отключена. Удачи!', 4] call "+_kfc_msg+";
 		fnc_usec_damageHandler = fnc_usec_damageHandler1;
 		player_zombieCheck = player_zombieCheck1;
 		player_fired = player_fired1;
@@ -681,7 +681,7 @@ _AH_Global = _AH_Global + ("
 	}, _queue] spawn {(_this select 1) call (_this select 0)};
 ");
 call compile (_kfc_gclnt + " = {" + _AH_Global + "}");
-diag_log (_diag_prefix + "Global client compiled successfully");
+diag_log (_diag_prefix + "Глобальные функции успешно загружены!");
 
 /* ***** Player Code (sent to normal player clients) ***** */
 
@@ -849,7 +849,7 @@ _AH_Normal = _AH_Normal + ("
 	};
 ");
 call compile (_kfc_nclnt + " = {" + _AH_Normal + "}");
-diag_log (_diag_prefix + "Normal client compiled successfully");
+diag_log (_diag_prefix + "Клиент функции успешно загружены!");
 
 /* ********* Staff Code (sent to staff clients) ********* */
 
@@ -1266,7 +1266,7 @@ _AH_Admin = _AH_Admin + ("
 					{_add set [count _add, [_x, 8, []]]} count death_logs;
 				};
 
-				[format['%1 synchronized successfully.', (_in select 0) call AH_fnc_grammar], 4] call "+_kfc_msg+";
+				[format['%1 успешно синхронизировано.', (_in select 0) call AH_fnc_grammar], 4] call "+_kfc_msg+";
 				_add call AH_fnc_add; call AH_fnc_refresh;
 			};
 		};
@@ -2562,7 +2562,7 @@ _AH_Admin = _AH_Admin + ("
 			local _rad = parseNumber(ctrlText 1400);
 			if (_rad == 0) exitWith {['Вы должны указать радиус!', 2] call "+_kfc_msg+"};
 			['TOOL_KILLAI', _rad] call AH_fnc_adminReq;
-			[format['Вы удалили всех ИИ в радиусе %1 метров от своей позиции.', [_rad] call BIS_fnc_numberText], 4] call "+_kfc_msg+";
+			[format['Вы убили всех ИИ в радиусе %1 метров от своей позиции.', [_rad] call BIS_fnc_numberText], 4] call "+_kfc_msg+";
 		"", 'Убить', '', ''] call AH_fnc_display;
 	};
 
@@ -2953,7 +2953,7 @@ _AH_Admin = _AH_Admin + ("
 	};
 ");
 call compile (_kfc_sclnt + " = {" + _AH_Admin + "}");
-diag_log (_diag_prefix + "Функции клиента Администратора успешно загружены");
+diag_log (_diag_prefix + "Функции клиент Администратора успешно загружены!");
 
 /* ********** Server Code (runs on server only) ********** */
 
@@ -3453,7 +3453,7 @@ _AH_Server = _AH_Server + ("
 		onPlayerDisconnected {
 			[_uid,_name] call server_onPlayerDisconnect;
 			[format['%1 (%2)', _name, _uid], 8, 'Отключен от сервера'] call AH_fnc_log;");if (_apj) then {_AH_Server = _AH_Server + ("
-			['ALL', format['%1 ОТКЛЮЧИЛСЯ', toUpper _name]] call AH_fnc_msg;");}; _AH_Server = _AH_Server + ("
+			['ALL', format['%1 отключился от сервера', toUpper _name]] call AH_fnc_msg;");}; _AH_Server = _AH_Server + ("
 		};
 		server_tradeObj1 = server_tradeObj;
 		server_tradeObj = {
@@ -3743,8 +3743,8 @@ _AH_Server = _AH_Server + ("
 ");
 
 call compile _AH_Server;
-diag_log (_diag_prefix + "Код сервера успешно скомпилирован");
-diag_log (_diag_prefix + "Epoch Antihack/Admin Tools инициализация завершена");
+diag_log (_diag_prefix + "Код сервера успешно загружен!");
+diag_log (_diag_prefix + "Epoch Antihack/Admin Tools инициализация успешно завершена!");
 
 /* ******************************************************* */
 /* ******************************************************* */
