@@ -10,7 +10,7 @@
 DZMSAICount = false;
 
 // If players are not near the AI behavior is disabled and the NPCs are hidden.
-DZMSAICaching = true;
+DZMSAICaching = false;
 
 // Time in minutes for a mission to timeout.
 DZMSMissionTimeOut = 20;
