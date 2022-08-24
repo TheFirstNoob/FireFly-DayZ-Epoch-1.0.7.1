@@ -11,10 +11,10 @@ dayz_REsec 						= 	1;		// DayZ RE Security / 1 = Вкл, 0 = Выкл.
 // Отключает Спавн Лута и Зомби, а так же защищает игроков в указанных зонах. Обычно для Трейд-Зон.
 DZE_SafeZonePosArray =
 [
-	 [[3164,12179,0],	85]		// ТЗ Церковь
-	,[[9670,2955,0],	120]	// ТЗ Гора
-	,[[10580,13110,0],	80]		// ТЗ Бункер
-	,[[13155,6395,0],	90]		// ТЗ Сторож
+	 [[3164, 	12179,	0],	70]	// ТЗ Церковь
+	,[[8958, 	3424, 	0],	70]	// ТЗ Эверест
+	,[[10580, 	13110,	0],	70]	// ТЗ Бункер
+	,[[13155, 	6395, 	0],	80]	// ТЗ Сторож
 ];
 
 // ТОЛЬКО ДЛЯ ЧЕРНОРУСИИ!!!
@@ -28,7 +28,7 @@ DZE_NoVehicleExplosions 	= 	false; 		// Выключить Взрыв от Те�
 DZE_SafeZoneZombieLoot 		= 	false;  	// Разрешить Предметам и Зомби в зонах DZE_SafeZonePosArray?
 dayz_ForcefullmoonNights 	= 	false; 		// Отключить лунный свет ночью? Выкручивание яркости в данном случае не поможет. True - Да / False - Нет.
 dayz_classicBloodBagSystem 	= 	false; 		// Отключить систему Групп крови и использовать один тип крови для всех с ItemBloodbag? True - Да / False - Нет.
-dayz_enableFlies 			= 	false; 		// Включить мух на Трупах? (Негативно влияет на FPS). True - Да / False - Нет.
+dayz_enableFlies 			= 	true; 		// Включить мух на Трупах? (Негативно влияет на FPS). True - Да / False - Нет.
 DZE_PlayerZed 				= 	false; 		// Если игрок умер при заражении, то он может стать зомби? True - Да / False - Нет.
 DZE_HeliLift 				= 	false; 		// Включить Epoch буксировочную систему? True - Да / False - Нет.
 
@@ -199,8 +199,8 @@ if (isServer) then
 	// ПСИ-Штормы
 	if (DZE_EVR) then
 	{
-		DZE_EVRFirstTime 	= 	[5, 10]; 	// Random time in minutes after server restart to begin the first EVR storm [min, max].
-		DZE_EVRTimer 		= 	[45, 180]; 	// Random time in minutes between additional EVR storms [min, max].
+		DZE_EVRFirstTime 	= 	[60, 180]; 	// Random time in minutes after server restart to begin the first EVR storm [min, max].
+		DZE_EVRTimer 		= 	[45, 240]; 	// Random time in minutes between additional EVR storms [min, max].
 	};
 };
 
@@ -278,7 +278,7 @@ if (!isDedicated) then
 		,"Land_MBG_Killhouse_2"
 		,"Land_Dam_Conc_20"
 	];
-	DZE_NoBuildNearDistance 		= 	150; 		// Дистанция в метрах от обьекта где нельзя строить.
+	DZE_NoBuildNearDistance 		= 	250; 		// Дистанция в метрах от обьекта где нельзя строить.
 	DZE_RestrictedBuildingZones	= []; // [["Balota Airfield", [5158.72, 2518.75, 0], 600]];	// [["description", [position], distance], ["description", [position], distance], ... ];
 	DZE_BlacklistedBuildings = [];	// [["Fire Station", "Land_a_stationhouse", 250]];	// [["description", "className", distance], ["description", "className", distance], ... ];
 	DZE_buildOnWater = true; // Allow building in or over sea water. Note: Sea level will change between low tide and high tide and may cause base flooding. This does not affect inland ponds, dams or lakes.
