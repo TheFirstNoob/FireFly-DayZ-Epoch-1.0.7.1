@@ -61,7 +61,7 @@ sched_corpses = {
 						};
 					};
 
-					if (diag_tickTime - _deathTime > 40*60) then
+					if (diag_tickTime - _deathTime > 360*60) then
 					{
 						if (_x getVariable["sched_co_fliesDeleted",false] or !dayz_enableFlies) then
 						{
