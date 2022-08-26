@@ -294,7 +294,7 @@ class Mission
 		{
 			position[]={13155, 0, 6395};
 			name="Allies2";
-			text="ТЗ Гора";
+			text="ТЗ Сторож";
 			type="Defend";
 			colorName="ColorGreen";
 		};
