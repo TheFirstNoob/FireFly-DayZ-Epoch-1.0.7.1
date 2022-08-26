@@ -7,7 +7,7 @@ WAI_Blacklist = true; // You can edit the blacklist per map in file WAI\configs\
 /* AI CONFIG */
 WAI_ShowCount = false; //this will show the AI count in the mission markers.
 WAI_HasMoney = true; //If you have ZSC installed then setting this to true will place random amounts of coins in 50 coin increments in ai wallets.
-WAI_MoneyMultiplier = 5; //This value is multiplied by 50 to set the max amount of ZSC coins in AI wallets. ex. 200 x 50 = 10000 max coins.
+WAI_MoneyMultiplier = 3; //This value is multiplied by 50 to set the max amount of ZSC coins in AI wallets. ex. 200 x 50 = 10000 max coins.
 WAI_ClearBody = false; // instantly clear bodies
 DZE_NPC_CleanUp_Time = 30; // time to clear bodies in minutes. Set to -1 to disable AI cleanup. Universal variable used by other mission systems.
 WAI_CleanRoadKill = false; // clean bodies that are roadkills
@@ -17,11 +17,11 @@ WAI_BanditBehaviour = "Combat"; // behavior of bandit AI
 WAI_HeroCombatmode = "RED"; // combat mode of hero AI
 WAI_HeroBehaviour = "Combat"; // behavior of hero AI
 WAI_ShareInfo = true; // AI share info on player position
-WAI_ShareDist = 300; // distance from killed AI for AI to share your rough position
+WAI_ShareDist = 200; // distance from killed AI for AI to share your rough position
 WAI_KillsGain = false; // add kill to bandit/human kill score
 WAI_HumanityGain = false; // gain humanity for killing AI
-WAI_AddHumanity = 50; // amount of humanity gained for killing a bandit AI - set to 0 to disable
-WAI_RemoveHumanity = 50; // amount of humanity lost for killing a hero AI - set to 0 to disable
+WAI_AddHumanity = 0; // amount of humanity gained for killing a bandit AI - set to 0 to disable
+WAI_RemoveHumanity = 0; // amount of humanity lost for killing a hero AI - set to 0 to disable
 WAI_RewardVehGunner = false; // Allows the gunner or "effectiveCommander" of a vehicle to get humanity and kill rewards
 WAI_KillFeed = false; // Sends personal messages when the player kills an AI - may not be good for network performance
 WAI_Caching = true; // Disables and hides AI if there are no players near to reduce server stress.
@@ -65,8 +65,8 @@ WAI_AddSkin = false; // adds unit skin to inventory on death. Should set to fals
 /* END AI CONFIG */
 
 /* WAI MISSIONS CONFIG */
-WAI_AvoidMissions = 750; // avoid spawning missions this close to other missions. If using auto claim, this number should be 2x WAI_AcAlertDistance.
-WAI_AvoidSafezones = 750; // avoid spawning missions this close to safezones
+WAI_AvoidMissions = 600; // avoid spawning missions this close to other missions. If using auto claim, this number should be 2x WAI_AcAlertDistance.
+WAI_AvoidSafezones = 600; // avoid spawning missions this close to safezones
 WAI_AvoidTown = 0; // avoid spawning missions this close to towns, *** doesn't function with infiSTAR enabled ***
 WAI_AvoidRoad = 0; // avoid spawning missions this close to roads
 WAI_AvoidWater = 50; // avoid spawning missions this close to water
@@ -74,9 +74,9 @@ WAI_AvoidPlayers = 500; // avoid spawning missions this close to a player
 WAI_AvoidPlots = 100; // avoid spawning missions near player plots
 WAI_WaitForPlayer = true; // Wait until a player is within range of WAI_TimeoutDist to spawn the mission objects and AI. If using auto-claim make sure WAI_TimeoutDist and WAI_AcAlertDistance are the same. This is good for server performance but can be problematic on servers run on low end hardware.																																																																										   
 
-WAI_Timer = [1,3]; // time (in minutes) between missions. Default: 5-15 minutes
-WAI_Timeout = 30; // time (in minutes) each mission takes to timeout if inactive. Default: 30 minutes.
-WAI_TimeoutDist = 1000; // if a player is this close to a mission then it won't timeout
+WAI_Timer = [5,30]; // time (in minutes) between missions. Default: 5-15 minutes
+WAI_Timeout = 90; // time (in minutes) each mission takes to timeout if inactive. Default: 30 minutes.
+WAI_TimeoutDist = 800; // if a player is this close to a mission then it won't timeout
 
 WAI_CleanMissionTime = 30; // time in minutes after a mission is complete to clean mission buildings. Set to -1 to disable mission cleanup. Default: 30 minutes
 WAI_CleanMissionCrate = true; // include the mission crates with the mission cleanup. If a player is within 50 meters of the crates the cleanup script will wait. Does not apply to missions that timeout.
@@ -94,9 +94,9 @@ WAI_CrateSmoke = false; // pop smoke on crate when mission is finished during da
 WAI_CrateFlare = false; // pop flare on crate when mission is finished during nighttime
 
 WAI_PlayersOnline = 1; // number of players online before mission starts
-WAI_KillPercent = 10; // percentage of AI players that must be killed at "crate" missions to be able to trigger completion
+WAI_KillPercent = 100; // percentage of AI players that must be killed at "crate" missions to be able to trigger completion
 WAI_HighValueChance = 10; // chance in percent you find a high value item in the crate.
-WAI_NumMags = [3,6]; // Number of magazines per weapon in the crate [min,max]
+WAI_NumMags = [2,7]; // Number of magazines per weapon in the crate [min,max]
 
 WAI_EnableMineField = true; // enable minefields to better defend missions
 WAI_EnableStaticGuns = true; // Enables or disables static gun placements at missions that have them.
