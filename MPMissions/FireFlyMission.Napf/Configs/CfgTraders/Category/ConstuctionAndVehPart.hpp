@@ -7,14 +7,14 @@
 // Инструменты
 class Category_500
 {
-	class ItemRadio				{typeW	buyCVP 1000 worth 		sellCVP 200 worth };
+	class ItemRadio				{typeW	buyCVP 2000 worth 		sellCVP 400 worth };
 	class ItemKnife				{typeW	buyCVP 1000 worth 		sellCVP 200 worth };
 	class ItemMatchbox			{typeW	buyCVP 1000 worth 		sellCVP 200 worth };
 	class ItemToolbox			{typeW	buyCVP 5000 worth 		sellCVP 1000 worth };
 	class ItemEtool				{typeW	buyCVP 500 worth 		sellCVP 100 worth };
 	class ItemWatch				{typeW	buyCVP 100 worth 		sellCVP 20 worth };
 	class ItemCompass			{typeW	buyCVP 2500 worth 		sellCVP 500 worth };
-	class ItemMap				{typeW	buyCVP 5000 worth 		sellCVP 1000 worth };
+	class ItemMap				{typeW	buyCVP 2000 worth 		sellCVP 400 worth };
 	class ItemGPS				{typeW	buyCVP 12500 worth 		sellCVP 2500 worth };
 	class ItemKeyKit			{typeW	buyCVP 10000 worth 		sellCVP 2000 worth };
 	class ItemSolder_DZE		{typeW	buyCVP 3000 worth 		sellCVP 600 worth };
@@ -33,7 +33,6 @@ class Category_500
 	class Screwdriver_DZE		{typeW	buyCVP 2500 worth 		sellCVP 500 worth };
 	class Scissors_DZE			{typeW	buyCVP 2500 worth 		sellCVP 500 worth };
 	class Hammer_DZE			{typeW	buyCVP 2500 worth 		sellCVP 500 worth };
-	class Smartphone_DZE		{typeW	buyCVP 2500 worth 		sellCVP 500 worth };
 	class Binocular				{typeW	buyCVP 1000 worth 		sellCVP 200 worth };
 	class Binocular_Vector		{typeW	buyCVP 40000 worth 		sellCVP 8000 worth };
 	class NVGoggles_DZE			{typeW	buyCVP 50000 worth 		sellCVP 10000 worth };
@@ -48,12 +47,12 @@ class Category_500
 // Детали техники (1л - 1000)
 class Category_501
 {
-	class PartFueltank			{typeI	buyCVP 2000 worth 		sellCVP 400 worth };
-	class PartWheel				{typeI	buyCVP 2000 worth 		sellCVP 400 worth };
-	class PartEngine			{typeI	buyCVP 3000 worth 		sellCVP 600 worth };
-	class PartGlass				{typeI	buyCVP 500 worth 		sellCVP 100 worth };
-	class PartGeneric			{typeI	buyCVP 500 worth 		sellCVP 100 worth };
-	class PartVRotor			{typeI	buyCVP 15000 worth 		sellCVP 3000 worth };
+	class PartFueltank			{typeI	buyCVP 2850 worth 		sellCVP 712 worth };
+	class PartWheel				{typeI	buyCVP 1250 worth 		sellCVP 312 worth };
+	class PartEngine			{typeI	buyCVP 3900 worth 		sellCVP 975 worth };
+	class PartGlass				{typeI	buyCVP 300 worth 		sellCVP 75 worth };
+	class PartGeneric			{typeI	buyCVP 300 worth 		sellCVP 75 worth };
+	class PartVRotor			{typeI	buyCVP 10000 worth 		sellCVP 2000 worth };
 	class ItemFuelcanEmpty		{typeI	buyCVP 100 worth 		sellCVP 20 worth };
 	class ItemFuelcan			{typeI	buyCVP 600 worth 		sellCVP 120 worth };
 	class ItemJerrycanEmpty		{typeI	buyCVP 400 worth 		sellCVP 80 worth };
@@ -81,12 +80,13 @@ class Category_502
 	class ItemVault2			{typeI	buyCVP -1 worth 		sellCVP 15000 worth };
 	class ItemLockbox			{typeI	buyCVP 75000 worth 		sellCVP 15000 worth };
 	class ItemLockbox2			{typeI	buyCVP -1 worth 		sellCVP 15000 worth };
+	class ItemTallSafe			{typeI	buyCVP 125000 worth 	sellCVP 31250 worth };
 };
 
 // Фурнитура
 class Category_503
 {
-	class equip_hose				{typeI	buyCVP 500 worth 		sellCVP 100 worth };	// Шланг
+	class equip_hose				{typeI	buyCVP 2000 worth 		sellCVP 500 worth };	// Шланг
 	class equip_rope				{typeI	buyCVP 500 worth 		sellCVP 100 worth };	// Веревка
 	class equip_string				{typeI	buyCVP 500 worth 		sellCVP 100 worth };	// Нитки
 	class equip_tent_poles			{typeI	buyCVP 500 worth 		sellCVP 100 worth };	// Распорки палаток/сетей
