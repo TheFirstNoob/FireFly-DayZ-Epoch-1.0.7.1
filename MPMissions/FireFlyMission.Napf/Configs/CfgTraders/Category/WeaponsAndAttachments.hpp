@@ -315,14 +315,14 @@ class Category_1103
 {
 	class Groza1_DZ				{typeW		buyWA 5000 worth 	sellWA 1000 worth };
 	class Groza1_SD_DZ			{typeW		buyWA 5300 worth 	sellWA 1060 worth };
-	class Groza1_Sniper_DZ		{typeW		buyWA -1 worth 		sellWA 1080 worth };
-	class Groza1_Sniper_SD_DZ	{typeW		buyWA -1 worth 		sellWA 1140 worth };
+	class Groza1_Sniper_DZ		{typeW		buyWA -1 worth 		sellWA 6000 worth };
+	class Groza1_Sniper_SD_DZ	{typeW		buyWA -1 worth 		sellWA 6450 worth };
 	class Groza9_DZ				{typeW		buyWA 500 worth 	sellWA 100 worth };
 	class Groza9_SD_DZ			{typeW		buyWA 800 worth 	sellWA 160 worth };
 	class Groza9_GL_DZ			{typeW		buyWA 750 worth 	sellWA 150 worth };
-	class Groza9_Sniper_DZ		{typeW		buyWA -1 worth 		sellWA 180 worth };
-	class Groza9_Sniper_SD_DZ	{typeW		buyWA -1 worth 		sellWA 240 worth };
-	class Groza9_GL_Sniper_DZ	{typeW		buyWA -1 worth 		sellWA 230 worth };
+	class Groza9_Sniper_DZ		{typeW		buyWA -1 worth 		sellWA 7000 worth };
+	class Groza9_Sniper_SD_DZ	{typeW		buyWA -1 worth 		sellWA 7500 worth };
+	class Groza9_GL_Sniper_DZ	{typeW		buyWA -1 worth 		sellWA 8000 worth };
 };
 
 //Серия MK16/17
