@@ -44,11 +44,18 @@ class Category_400
 	class FoodPumpkin				{typeI	buyFB 400 worth 	sellFB 80 worth };
 	class FoodCarrot				{typeI	buyFB 400 worth 	sellFB 80 worth };
 	class FoodPotatoRaw				{typeI	buyFB 200 worth 	sellFB 40 worth };
-	class FoodPotatoBaked			{typeI	buyFB 500 worth 	sellFB 200 worth };
+	class FoodPotatoBaked			{typeI	buyFB 500 worth 	sellFB 125 worth };
 	class FoodSunFlowerSeed			{typeI	buyFB 400 worth 	sellFB 80 worth };
 	class FoodPistachio				{typeI	buyFB 400 worth 	sellFB 80 worth };
 	class FoodNutmix				{typeI	buyFB 400 worth 	sellFB 80 worth };
-	class FoodMRE					{typeI	buyFB 2000 worth 	sellFB 400 worth };
+	class FoodCarrotSoup			{typeI	buyFB 1000 worth 	sellFB 350 worth };
+	class FoodGarlicSoup			{typeI	buyFB 1000 worth 	sellFB 350 worth };
+	class FoodPotatoSoup			{typeI	buyFB 1000 worth 	sellFB 350 worth };
+	class FoodPumpkinSoup			{typeI	buyFB 1000 worth 	sellFB 350 worth };
+	class FoodVegetablePlate		{typeI	buyFB 1000 worth 	sellFB 350 worth };
+	class FoodSteakWithPotatos		{typeI	buyFB 2000 worth 	sellFB 500 worth };
+	class FoodSushi					{typeI	buyFB 750 worth 	sellFB 250 worth };
+	class FoodMRE					{typeI	buyFB 2000 worth 	sellFB 500 worth };
 };
 
 // Еда (Мясо/Рыба)
@@ -58,22 +65,22 @@ class Category_401
 	class FoodGoatCooked		{typeI	buyFB 1000 worth 	sellFB 200 worth };
 	class FoodMuttonRaw			{typeI	buyFB 200 worth 	sellFB 40 worth };
 	class FoodMuttonCooked		{typeI	buyFB 1000 worth 	sellFB 200 worth };
-	class FoodChickenRaw		{typeI	buyFB 200 worth 	sellFB 40 worth };
-	class FoodChickenCooked		{typeI	buyFB 1000 worth 	sellFB 200 worth };
+	class FoodChickenRaw		{typeI	buyFB 400 worth 	sellFB 80 worth };
+	class FoodChickenCooked		{typeI	buyFB 1400 worth 	sellFB 350 worth };
 	class FoodBaconRaw			{typeI	buyFB 200 worth 	sellFB 40 worth };
 	class FoodBaconCooked		{typeI	buyFB 1000 worth 	sellFB 200 worth };
-	class FoodRabbitRaw			{typeI	buyFB 200 worth 	sellFB 40 worth };
-	class FoodRabbitCooked		{typeI	buyFB 1000 worth 	sellFB 200 worth };
+	class FoodRabbitRaw			{typeI	buyFB 800 worth 	sellFB 160 worth };
+	class FoodRabbitCooked		{typeI	buyFB 2500 worth 	sellFB 625 worth };
 	class FoodBeefRaw			{typeI	buyFB 200 worth 	sellFB 40 worth };
 	class FoodBeefCooked		{typeI	buyFB 1000 worth 	sellFB 200 worth };
 	class FoodDogRaw			{typeI	buyFB 200 worth 	sellFB 40 worth };
 	class FoodDogCooked			{typeI	buyFB 1000 worth 	sellFB 200 worth };
 	class FishRawTrout			{typeI	buyFB 200 worth 	sellFB 40 worth };
 	class FishCookedTrout		{typeI	buyFB 500 worth 	sellFB 200 worth };
-	class FishRawSeaBass		{typeI	buyFB 200 worth 	sellFB 40 worth };
-	class FishCookedSeaBass		{typeI	buyFB 500 worth 	sellFB 200 worth };
-	class FishRawTuna			{typeI	buyFB 200 worth 	sellFB 40 worth };
-	class FishCookedTuna		{typeI	buyFB 500 worth 	sellFB 200 worth };
+	class FishRawSeaBass		{typeI	buyFB 300 worth 	sellFB 75 worth };
+	class FishCookedSeaBass		{typeI	buyFB 800 worth 	sellFB 200 worth };
+	class FishRawTuna			{typeI	buyFB 400 worth 	sellFB 100 worth };
+	class FishCookedTuna		{typeI	buyFB 1600 worth 	sellFB 400 worth };
 };
 
 // Еда (Вода)
@@ -96,8 +103,8 @@ class Category_402
 	class ItemSodaSmasht			{typeI	buyFB 500 worth 	sellFB 100 worth };
 	class ItemSodaClays				{typeI	buyFB 500 worth 	sellFB 100 worth };
 	class ItemSodaR4z0r				{typeI	buyFB 500 worth 	sellFB 100 worth };
-	class ItemSodaMtngreen			{typeI	buyFB 2500 worth 	sellFB 500 worth };
-	class ItemSodaMdew				{typeI	buyFB 500 worth 	sellFB 100 worth };
+	class ItemSodaMtngreen			{typeI	buyFB 500 worth 	sellFB 100 worth };
+	class ItemSodaMdew				{typeI	buyFB 2500 worth 	sellFB 500 worth };
 	class ItemSodaPepsi				{typeI	buyFB 500 worth 	sellFB 100 worth };
 	class ItemSodaCoke				{typeI	buyFB 500 worth 	sellFB 100 worth };
 	class ItemWaterBottleUnfilled	{typeI	buyFB 2500 worth 	sellFB 500 worth };
@@ -126,4 +133,5 @@ class Category_403
 	class WandererBackpack_DZE1		{typeB	buyFB 18750 worth 	sellFB 3750 worth };	// 50
 	class LegendBackpack_DZE1		{typeB	buyFB 20625 worth 	sellFB 4125 worth };	// 55
 	class CoyoteBackpack_DZE1		{typeB	buyFB 22500 worth 	sellFB 4500 worth };	// 60
+	class LargeGunBag_DZE1			{typeB	buyFB 30000 worth 	sellFB 7500 worth };	// 65
 };
