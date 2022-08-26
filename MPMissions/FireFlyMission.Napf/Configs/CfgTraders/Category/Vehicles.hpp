@@ -67,22 +67,22 @@ class Category_303
 	class hilux1_civil_3_open_DZE		{typeVeh	buyV 10750 worth 	sellV 2150 worth };
 	class LandRover_CZ_EP1_DZE			{typeVeh	buyV 11350 worth 	sellV 2270 worth };
 	class LandRover_TK_CIV_EP1_DZE		{typeVeh	buyV 11350 worth 	sellV 2270 worth };
-	class GAZ_Vodnik_MedEvac_DZE		{typeVeh	buyV 32500 worth 	sellV 6500 worth };
+	class GAZ_Vodnik_MedEvac_DZE		{typeVeh	buyV -1 worth 		sellV 15000 worth };
 	class M113Ambul_TK_EP1_DZ			{typeVeh	buyV 50000 worth 	sellV 12500 worth };
 	class M113Ambul_UN_EP1_DZ			{typeVeh	buyV 50000 worth 	sellV 12500 worth };
 	class BTR40_TK_GUE_EP1_DZE			{typeVeh	buyV 10500 worth 	sellV 2100 worth };
 	class BTR40_TK_INS_EP1_DZE			{typeVeh	buyV 10500 worth 	sellV 2100 worth };
-	class SUV_Camo						{typeVeh	buyV 20000 worth 	sellV 4000 worth };
-	class SUV_Blue						{typeVeh	buyV 18500 worth 	sellV 3700 worth };
-	class SUV_Green						{typeVeh	buyV 18500 worth 	sellV 3700 worth };
-	class SUV_Yellow					{typeVeh	buyV 18500 worth 	sellV 3700 worth };
-	class SUV_Red						{typeVeh	buyV 18500 worth 	sellV 3700 worth };
-	class SUV_White						{typeVeh	buyV 18500 worth 	sellV 3700 worth };
-	class SUV_Pink						{typeVeh	buyV 18500 worth 	sellV 3700 worth };
-	class SUV_Charcoal					{typeVeh	buyV 18500 worth 	sellV 3700 worth };
-	class SUV_Orange					{typeVeh	buyV 18500 worth 	sellV 3700 worth };
-	class SUV_Silver					{typeVeh	buyV 18500 worth 	sellV 3700 worth };
-	class SUV_TK_CIV_EP1_DZE			{typeVeh	buyV 18500 worth 	sellV 3700 worth };
+	class SUV_Camo						{typeVeh	buyV -1 worth 		sellV 7000 worth };
+	class SUV_Blue						{typeVeh	buyV -1 worth 		sellV 7000 worth };
+	class SUV_Green						{typeVeh	buyV -1 worth 		sellV 7000 worth };
+	class SUV_Yellow					{typeVeh	buyV -1 worth 		sellV 7000 worth };
+	class SUV_Red						{typeVeh	buyV -1 worth 		sellV 7000 worth };
+	class SUV_White						{typeVeh	buyV -1 worth 		sellV 7000 worth };
+	class SUV_Pink						{typeVeh	buyV -1 worth 		sellV 7000 worth };
+	class SUV_Charcoal					{typeVeh	buyV -1 worth 		sellV 7000 worth };
+	class SUV_Orange					{typeVeh	buyV -1 worth 		sellV 7000 worth };
+	class SUV_Silver					{typeVeh	buyV -1 worth 		sellV 7000 worth };
+	class SUV_TK_CIV_EP1_DZE			{typeVeh	buyV -1 worth 		sellV 7000 worth };
 };
 
 // Внедорожники (с вооружением)
@@ -91,10 +91,10 @@ class Category_304
 	class HMMWV_Armored_DZE				{typeVeh	buyV 25000 worth 	sellV 5000 worth };
 	class HMMWV_M2_DZE					{typeVeh	buyV 27500 worth 	sellV 5500 worth };
 	class HMMWV_M1151_M2_CZ_DES_EP1_DZE	{typeVeh	buyV 23500 worth 	sellV 4700 worth };
-	class HMMWV_MK19_DZE				{typeVeh	buyV 33000 worth 	sellV 6600 worth };
+	class HMMWV_MK19_DZE				{typeVeh	buyV -1 worth 		sellV 8000 worth };
 	class UAZ_MG_CDF_DZE				{typeVeh	buyV 22700 worth 	sellV 4540 worth };
 	class UAZ_MG_INS_DZE				{typeVeh	buyV 22700 worth 	sellV 4540 worth };
-	class UAZ_AGS30_RU_DZE				{typeVeh	buyV 32500 worth 	sellV 6500 worth };
+	class UAZ_AGS30_RU_DZE				{typeVeh	buyV -1 worth 		sellV 8000 worth };
 	class Pickup_PK_GUE_DZE				{typeVeh	buyV 21500 worth 	sellV 4300 worth };
 	class Pickup_PK_INS_DZE				{typeVeh	buyV 21500 worth 	sellV 4300 worth };
 	class Offroad_DSHKM_Gue_DZE			{typeVeh	buyV 22700 worth 	sellV 4540 worth };
@@ -115,22 +115,22 @@ class Category_305
 	class Ural_INS_DZE				{typeVeh	buyV 45000 worth 	sellV 9000 worth };
 	class UralCivil_DZE				{typeVeh	buyV 45000 worth 	sellV 9000 worth };
 	class UralCivil2_DZE			{typeVeh	buyV 45000 worth 	sellV 9000 worth };
-	class UralRefuel_CDF_DZE		{typeVeh	buyV -1 worth 	sellV 15000 worth };
+	class UralRefuel_CDF_DZE		{typeVeh	buyV -1 worth 		sellV 15000 worth };
 	class Ikarus_White_DZE			{typeVeh	buyV 22700 worth 	sellV 4540 worth };
 	class Ikarus_DZE				{typeVeh	buyV 32750 worth 	sellV 6550 worth };
 	class Ikarus_TK_CIV_EP1_DZE		{typeVeh	buyV 32750 worth 	sellV 6550 worth };
 	class Ikarus_Armored_DZE		{typeVeh	buyV 35000 worth 	sellV 7000 worth };
 	class Kamaz_DZE					{typeVeh	buyV 45000 worth 	sellV 9000 worth };
 	class KamazOpen_DZE				{typeVeh	buyV 42500 worth 	sellV 8500 worth };
-	class KamazRefuel_DZ			{typeVeh	buyV -1 worth 	sellV 15000 worth };
+	class KamazRefuel_DZ			{typeVeh	buyV -1 worth 		sellV 15000 worth };
 	class MTVR_DZE					{typeVeh	buyV 50000 worth 	sellV 10000 worth };
 	class MTVR_Open_DZE				{typeVeh	buyV 47500 worth 	sellV 9500 worth };
-	class MtvrRefuel_DZ				{typeVeh	buyV -1 worth 	sellV 15000 worth };
+	class MtvrRefuel_DZ				{typeVeh	buyV -1 worth 		sellV 15000 worth };
 	class V3S_Civ_DZE				{typeVeh	buyV 42500 worth 	sellV 8500 worth };
 	class V3S_TK_EP1_DZE			{typeVeh	buyV 45000 worth 	sellV 9000 worth };
 	class V3S_Open_TK_EP1_DZE		{typeVeh	buyV 42500 worth 	sellV 8500 worth };
 	class V3S_Open_TK_CIV_EP1_DZE	{typeVeh	buyV 42500 worth 	sellV 8500 worth };
-	class V3S_Refuel_TK_GUE_EP1_DZ	{typeVeh	buyV -1 worth 	sellV 15000 worth };
+	class V3S_Refuel_TK_GUE_EP1_DZ	{typeVeh	buyV -1 worth 		sellV 15000 worth };
 };
 
 // Вертолеты
@@ -142,8 +142,8 @@ class Category_306
 	class Mi17_medevac_RU_DZ	{typeVeh	buyV 125000 worth 	sellV 25000 worth };
 	class UH60M_MEV_EP1_DZ		{typeVeh	buyV 135000 worth 	sellV 27000 worth };
 	class BAF_Merlin_DZE		{typeVeh	buyV 150000 worth 	sellV 30000 worth };
-	class CH53_DZE				{typeVeh	buyV -1 worth 		sellV 30000 worth };
-	class UH1H_DZE				{typeVeh	buyV -1 worth 		sellV 36000 worth };
-	class Mi17_DZE				{typeVeh	buyV -1 worth 		sellV 40000 worth };
-	class MH60S_DZE				{typeVeh	buyV -1 worth 		sellV 45000 worth };
+	class CH53_DZE				{typeVeh	buyV -1 worth 		sellV 70000 worth };
+	class UH1H_DZE				{typeVeh	buyV -1 worth 		sellV 70000 worth };
+	class Mi17_DZE				{typeVeh	buyV -1 worth 		sellV 70000 worth };
+	class MH60S_DZE				{typeVeh	buyV -1 worth 		sellV 70000 worth };
 };
