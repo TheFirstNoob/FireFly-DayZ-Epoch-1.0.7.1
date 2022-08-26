@@ -31,22 +31,21 @@ class Category_604
 	class ItemTrashRazor		{typeI	buyM 999999999 worth 		sellM 3000 worth };
 	class ItemTrashToiletpaper	{typeI	buyM 999999999 worth 		sellM 3000 worth };
 	class PileMedBooks			{typeI	buyM 999999999 worth 		sellM 25000 worth };
+	class ItemMutantHeart		{typeI	buyM 999999999 worth 		sellM 7500 worth };
 };
 
-// Документы
+// Улучшение техники
 class Category_605
 {
-	class ItemORP				{typeI	buyM 10000 worth 		sellM 2000 worth };
-	class ItemAVE				{typeI	buyM 10000 worth 		sellM 2000 worth };
-	class ItemLRK				{typeI	buyM 10000 worth 		sellM 2000 worth };
-	class ItemTNK				{typeI	buyM 10000 worth 		sellM 2000 worth };
-	class ItemARM				{typeI	buyM 10000 worth 		sellM 2000 worth };
-	class ItemTruckORP			{typeI	buyM 10000 worth 		sellM 2000 worth };
-	class ItemTruckAVE			{typeI	buyM 10000 worth 		sellM 2000 worth };
-	class ItemTruckLRK			{typeI	buyM 10000 worth 		sellM 2000 worth };
-	class ItemTruckTNK			{typeI	buyM 10000 worth 		sellM 2000 worth };
-	class ItemTruckARM			{typeI	buyM 10000 worth 		sellM 2000 worth };
-	class ItemHeliAVE			{typeI	buyM 10000 worth 		sellM 2000 worth };
-	class ItemHeliLRK			{typeI	buyM 10000 worth 		sellM 2000 worth };
-	class ItemHeliTNK			{typeI	buyM 10000 worth 		sellM 2000 worth };
+	class ItemORP				{typeI	buyM 2000 worth 		sellM 500 worth };
+	class ItemAVE				{typeI	buyM 3000 worth 		sellM 750 worth };
+	class ItemLRK				{typeI	buyM 4000 worth 		sellM 1000 worth };
+	class ItemTNK				{typeI	buyM 5000 worth 		sellM 1250 worth };
+	class ItemTruckORP			{typeI	buyM 8000 worth 		sellM 2000 worth };
+	class ItemTruckAVE			{typeI	buyM 9500 worth 		sellM 2375 worth };
+	class ItemTruckLRK			{typeI	buyM 11000 worth 		sellM 2750 worth };
+	class ItemTruckTNK			{typeI	buyM 12500 worth 		sellM 3125 worth };
+	class ItemHeliAVE			{typeI	buyM 15000 worth 		sellM 3750 worth };
+	class ItemHeliLRK			{typeI	buyM 17500 worth 		sellM 4375 worth };
+	class ItemHeliTNK			{typeI	buyM 20000 worth 		sellM 5000 worth };
 };
