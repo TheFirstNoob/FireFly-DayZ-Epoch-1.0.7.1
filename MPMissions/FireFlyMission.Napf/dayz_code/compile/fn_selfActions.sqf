@@ -904,15 +904,15 @@ if (!isNull _cursorTarget && _noChange && !_inVehicle && !_isPZombie && _canDo &
 				};
 			};
 			if (s_player_gamble1 < 0) then {
-				s_player_gamble1 = player addAction [format ["<t color='#FFFF00'>%1</t>",format [localize "STR_CL_GAMBLE_PRICE1x", CurrencyName]], "Scripts\Gamble\Gamble.sqf",1000, 1, false, true];
+				s_player_gamble1 = player addAction [format ["<t color='#FFFF00'>%1</t>",format [localize "STR_CL_GAMBLE_PRICE1x", CurrencyName]], "Scripts\Gamble\Gamble.sqf",800, 1, false, true];
 			};
 			
 			if (s_player_gamble2 < 0) then {
-				s_player_gamble2 = player addAction [format ["<t color='#FFFF00'>%1</t>",format [localize "STR_CL_GAMBLE_PRICE2x", CurrencyName]], "Scripts\Gamble\Gamble.sqf",2000, 1, false, true];
+				s_player_gamble2 = player addAction [format ["<t color='#FFFF00'>%1</t>",format [localize "STR_CL_GAMBLE_PRICE2x", CurrencyName]], "Scripts\Gamble\Gamble.sqf",1600, 1, false, true];
 			};
 			
 			if (s_player_gamble3 < 0) then {
-				s_player_gamble3 = player addAction [format ["<t color='#FFFF00'>%1</t>",format [localize "STR_CL_GAMBLE_PRICE3x", CurrencyName]], "Scripts\Gamble\Gamble.sqf",3000, 1, false, true];
+				s_player_gamble3 = player addAction [format ["<t color='#FFFF00'>%1</t>",format [localize "STR_CL_GAMBLE_PRICE3x", CurrencyName]], "Scripts\Gamble\Gamble.sqf",2400, 1, false, true];
 			};
 		} else {
 			player removeAction s_player_gamblefree;

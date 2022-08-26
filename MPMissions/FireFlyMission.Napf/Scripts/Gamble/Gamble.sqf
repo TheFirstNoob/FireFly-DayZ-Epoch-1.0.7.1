@@ -3,8 +3,7 @@
 	Автор: Airwaves Man
 	Версия: Epoch 1.0.7+
 	Git: https://github.com/AirwavesMan/O9-Gambling-Script
-	Пометка: Спрашивайте разрешение у Автора
-	на модификацию и использование.
+	Пометка: Спрашивайте разрешение у Автора на модификацию и использование.
 	Просьба не удалять Copyright!
 */
 
@@ -12,7 +11,8 @@ if (dayz_actionInProgress) exitWith
 {
 	localize "STR_CL_GAMBLE_ALREADY" call dayz_rollingMessages;
 };
-dayz_actionInProgress = true;
+
+dayz_actionInProgress 	= 	true;
 
 private ["_fn_additems","_playerMoney","_gambleAmount","_freeTry","_hasCards","_playerMoneyNew","_hasGold"
 		,"_gambleChance","_winNumbers","_prizeWeapons","_prizeTools","_prizeAmmo","_prizeItems","_multi"
@@ -20,7 +20,7 @@ private ["_fn_additems","_playerMoney","_gambleAmount","_freeTry","_hasCards","_
 
 closeDialog 0;
 
-_fn_additems =
+_fn_additems 	=
 {
 	private ["_item","_qyt","_type","_itemtype","_holder","_magazine","_pos"];
 	_item 		= 	_this select 0;
@@ -88,12 +88,12 @@ _gambleChance 	= 	floor(random 1550);
 _winNumbers 	= 	
 [
 	 3,11,27,32,44,54,66,68,71,88,99,120,132,134,146,147,149,154,175,189,191,199		// _prizeWeapons floor(random 2)
-	,221,231,249,251,276,290,310,343,344,354,376,396									// _prizeTools floor(random 2)
+	,221,231,249,251,276,290,310,328,343,344,354,376,396								// _prizeTools floor(random 2)
 	,404,442,456,479,491,523,541,589													// _prizeAmmo floor(random 3)
 	,611,635,676,678,689,739,786														// _prizeItems floor(random 2)
 	,832,856,876,921,934,959,999														// _prizeItems floor(random 3)
 	,1001,1015,1043,1073,1110,1146,1199													// _prizeAmmo floor(random 2)
-	,1204,1214,1224,1234,1244,1245,1254,1259,1280										// Деньги _coins
+	,1204,1214,1224,1234,1244,1245,1254,1259,1267,1280									// Деньги _coins
 	,1499																				// JACKPOT
 ];
 
@@ -132,6 +132,7 @@ _prizeAmmo 		=
 	/* Патр. Техники */
 	"30Rnd_556x45_Stanag"
 	,"30Rnd_9x19_MP5" ,"30Rnd_545x39_AKSD" ,"5Rnd_17HMR" ,"5Rnd_762x54_Mosin" ,"30Rnd_762x39_AK47" ,"29Rnd_30mm_AGS30" ,"50Rnd_127x107_DSHKM" ,"48Rnd_40mm_MK19" ,"100Rnd_127x99_M2" ,"8Rnd_9x18_MakarovSD" ,"15Rnd_9x19_M9SD" ,"17Rnd_9x19_glock17SD" ,"30Rnd_9x19_UZI_SD" ,"30Rnd_9x19_MP5SD" ,"64Rnd_9x19_SD_Bizon" ,"30Rnd_556x45_G36SD" ,"30Rnd_556x45_StanagSD" ,"20Rnd_762x51_SB_SCAR" ,"20Rnd_762x51_FNFAL" ,"20Rnd_762x51_B_SCAR" ,"75Rnd_545x39_RPK" ,"50Rnd_762x54_UK59" ,"200Rnd_556x45_M249" ,"100Rnd_762x51_M240" ,"100Rnd_762x54_PK" ,"75Rnd_762x39_RPK" ,"5Rnd_762x51_M24" ,"10Rnd_762x54_SVD" ,"5Rnd_127x108_KSVK" ,"10Rnd_127x99_m107" ,"20Rnd_9x39_SP5_VSS" ,"5Rnd_86x70_L115A1" ,"20Rnd_762x51_DMR" ,"Attachment_BELT" ,"Attachment_SA58RIS" ,"Attachment_Ghillie" ,"Attachment_FL_Pist" ,"Attachment_FL" ,"Attachment_MFL_Pist" ,"Attachment_MFL" ,"Attachment_CCO" ,"Attachment_Holo" ,"Attachment_Kobra" ,"Attachment_SCOPED" ,"Attachment_ACOG" ,"Attachment_PSO1" ,"Attachment_Sup9" ,"Attachment_Sup545" ,"Attachment_Sup556" ,"Attachment_GP25" ,"Attachment_M203" ];
+
 _prizeItems 	=
 [
 	"ItemKiloHemp"
@@ -144,17 +145,17 @@ _prizeItems 	=
 	,"ItemSilverBar10oz" ,"ItemGoldBar10oz" ,"equip_floppywire" ,"equip_scrapelectronics" ,"PartPlankPack" ,"PartPlywoodPack" ,"PartOreGold" ,"PartOreSilver" ,"PartOre" ,"FoodbaconCooked" ,"FoodbeefCooked" ,"FoodchickenCooked" ,"FoodGoatCooked" ,"FishCookedTrout" ,"FishCookedSeaBass" ,"FishCookedTuna" ,"FoodrabbitCooked" ,"FoodCanBakedBeans" ,"FoodCanBoneboy" ,"FoodCanFrankBeans" ,"FoodChipsChocolate" ,"ItemSodaCoke" ,"ItemSodaMdew" ,"ItemSodaRbull" ,"ItemSodaOrangeSherbet" ,"ItemKosmosSmokes" ,"ItemBandage" ,"ItemAntibiotic" ,"ItemMorphine" ,"ItemCards" ,"emptyBloodBag" ,"PartEngine" ,"PartVRotor" ,"PartWheel" ,"PartGlass" ,"PartFueltank" ,"ItemTent" ,"ItemDomeTent" ,"ItemDesertTent" ,"plot_pole_kit" ,"plot_pole_kit" ,"ItemMixOil" ,"Skin_FR_Sapper_DZ" ,"Skin_TK_Soldier_Sniper_EP1_DZ" ,"Skin_Sniper1_DZ" ,"Skin_BAF_Soldier_Officer_MTP_DZ" ,"Skin_GUE_Soldier_Sniper_DZ" ,"CinderBlocks" ,"metal_floor_kit" ,"half_cinder_wall_kit" ,"full_cinder_wall_kit" ,"ItemBookBible" ,"ItemLetter" ,"ItemOilBarrel" ,"ItemOilBarrel" ,"storage_shed_kit" ,"wood_ramp_kit" ,"ItemRSJ" ,"Skin_MVD_Soldier_DZ" ,"Skin_RUS_Commander_DZ" ,"Skin_Ins_Commander_DZ" ,"ItemNewspaper" ,"ItemTrashPaperMusic" ,"ItemBook1" ,"ItemBook2" ,"ItemBook3" ,"ItemBook4" ,"ItemGenerator" ,"equip_nails" ,"ItemCorrugated" ,"ItemPole" ,"ItemSandbag" ,"ItemWoodWall" ,"ItemFireBarrel_kit" ,"outhouse_kit" ,"park_bench_kit" ,"BagFenceRound_DZ_kit" ,"forest_net_kit" ,"desert_net_kit" ,"ItemScaffoldingKit" ,"ItemGunRackKit" ,"ItemWoodCrateKit" ,"deer_stand_kit" ,"Skin_Rocker2_DZ" ,"Skin_Priest_DZ" ,"Skin_RU_Policeman_DZ" ,"Skin_Rocker3_DZ" ,"FoodCanPasta" ,"FoodCanSardines" ,"FoodCanBeef" ,"FoodCanPotatoes" ,"FoodCanGriff" ,"FoodCanBadguy" ,"FoodCanBoneboy" ,"FoodCakeCremeCakeClean" ,"FoodCandyLegacys" ,"FoodCandyAnders" ,"ItemHotwireKit"
 ];
 
-if ((_gambleAmount == 1000) || (_gambleAmount == 0)) then
+if ((_gambleAmount == 800) || (_gambleAmount == 0)) then
 {
 	_multi 	= 	1;
 };
 
-if (_gambleAmount == 2000) then
+if (_gambleAmount == 1600) then
 {
 	_multi 	= 	2;
 };
 
-if (_gambleAmount == 3000) then
+if (_gambleAmount == 2400) then
 {
 	_multi 	= 	3;
 };
@@ -166,10 +167,12 @@ if (_hasGold) then
 	if (_freeTry) then
 	{
 		localize "STR_CL_GAMBLE_GAMBLING_FOR_FREE" call dayz_rollingMessages;
-	}else
+	}
+	else
 	{
 		format [localize "STR_CL_GAMBLE_GAMBLING_FOR_X_COINS", [_gambleAmount] call BIS_fnc_numberText,CurrencyName] call dayz_rollingMessages;
 	};
+
 	uiSleep 3;
 
 	if (_gambleChance in _winNumbers) then
@@ -246,7 +249,7 @@ if (_hasGold) then
 			if ((_gambleChance > 1200) && (_gambleChance < 1280)) exitwith
 			{
 				_money 		= 	player getVariable [(["cashMoney","globalMoney"] select Z_persistentMoney),0];
-				_coins 		= 	(1000 + floor(random 50000))*_multi;
+				_coins 		= 	(floor(random 10000) + floor(random 50000))*_multi;
 				player setVariable [(["cashMoney","globalMoney"] select Z_persistentMoney),(_money + _coins),true];
 				call player_forceSave;
 				format [localize "STR_CL_GAMBLE_WON_COINS",[_coins] call BIS_fnc_numberText,CurrencyName] call dayz_rollingMessages;
@@ -259,7 +262,7 @@ if (_hasGold) then
 
 				[objNull, player, rSAY, "tada",5] call RE;
 				_money 		= 	player getVariable [(["cashMoney","globalMoney"] select Z_persistentMoney),0];
-				_coins 		= 	(100000 + floor(random 250000))*_multi; // Jackpot
+				_coins 		= 	(floor(random 100000) + floor(random 250000))*_multi; // Jackpot
 				player setVariable [(["cashMoney","globalMoney"] select Z_persistentMoney),(_money + _coins),true];
 				call player_forceSave;
 				format [localize "STR_CL_GAMBLE_WON_COINS_JACKPOT",[_coins] call BIS_fnc_numberText,CurrencyName] call dayz_rollingMessages;
