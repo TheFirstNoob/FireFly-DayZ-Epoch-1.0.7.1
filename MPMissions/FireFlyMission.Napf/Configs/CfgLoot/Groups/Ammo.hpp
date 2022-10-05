@@ -26,7 +26,7 @@ AmmoCivilian[] =
 };
 
 militaryVehicleAmmo[] = { //DZE
-	{Loot_MAGAZINE,		1,		2000Rnd_762x51_M134},
+	//{Loot_MAGAZINE,		1,		2000Rnd_762x51_M134},
 	{Loot_MAGAZINE,		1,		29Rnd_30mm_AGS30},
 	{Loot_MAGAZINE,		1,		50Rnd_127x107_DSHKM},
 	{Loot_MAGAZINE,		1,		48Rnd_40mm_MK19},
