@@ -163,6 +163,7 @@ if (isServer) then
 		["any","any","any","any",-1,"animated_crash_spawner"]
 		,["any","any","any","any",-1,"Infected_Camps"]
 		,["any","any","any","any",-1,"Care_Packages"]
+		//,["any","any","any","any",20,"bandit_escape"]
 		,["any","any","any","any",180,"animated_crash_spawner"]
 		,["any","any","any","any",180,"abandoned_vaults"]
 		
@@ -408,7 +409,7 @@ if (!isDedicated) then
 	DZE_doorManagementHarderPenalty 	= 	true; 	// Включить "Пенальти" за неудачные взломы/открытия Дверей? : True - Вкл / False - Выкл
 
 	// Торговые зоны
-	DZE_SafeZoneNoBuildItems		=	[]; 		// Список Объектов которые нельзя строить возле Трейд-Зон DZE_SafeZonePosArray (Смотри mission\init.sqf). Можно использовать свои значения расстояния для Определенного объекта. НАПРИМЕР: ["VaultStorageLocked","LockboxStorageLocked",["Plastic_Pole_EP1_DZ",1300]].
+	DZE_SafeZoneNoBuildItems		=	[["Plastic_Pole_EP1_DZ",750]]; 		// Список Объектов которые нельзя строить возле Трейд-Зон DZE_SafeZonePosArray (Смотри mission\init.sqf). Можно использовать свои значения расстояния для Определенного объекта. НАПРИМЕР: ["VaultStorageLocked","LockboxStorageLocked",["Plastic_Pole_EP1_DZ",1300]].
 	DZE_SafeZoneNoBuildDistance		=	750; 		// Дистанция для объектов возле Трейд-Зон DZE_SafeZonePosArray (see mission\init.sqf) to disallow building near.
 	DZE_BackpackAntiTheft 			= 	true;		// Предотвращать воровство из Рюкзаков для "Не отмеченных другом" игроков в Трейд-Зонах.
 	DZE_SaleRequiresKey 			= 	true; 		// Требуется Ключ от техники чтобы продать ее? True - Да / False - Нет. Ключ может быть где угодно у Игрока или в его Технике.
