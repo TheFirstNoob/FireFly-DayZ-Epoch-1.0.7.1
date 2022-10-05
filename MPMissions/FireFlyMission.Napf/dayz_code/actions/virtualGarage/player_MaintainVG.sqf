@@ -1,6 +1,7 @@
 // Written by icomrade (https://github.com/icomrade) FIX: https://github.com/EpochModTeam/DayZ-Epoch/commit/2d00a515cd828221c080499f86a2ec955f4ae4f7
+// FIX #2: https://github.com/F507DMT/DayZ-Epoch/commits/patch-33
 
-private ["_hasAccess","_heliPad","_objectID","_objectUID","_plotCheck","_wealth"];
+private["_itemText","_enoughMoney","_moneyInfo","_wealth","_success","_ownerPUID"];
 
 closeDialog 0;
 
