@@ -1,3 +1,4 @@
+#define typeW type = "trade_weapons";
 #define typeI type = "trade_items";
 #define buyM buy[] = {
 #define sellM sell[] = {
@@ -31,7 +32,7 @@ class Category_604
 	class ItemTrashRazor		{typeI	buyM 999999999 worth 		sellM 3000 worth };
 	class ItemTrashToiletpaper	{typeI	buyM 999999999 worth 		sellM 3000 worth };
 	class PileMedBooks			{typeI	buyM 999999999 worth 		sellM 25000 worth };
-	class ItemMutantHeart		{typeI	buyM 999999999 worth 		sellM 7500 worth };
+	class ItemMutantHeart		{typeW	buyM 999999999 worth 		sellM 7500 worth };
 };
 
 // Улучшение техники
