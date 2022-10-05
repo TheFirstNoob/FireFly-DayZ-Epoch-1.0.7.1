@@ -19,4 +19,9 @@ if (!isDedicated) then
 	
 	};
 	call dayz_resetSelfActions;	
+
+	vehicle_bot = objNull;
+	preview_bot = objNull;
+	preview_camera = nil;
+	preview_cameraPos = nil; 
 };

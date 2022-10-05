@@ -412,6 +412,22 @@ if (_dikCode == DIK_9) then
 	[] call building_catalog;
 };
 
+local _isBusy = player getVariable["isBusy",false];
+if (_isBusy) then
+{
+	if (_dikCode == 0x05) then
+	{			
+		[15,preview_bot] call fnc_rotate_bot;
+		[15,vehicle_bot] call fnc_rotate_bot;
+	};
+
+	if (_dikCode == 0x07) then
+	{			
+		[-15,preview_bot] call fnc_rotate_bot;
+		[-15,vehicle_bot] call fnc_rotate_bot;
+	};	
+};	
+
 if (_dikCode == 0xD2) then
 {
 	if (isNil 'debugMonitor') then

@@ -6,7 +6,7 @@
 	style = 0;
 	colorText[] = {1,1,1,9};
 	colorBackground[] = {-1,-1,-1,-1};
-	class Attributes	{
+	class Attributes {
 		font = "Zeppelin32";
 		color = "#FFFFFF";
 		align = "center";
@@ -149,9 +149,9 @@ class BuildingCatalogue
 	idd = 8456;
 	name = "BuildingCatalogue";
 	movingEnabled = true;
-	onload = "uiNamespace setVariable ['BuildingCatalogue', _this select 0]; player setVariable['isBusy',true,true];vehicle_bot=objNull; preview_bot=objNull; preview_camera cameraEffect ['terminate','back']; camDestroy preview_camera; preview_camera = nil; preview_cameraPos = nil; "; 
-	onUnload = "player setVariable['isBusy',false,true]; deleteVehicle vehicle_bot; deleteVehicle preview_bot; vehicle_bot=objNull; preview_bot=objNull; preview_camera cameraEffect ['terminate','back']; camDestroy preview_camera; preview_camera = nil; preview_cameraPos = nil; ";
-
+	onload = " systemChat 'Нажмите 4 или 6 для поворота.'; uiNamespace setVariable ['BuildingCatalogue', _this select 0]; player setVariable['isBusy',true,true]; vehicle_bot = objNull; preview_bot = objNull; preview_camera cameraEffect ['terminate','back']; camDestroy preview_camera; preview_camera = nil; preview_cameraPos = nil; "; 
+	onUnload = " player setVariable['isBusy',false,true]; deleteVehicle vehicle_bot; deleteVehicle preview_bot; vehicle_bot = objNull; preview_bot = objNull; preview_camera cameraEffect ['terminate','back']; camDestroy preview_camera; preview_camera = nil; preview_cameraPos = nil; ";
+	
 	class ControlsBackground
 	{
 		class CHXBCATLBG: CHX_RscPicture
@@ -197,7 +197,7 @@ class BuildingCatalogue
 			w = 0.264324 * safezoneW;
 			h = 0.70125 * safezoneH;
 			soundSelect[] = {"",0.1,1};
-			onLBDblClick  = "player spawn building_previews;  ";
+			onLBDblClick  = "player spawn building_previews;";
 		};
 
 		class CHXBCATINFO: CHX_RscStructuredText
