@@ -53,6 +53,8 @@ class Category_501
 	class PartGlass				{typeI	buyCVP 300 worth 		sellCVP 75 worth };
 	class PartGeneric			{typeI	buyCVP 300 worth 		sellCVP 75 worth };
 	class PartVRotor			{typeI	buyCVP 10000 worth 		sellCVP 2000 worth };
+	class ItemMixOil			{typeI	buyCVP 1000 worth 		sellCVP 200 worth };
+	class ItemJerryMixed		{typeI	buyCVP 3800 worth 		sellCVP 760 worth };
 	class ItemFuelcanEmpty		{typeI	buyCVP 100 worth 		sellCVP 20 worth };
 	class ItemFuelcan			{typeI	buyCVP 600 worth 		sellCVP 120 worth };
 	class ItemJerrycanEmpty		{typeI	buyCVP 400 worth 		sellCVP 80 worth };
