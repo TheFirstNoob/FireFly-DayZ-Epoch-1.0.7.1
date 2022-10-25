@@ -1,0 +1,1130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project name="DayZ Custom">
+	<Package name="Mission and Events Markers 1">
+		<Key ID="STR_CL_HEMP_FARM">
+			<Russian>Конопляная ферма</Russian>
+		</Key>
+		<Key ID="STR_CL_ESE_FUELBOMB_TITLE">
+			<Russian>Бомба на заправке</Russian>
+		</Key>
+		<Key ID="STR_CL_ESE_FUELBOMB_START">
+			<Russian>На автозаправочной станции %1, на грузовике установлена бомба. Она взорвётся через %2 мин.</Russian>
+		</Key>
+		<Key ID="STR_CL_ESE_FUELBOMB_END">
+			<Russian>Взрыв на заправке %1! Заберите оставшиеся припасы!</Russian>
+		</Key>
+		<Key ID="STR_CL_ESE_CRASHSITE_MARKER">
+			<Russian>Обломки %1</Russian>
+		</Key>
+		<Key ID="STR_CL_ESE_MECHANIC_TITLE">
+			<Russian>Транспорт механика</Russian>
+		</Key>
+		<Key ID="STR_CL_ESE_MECHANIC_START">
+			<Russian>Механик оставил свой транспорт, полный деталей для улучшения, в большом гараже около %1.</Russian>
+		</Key>
+		<Key ID="STR_CL_CLAIM_MARKER">
+			<Russian>Миссия занята %1</Russian>
+		</Key>
+		<Key ID="STR_CL_TIMEOUT_MARKER">
+			<Russian>%1: время на возврат %2 сек.</Russian>
+		</Key>
+		<Key ID="STR_CL_CLAIM_WARNING">
+			<Russian>Эту миссию занял %1. Спросите у него разрешения!</Russian>
+		</Key>
+		<Key ID="STR_CL_CLEARED_MARKER">
+			<Russian>Зачистил %1</Russian>
+		</Key>
+		<Key ID="STR_CL_MISSION_HERO">
+			<Russian>[Герои] %1</Russian>
+		</Key>
+		<Key ID="STR_CL_MISSION_BANDIT">
+			<Russian>[Бандиты] %1</Russian>
+		</Key>
+		<Key ID="STR_CL_MISSION_HEROS">
+			<Russian>Герои</Russian>
+		</Key>
+		<Key ID="STR_CL_MISSION_BANDITS">
+			<Russian>Бандиты</Russian>
+		</Key>
+		<Key ID="STR_CL_MISSION_HERO_COUNT">
+			<Russian>[Герои] %1 (Осталось: %2)</Russian>
+		</Key>
+		<Key ID="STR_CL_MISSION_BANDIT_COUNT">
+			<Russian>[Бандиты] %1 (Осталось: %2)</Russian>
+		</Key>
+		<Key ID="STR_CL_BASE_TITLE">
+			<Russian>Военная база</Russian>
+		</Key>
+		<Key ID="STR_CL_ABANDONEDTRADER_TITLE">
+			<Russian>Торговый город</Russian>
+		</Key>
+		<Key ID="STR_CL_ARMEDVEHICLE_TITLE">
+			<Russian>Разбитый %1</Russian>
+		</Key>
+		<Key ID="STR_CL_ARMYBASE_TITLE">
+			<Russian>Армейская база</Russian>
+		</Key>
+		<Key ID="STR_CL_BHCRASH_TITLE">
+			<Russian>Падение Чёрного Ястреба</Russian>
+		</Key>
+		<Key ID="STR_CL_URAL_TITLE">
+			<Russian>Урал под атакой</Russian>
+		</Key>
+		<Key ID="STR_CL_CANNIBALCAVE_TITLE">
+			<Russian>Пещера каннибалов</Russian>
+		</Key>
+		<Key ID="STR_CL_MV22_TITLE">
+			<Russian>Захваченный MV-22</Russian>
+		</Key>
+		<Key ID="STR_CL_AIRDROP_TITLE">
+			<Russian>Сброшен %1</Russian>
+		</Key>
+		<Key ID="STR_CL_WAIPATROL_TITLE">
+			<Russian>Вооружённый патруль</Russian>
+		</Key>
+		<Key ID="STR_CL_CROPRADIER_TITLE">
+			<Russian>Налёт на общину</Russian>
+		</Key>
+		<Key ID="STR_CL_DRONE_TITLE">
+			<Russian>Беспилотник</Russian>
+		</Key>
+		<Key ID="STR_CL_DRUGBUST_TITLE">
+			<Russian>Драгдилер</Russian>
+		</Key>
+		<Key ID="STR_CL_FARMER_TITLE">
+			<Russian>Фермер</Russian>
+		</Key>
+		<Key ID="STR_CL_FIRESTATION_TITLE">
+			<Russian>Пожарная часть</Russian>
+		</Key>
+		<Key ID="STR_CL_GEMTOWER_TITLE">
+			<Russian>Башня</Russian>
+		</Key>
+		<Key ID="STR_CL_WAI_IKEA_TITLE">
+			<Russian>Конвой IKEA</Russian>
+		</Key>
+		<Key ID="STR_CL_JUNKYARD_TITLE">
+			<Russian>Свалка</Russian>
+		</Key>
+		<Key ID="STR_CL_LUMBERMILL_TITLE">
+			<Russian>Лесопилка</Russian>
+		</Key>
+		<Key ID="STR_CL_PRESIDENT_TITLE">
+			<Russian>Президент в городе</Russian>
+		</Key>
+		<Key ID="STR_CL_EXTRACTION_TITLE">
+			<Russian>Эвакуация снайпера %1</Russian>
+		</Key>
+		<Key ID="STR_CL_FARM_TITLE">
+			<Russian>Ферма</Russian>
+		</Key>
+		<Key ID="STR_CL_MAYOR_TITLE">
+			<Russian>Особняк Мэра</Russian>
+		</Key>
+		<Key ID="STR_CL_WAI_MSC_TITLE">
+			<Russian>Медицинский лагерь</Russian>
+		</Key>
+		<Key ID="STR_CL_WAI_OUTPOST_TITLE">
+			<Russian>Аванпост</Russian>
+		</Key>
+		<Key ID="STR_CL_RADIOTOWER_TITLE">
+			<Russian>Радиовышка</Russian>
+		</Key>
+		<Key ID="STR_CL_WAI_PATROL_TITLE">
+			<Russian>Патруль</Russian>
+		</Key>
+		<Key ID="STR_CL_SLAUGHTERHOUSE_TITLE">
+			<Russian>Старая бойня</Russian>
+		</Key>
+		<Key ID="STR_CL_WAI_TANK_TITLE">
+			<Russian>Танковая колонна</Russian>
+		</Key>
+		<Key ID="STR_CL_WAI_WEAPONCACHE_TITLE">
+			<Russian>Ящик с оружием</Russian>
+		</Key>
+		<Key ID="STR_CL_GRAYSKULL_TITLE">
+			<Russian>Замок Серого Черепа</Russian>
+		</Key>
+		<Key ID="STR_CL_WUHAN_TITLE">
+			<Russian>Уханьская лаборатория</Russian>
+		</Key>
+	</Package>
+
+	<Package name="WickedAI_new 1">
+		<Key ID="STR_CL_MISSION_ANNOUNCE">
+			<Russian>Миссия:</Russian>
+		</Key>
+		<Key ID="STR_CL_MINEFIELD_WARNING">
+			<Russian>ОПАСНОСТЬ! Вы приближаетесь к минному полю!</Russian>
+		</Key>
+		<Key ID="STR_CL_ABANDONEDTRADER_ANNOUNCE">
+			<Russian>Разведка обнаружила нелегальную торговлю на заброшенном базаре.</Russian>
+		</Key>
+		<Key ID="STR_CL_ABANDONEDTRADER_WIN">
+			<Russian>Выжившие захватили заброшенный базар. Вы можете забрать себе все нелегальное.</Russian>
+		</Key>
+		<Key ID="STR_CL_ABANDONEDTRADER_FAIL">
+			<Russian>Выжившим не удалось узнать что было на заброшенном базаре. Все сбежали.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_ARMEDVEHICLE_ANNOUNCE">
+			<Russian>Герои захватили у бандитов вооруженный транспорт.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_ARMEDVEHICLE_WIN">
+			<Russian>Бандиты отбили вооруженный транспорт.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_ARMEDVEHICLE_FAIL">
+			<Russian>Бандиты не смогли отбить вооруженный транспорт.</Russian>
+		</Key>
+		<Key ID="STR_CL_ARMYBASE_ANNOUNCE">
+			<Russian>Обнаружена армейская база под усиленной охраной!</Russian>
+		</Key>
+		<Key ID="STR_CL_ARMYBASE_WIN">
+			<Russian>Выжившие захватили армейскую базу.</Russian>
+		</Key>
+		<Key ID="STR_CL_ARMYBASE_FAIL">
+			<Russian>Выжившие не смогли захватить армейскую базу.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_URAL_ANNOUNCE">
+			<Russian>Герои охраняют сломанный Урал!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_URAL_WIN">
+			<Russian>Груз с Урала был захвачен бандитами.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_URAL_FAIL">
+			<Russian>Бандиты не смогли захватить груз с Урала.</Russian>
+		</Key>
+		<Key ID="STR_CL_CANNIBALCAVE_ANNOUNCE">
+			<Russian>Каннибалы прячутся в пещере!</Russian>
+		</Key>
+		<Key ID="STR_CL_CANNIBALCAVE_WIN">
+			<Russian>Выжившие зачистили Пещеру каннибалов.</Russian>
+		</Key>
+		<Key ID="STR_CL_CANNIBALCAVE_FAIL">
+			<Russian>Выжившие не смогли зачистить Пещеру каннибалов.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_MV22_ANNOUNCE">
+			<Russian>Группа добровольцев из Красного Креста раздает предметы медицины из захваченного MV22!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_MV22_WIN">
+			<Russian>Бандиты убили добровольцев и захватили лут.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_MV22_FAIL">
+			<Russian>Бандиты не смогли захватить медицинские препараты.</Russian>
+		</Key>
+		<Key ID="STR_CL_CROPRAIDER_ANNOUNCE">
+			<Russian>Полиция собирается совершить налет на общину хиппи!</Russian>
+		</Key>
+		<Key ID="STR_CL_CROPRAIDER_WIN">
+			<Russian>Выжившие спасли общину хиппи.</Russian>
+		</Key>
+		<Key ID="STR_CL_CROPRAIDER_FAIL">
+			<Russian>Выжившие не смогли спасти общину.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_DRONE_ANNOUNCE">
+			<Russian>Герои готовят беспилотник на секретном аэродроме!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_DRONE_WIN">
+			<Russian>Выжившие захватили беспилотник.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_DRONE_FAIL">
+			<Russian>Выжившие не смогли захватить беспилотник.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_DRUGBUST_ANNOUNCE">
+			<Russian>Полиция совершила налет на драгдилера!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_DRUGBUST_WIN">
+			<Russian>Бандиты захватили наркоту.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_DRUGBUST_FAIL">
+			<Russian>Бандиты не смогли захватить наркоту.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_FARMER_ANNOUNCE">
+			<Russian>Фермер продает товары на ферме!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_FARMER_WIN">
+			<Russian>Бандиты убили всех рабочих на ферме.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_FARMER_FAIL">
+			<Russian>Фермер распродал все свои товары.</Russian>
+		</Key>
+		<Key ID="STR_CL_GEMTOWER_ANNOUNCE">
+			<Russian>БАШНЯ! Поднимись на Башню и спустись вниз по другой стороне, чтобы получить добычу!</Russian>
+		</Key>
+		<Key ID="STR_CL_GEMTOWER_WIN">
+			<Russian>Выжившие захватили Башню.</Russian>
+		</Key>
+		<Key ID="STR_CL_GEMTOWER_FAIL">
+			<Russian>Выжившие не смогли захватить Башню.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_BASE_ANNOUNCE">
+			<Russian>Герои основали укрепленную базу!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_BASE_WIN">
+			<Russian>Бандиты захватили Геройскую базу.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_BASE_FAIL">
+			<Russian>Бандиты не смогли захватить Геройскую базу.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_OUTPOST_ANNOUNCE">
+			<Russian>Отряд героев обосновал аванпост!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_OUTPOST_WIN">
+			<Russian>Бандиты захватили аванпост.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_OUTPOST_FAIL">
+			<Russian>Бандиты не смогли захватить аванпост.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_IKEA_ANNOUNCE">
+			<Russian>Конвой IKEA сделал остановку на обед!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_IKEA_WIN">
+			<Russian>Бандиты успешно захватили конвой IKEA.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_IKEA_FAIL">
+			<Russian>Бандитам не удалось захватить конвой.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_JUNKYARD_ANNOUNCE">
+			<Russian>Герои что-то скрывают на свалке!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_JUNKYARD_WIN">
+			<Russian>Выжившие захватили свалку.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_JUNKYARD_FAIL">
+			<Russian>Выжившие не смогли захватить свалку.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_LUMBERMILL_ANNOUNCE">
+			<Russian>Бандиты обосновались на лесопилке!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_LUMBERMILL_WIN">
+			<Russian>Выжившие захватили лесопилку.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_LUMBERMILL_FAIL">
+			<Russian>Выжившие не смогли вовремя захватить лесопилку.</Russian>
+		</Key>
+		<Key ID="STR_CL_FARM_ANNOUNCE">
+			<Russian>Обнаружена старая ферма MacDonald!</Russian>
+		</Key>
+		<Key ID="STR_CL_FARM_WIN">
+			<Russian>Выжившие захватили ферму.</Russian>
+		</Key>
+		<Key ID="STR_CL_FARM_FAIL">
+			<Russian>Выжившим не удалось захватить ферму.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_MSC_ANNOUNCE">
+			<Russian>Обнаружен медицинский лагерь!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_MSC_WIN">
+			<Russian>Выжившие взяли под контроль медицинский лагерь.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_MSC_FAIL">
+			<Russian>Выжившим не удалось захватить медицинский лагерь.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_PATROL_ANNOUNCE">
+			<Russian>Герои начали патрулирование в %1!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_PATROL_WIN">
+			<Russian>Бандиты уничтожили Геройский патруль.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_PATROL_FAIL">
+			<Russian>Герои успешно закончили патрулирование.</Russian>
+		</Key>
+		<Key ID="STR_CL_PRESIDENT_ANNOUNCE">
+			<Russian>Президент приехал в город на конференцию!</Russian>
+		</Key>
+		<Key ID="STR_CL_PRESIDENT_WIN">
+			<Russian>Президент был убит.</Russian>
+		</Key>
+		<Key ID="STR_CL_PRESIDENT_FAIL">
+			<Russian>Президенту удалось уйти.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_RADIO_ANNOUNCE">
+			<Russian>Герои построили радиовышку!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_RADIO_WIN">
+			<Russian>Выжившие захватили радиовышку.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_RADIO_FAIL">
+			<Russian>Выжившим не удалось захватить радиовышку.</Russian>
+		</Key>
+		<Key ID="STR_CL_SLAUGHTERHOUSE_ANNOUNCE">
+			<Russian>Какая-то движуха на старой бойне!</Russian>
+		</Key>
+		<Key ID="STR_CL_SLAUGHTERHOUSE_WIN">
+			<Russian>Выжившие захватили старую бойню.</Russian>
+		</Key>
+		<Key ID="STR_CL_SLAUGHTERHOUSE_FAIL">
+			<Russian>Выжившие обнаружили массовую могилу.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_MILCHOPPER_ANNOUNCE">
+			<Russian>Герои загружают снайперское оружие в вертолет!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_MILCHOPPER_WIN">
+			<Russian>Бандиты захватили снайперское оружие и вертолет.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_MILCHOPPER_FAIL">
+			<Russian>Бандиты не смогли захватить оружие.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_TANK_ANNOUNCE">
+			<Russian>Танковая колонна ООН остановилась для пополнения запасов!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_TANK_WIN">
+			<Russian>Выжившие захватили танковую колонну.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_TANK_FAIL">
+			<Russian>Выжившим не удалось захватить танковую колонну.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_WEAPONCACHE_ANNOUNCE">
+			<Russian>Герои обнаружили ящик с оружием!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_WEAPONCACHE_WIN">
+			<Russian>Бандиты захватили ящик с оружием.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_WEAPONCACHE_FAIL">
+			<Russian>Бандиты не смогли захватить ящик с оружием.</Russian>
+		</Key>
+		<Key ID="STR_CL_HEROPATROL_ANNOUNCE">
+			<Russian>Разведчики Героев проверяют место под новую базу!</Russian>
+		</Key>
+		<Key ID="STR_CL_HEROPATROL_WIN">
+			<Russian>Бандиты уничтожили Геройских разведчиков.</Russian>
+		</Key>
+		<Key ID="STR_CL_HEROPATROL_FAIL">
+			<Russian>Бандиты не смогли уничтожить Геройских разведчиков.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_ARMEDVEHICLE_ANNOUNCE">
+			<Russian>Бандиты захватили вооруженный транспорт!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_ARMEDVEHICLE_WIN">
+			<Russian>Герои отбили вооруженный транспорт.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_ARMEDVEHICLE_FAIL">
+			<Russian>Герои не смогли отбить вооруженный транспорт.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_BASE_ANNOUNCE">
+			<Russian>Обнаружен временный военный лагерь!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_BASE_WIN">
+			<Russian>Выжившие захватили лагерь.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_BASE_FAIL">
+			<Russian>Выжившие не смогли захватить лагерь.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_OUTPOST_ANNOUNCE">
+			<Russian>Отряд бандитов обосновал аванпост!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_OUTPOST_WIN">
+			<Russian>Выжившие захватили аванпост.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_OUTPOST_FAIL">
+			<Russian>Выжившие не смогли захватить аванпост.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDITPATROL_ANNOUNCE">
+			<Russian>Патруль бандитских разведчиков проверяет новое место для базы!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDITPATROL_WIN">
+			<Russian>Выжившие уничтожили бандитский патруль.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDITPATROL_FAIL">
+			<Russian>Выжившим не удалось уничтожить бандитский патруль.</Russian>
+		</Key>
+		<Key ID="STR_CL_BHCRASH_ANNOUNCE">
+			<Russian>Разбился Чёрный Ястреб, перевозящий предметы снабжения!</Russian>
+		</Key>
+		<Key ID="STR_CL_BHCRASH_WIN">
+			<Russian>Выжившие захватили место крушения Чёрного Ястреба.</Russian>
+		</Key>
+		<Key ID="STR_CL_BHCRASH_FAIL">
+			<Russian>Выжившие не смогли захватить место крушения Чёрного Ястреба.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_MV22_ANNOUNCE">
+			<Russian>Бандиты захватили MV-22 Красного Креста!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_MV22_WIN">
+			<Russian>Выжившие убили бандитов и захватили MV-22.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_MV22_FAIL">
+			<Russian>Выжившие не смогли захватить MV-22.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_URAL_ANNOUNCE">
+			<Russian>Бандиты охраняют сломанный Урал!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_URAL_WIN">
+			<Russian>Груз с Урала был захвачен выжившими.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_URAL_FAIL">
+			<Russian>Выжившие не смогли захватить груз с Урала.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_EXTRACTION_ANNOUNCE">
+			<Russian>Бандитский вертолет со снайперским оружием готовится к вылету!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_EXTRACTION_WIN">
+			<Russian>Выжившие захватили вертолет с оружием.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_EXTRACTION_FAIL">
+			<Russian>Выжившие не смогли захватить снайперское оружие с вертолета.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_DRONEPILOT_ANNOUNCE">
+			<Russian>Бандиты готовят беспилотник на секретном аэродроме!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_DRONEPILOT_WIN">
+			<Russian>Выжившие захватили беспилотник.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_DRONEPILOT_FAIL">
+			<Russian>Выжившие не смогли захватить беспилотник.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_DRUGBUST_ANNOUNCE">
+			<Russian>Обнаружен бандитский наркопритон!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_DRUGBUST_WIN">
+			<Russian>Выжившие захватили наркопритон.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_DRUGBUST_FAIL">
+			<Russian>Выжившие не смогли захватить наркопритон.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_FARMER_ANNOUNCE">
+			<Russian>Бандиты напали на фермера и крадут его запасы!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_FARMER_WIN">
+			<Russian>Выжившие отбили ферму от бандитов.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_FARMER_FAIL">
+			<Russian>Бандиты ограбили фермера.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_IKEA_ANNOUNCE">
+			<Russian>Конвой IKEA был захвачен бандитами!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_IKEA_WIN">
+			<Russian>Выжившие успешно захватили конвой IKEA.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_IKEA_FAIL">
+			<Russian>Выжившим не удалось захватить конвой.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_JUNKYARD_ANNOUNCE">
+			<Russian>Бандиты что-то скрывают на свалке!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_JUNKYARD_WIN">
+			<Russian>Выжившие захватили свалку.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_JUNKYARD_FAIL">
+			<Russian>Выжившие не смогли захватить свалку.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_LUMBER_ANNOUNCE">
+			<Russian>Герои обосновались на лесопилке!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_LUMBER_WIN">
+			<Russian>Выжившие захватили лесопилку.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_LUMBER_FAIL">
+			<Russian>Выжившие не смогли вовремя захватить лесопилку.</Russian>
+		</Key>
+		<Key ID="STR_CL_MAYOR_ANNOUNCE">
+			<Russian>Коррумпированный Мэр прячется в особняке!</Russian>
+		</Key>
+		<Key ID="STR_CL_MAYOR_WIN">
+			<Russian>Особняк Мэра под контролем выживших.</Russian>
+		</Key>
+		<Key ID="STR_CL_MAYOR_FAIL">
+			<Russian>Выжившие не смогли захватить особняк Мэра.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_MSC_ANNOUNCE">
+			<Russian>Обнаружен бандитский медицинский лагерь!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_MSC_WIN">
+			<Russian>Выжившие взяли под контроль медицинский лагерь.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_MSC_FAIL">
+			<Russian>Выжившим не удалось захватить медицинский лагерь.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_PATROL_ANNOUNCE">
+			<Russian>Бандиты начали патрулирование в %1!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_PATROL_WIN">
+			<Russian>Герои уничтожили Бандитский патруль.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_PATROL_FAIL">
+			<Russian>Бандиты успешно закончили патрулирование.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_RADIOTOWER_ANNOUNCE">
+			<Russian>Бандиты построили радиовышку.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_RADIOTOWER_WIN">
+			<Russian>Выжившие захватили радиовышку.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_RADIOTOWER_FAIL">
+			<Russian>Выжившим не удалось захватить радиовышку.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_TANK_ANNOUNCE">
+			<Russian>Танковая колонна Бандитов остановилась для пополнения запасов!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_TANK_WIN">
+			<Russian>Выжившие захватили танковую колонну.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_TANK_FAIL">
+			<Russian>Выжившим не удалось захватить танковую колонну.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_WEAPONCACHE_ANNOUNCE">
+			<Russian>Бандиты обнаружили ящик с оружием!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_WEAPONCACHE_WIN">
+			<Russian>Выжившие захватили ящик с оружием.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_WEAPONCACHE_FAIL">
+			<Russian>Выжившие не смогли захватить ящик с оружием.</Russian>
+		</Key>
+		<Key ID="STR_CL_PATROL_ARRIVE">
+			<Russian>Патруль прибыл в %1!</Russian>
+		</Key>
+		<Key ID="STR_CL_PATROL_MOVE">
+			<Russian>Патруль замечен в направлении %1.</Russian>
+		</Key>
+		<Key ID="STR_CL_PATROL_DISABLED">
+			<Russian>Патрульный транспорт выведен из строя!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_AIRDROP_ANNOUNCE">
+			<Russian>%2 будет сброшен из %1 для частной военной компании!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_AIRDROP_CRASH">
+			<Russian>%1 потерпел крушение!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_AIRDROP_DROP">
+			<Russian>%1 был сброшен!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_AIRDROP_WIN">
+			<Russian>Бандиты похитили %1!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_AIRDROP_FAIL">
+			<Russian>Бандиты не смогли украсть %1.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_AIRDROP_ANNOUNCE">
+			<Russian>%2 будет сброшен из %1 для Талибов!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_AIRDROP_CRASH">
+			<Russian>%1 потерпел крушение!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_AIRDROP_DROP">
+			<Russian>%1 был сброшен!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_AIRDROP_WIN">
+			<Russian>Выжившие захватили %1!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_AIRDROP_FAIL">
+			<Russian>Выжившие не смогли захватить %1!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_FIRESTATION_ANNOUNCE">
+			<Russian>Герои охраняют пожарную часть!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_FIRESTATION_WIN">
+			<Russian>Бандиты захватили пожарную часть!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_FIRESTATION_FAIL">
+			<Russian>Бандиты не смогли захватить пожарную часть!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_FIRESTATION_ANNOUNCE">
+			<Russian>Бандиты атаковали пожарную часть!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_FIRESTATION_WIN">
+			<Russian>Выжившие захватили у бандитов пожарную часть!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_FIRESTATION_FAIL">
+			<Russian>Выжившие не смогли захватить пожарную часть!</Russian>
+		</Key>
+		<Key ID="STR_CL_GRAYSKULL_ANNOUNCE">
+			<Russian>Замок Серого Черепа подвергся нападению!</Russian>
+		</Key>
+		<Key ID="STR_CL_GRAYSKULL_WIN">
+			<Russian>Выжившие захватили Замок Серого Черепа.</Russian>
+		</Key>
+		<Key ID="STR_CL_GRAYSKULL_FAIL">
+			<Russian>Выжившие не смогли захватить Замок Серого Черепа.</Russian>
+		</Key>
+		<Key ID="STR_CL_WUHAN_ANNOUNCE">
+			<Russian>Учёные Уханьской лаборатории охраняют доктора Фаучи.</Russian>
+		</Key>
+		<Key ID="STR_CL_WUHAN_WIN">
+			<Russian>Доктор Фаучи освобождён от должности.</Russian>
+		</Key>
+		<Key ID="STR_CL_WUHAN_FAIL">
+			<Russian>Доктор Фаучи продолжает лгать о происхождении вируса.</Russian>
+		</Key>
+	</Package>
+
+	<Package name="WickedAI_old 1">
+		<Key ID="STR_CL_GENERAL_ARMYBASE_ANNOUNCE">
+			<Russian>Обнаружена армейская база под усиленной охраной!</Russian>
+		</Key>
+		<Key ID="STR_CL_GENERAL_ARMYBASE_WIN">
+			<Russian>Выжившие захватили армейскую базу.</Russian>
+		</Key>
+		<Key ID="STR_CL_GENERAL_ARMYBASE_FAIL">
+			<Russian>Выжившие не смогли захватить армейскую базу.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_BHCRASH_ANNOUNCE">
+			<Russian>Разбился Чёрный Ястреб, перевозящий предметы снабжения!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_BHCRASH_WIN">
+			<Russian>Бандиты захватили место крушения Чёрного Ястреба.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_BHCRASH_FAIL">
+			<Russian>Бандиты не смогли захватить место крушения Чёрного Ястреба.</Russian>
+		</Key>
+		<Key ID="STR_CL_GENERAL_CANNIBALCAVE_ANNOUNCE">
+			<Russian>Каннибалы прячутся в пещере!</Russian>
+		</Key>
+		<Key ID="STR_CL_GENERAL_CANNIBALCAVE_WIN">
+			<Russian>Выжившие зачистили Пещеру каннибалов.</Russian>
+		</Key>
+		<Key ID="STR_CL_GENERAL_CANNIBALCAVE_FAIL">
+			<Russian>Выжившие не смогли зачистить Пещеру каннибалов.</Russian>
+		</Key>
+		<Key ID="STR_CL_GENERAL_CROPRAIDER_ANNOUNCE">
+			<Russian>Полиция собирается совершить налет на общину хиппи!</Russian>
+		</Key>
+		<Key ID="STR_CL_GENERAL_CROPRAIDER_WIN">
+			<Russian>Выжившие спасли общину хиппи.</Russian>
+		</Key>
+		<Key ID="STR_CL_GENERAL_CROPRAIDER_FAIL">
+			<Russian>Выжившие не смогли спасти общину.</Russian>
+		</Key>
+		<Key ID="STR_CL_GENERAL_GEMTOWER_ANNOUNCE">
+			<Russian>БАШНЯ! Поднимись на Башню и спустись вниз по другой стороне, чтобы получить добычу!</Russian>
+		</Key>
+		<Key ID="STR_CL_GENERAL_GEMTOWER_WIN">
+			<Russian>Выжившие захватили Башню.</Russian>
+		</Key>
+		<Key ID="STR_CL_GENERAL_GEMTOWER_FAIL">
+			<Russian>Выжившие не смогли захватить Башню.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_HEROBASE_ANNOUNCE">
+			<Russian>Герои основали укрепленную базу!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_HEROBASE_WIN">
+			<Russian>Бандиты захватили Геройскую базу.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_HEROBASE_FAIL">
+			<Russian>Бандиты не смогли захватить Геройскую базу.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_HEROOUTPOST_ANNOUNCE">
+			<Russian>Отряд героев обосновал аванпост!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_HEROOUTPOST_WIN">
+			<Russian>Бандиты захватили аванпост.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_HEROOUTPOST_FAIL">
+			<Russian>Бандиты не смогли захватить аванпост.</Russian>
+		</Key>
+		<Key ID="STR_CL_GENERAL_FARM_ANNOUNCE">
+			<Russian>Обнаружена старая ферма MacDonald!</Russian>
+		</Key>
+		<Key ID="STR_CL_GENERAL_FARM_WIN">
+			<Russian>Выжившие захватили ферму.</Russian>
+		</Key>
+		<Key ID="STR_CL_GENERAL_FARM_FAIL">
+			<Russian>Выжившим не удалось захватить ферму.</Russian>
+		</Key>
+		<Key ID="STR_CL_GENERAL_SLAUGHTERHOUSE_ANNOUNCE">
+			<Russian>Какая-то движуха на старой бойне!</Russian>
+		</Key>
+		<Key ID="STR_CL_GENERAL_SLAUGHTERHOUSE_WIN">
+			<Russian>Выжившие захватили старую бойню.</Russian>
+		</Key>
+		<Key ID="STR_CL_GENERAL_SLAUGHTERHOUSE_FAIL">
+			<Russian>Выжившие обнаружили массовую могилу.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_HEROPATROL_ANNOUNCE">
+			<Russian>Разведчики Героев проверяют место под новую базу!</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_HEROPATROL_WIN">
+			<Russian>Бандиты уничтожили Геройских разведчиков.</Russian>
+		</Key>
+		<Key ID="STR_CL_BANDIT_HEROPATROL_FAIL">
+			<Russian>Бандиты не смогли уничтожить Геройских разведчиков.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_BANDITBASE_ANNOUNCE">
+			<Russian>Обнаружен временный военный лагерь!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_BANDITBASE_WIN">
+			<Russian>Выжившие захватили лагерь.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_BANDITBASE_FAIL">
+			<Russian>Выжившие не смогли захватить лагерь.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_BANDITOUTPOST_ANNOUNCE">
+			<Russian>Отряд бандитов обосновал аванпост!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_BANDITOUTPOST_WIN">
+			<Russian>Выжившие захватили аванпост.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_BANDITOUTPOST_FAIL">
+			<Russian>Выжившие не смогли захватить аванпост.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_BANDITPATROL_ANNOUNCE">
+			<Russian>Патруль бандитских разведчиков проверяет новое место для базы!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_BANDITPATROL_WIN">
+			<Russian>Выжившие уничтожили бандитский патруль.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_BANDITPATROL_FAIL">
+			<Russian>Выжившим не удалось уничтожить бандитский патруль.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_BHCRASH_ANNOUNCE">
+			<Russian>Разбился Чёрный Ястреб, перевозящий предметы снабжения!</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_BHCRASH_WIN">
+			<Russian>Выжившие захватили место крушения Чёрного Ястреба.</Russian>
+		</Key>
+		<Key ID="STR_CL_HERO_BHCRASH_FAIL">
+			<Russian>Выжившие не смогли захватить место крушения Чёрного Ястреба.</Russian>
+		</Key>
+	</Package>
+
+	<Package name="EpochServerEvents 1">
+		<Key ID="STR_CL_ESE_IKEA_TITLE">
+			<Russian>Строительные материалы</Russian>
+		</Key>
+		<Key ID="STR_CL_ESE_IKEA">
+			<Russian>Грузовик IKEA потерял свой груз! Проверьте карту.</Russian>
+		</Key>
+		<Key ID="STR_CL_ESE_TREASURE_TITLE">
+			<Russian>Ящик с сокровищами</Russian>
+		</Key>
+		<Key ID="STR_CL_ESE_TREASURE">
+			<Russian>Пираты спрятали свои сокровища в сундуке, но мы то знаем где он! Проверьте карту.</Russian>
+		</Key>
+		<Key ID="STR_CL_ESE_MILITARY_TITLE">
+			<Russian>Военный груз</Russian>
+		</Key>
+		<Key ID="STR_CL_ESE_MILITARY">
+			<Russian>Группа военных потеряла свой груз с оружием! Проверьте карту.</Russian>
+		</Key>
+		<Key ID="STR_CL_ESE_UNSUPPLY_TITLE">
+			<Russian>Гуманитарная помощь</Russian>
+		</Key>
+		<Key ID="STR_CL_ESE_UNSUPPLY">
+			<Russian>ООН сбросила ящик с необходимыми плюшками для выживших! Проверьте карту.</Russian>
+		</Key>
+		<Key ID="STR_CL_ESE_RUBBLETOWN_TITLE">
+			<Russian>Разрушенный город</Russian>
+		</Key>
+		<Key ID="STR_CL_ESE_RUBBLETOWN">
+			<Russian>Беспилотная разведка сообщила о городе-призраке! Проверьте карту.</Russian>
+		</Key>
+		<Key ID="STR_CL_ESE_LABYRINTH_TITLE">
+			<Russian>Лабиринт</Russian>
+		</Key>
+		<Key ID="STR_CL_ESE_LABYRINTH">
+			<Russian>Андрюша опять спрятал ящик с лутом в лабиринте! Проверьте карту.</Russian>
+		</Key>
+		<Key ID="STR_CL_ESE_VAULT_TITLE">
+			<Russian>Заброшенный сейф</Russian>
+		</Key>
+		<Key ID="STR_CL_ESE_VAULT">
+			<Russian>Кто-то из игроков забыл про свой сейф, теперь его код 0000! Проверьте карту.</Russian>
+		</Key>
+	</Package>
+
+	<Package name="Over9000Gambling 1">
+		<Key ID="STR_CL_GAMBLE_PRICEFREE">
+			<Russian>Бесплатная игра, Множитель 1x</Russian>
+		</Key>
+		<Key ID="STR_CL_GAMBLE_PRICEFREE_NO_CARDS">
+			<Russian>У вас нет билета на бесплатную попытку!</Russian>
+		</Key>
+		<Key ID="STR_CL_GAMBLE_PRICE1x">
+			<Russian>Ставка 800 %1, Множитель 1x</Russian>
+		</Key>
+		<Key ID="STR_CL_GAMBLE_PRICE2x">
+			<Russian>Ставка 1600 %1, Множитель 2x</Russian>
+		</Key>
+		<Key ID="STR_CL_GAMBLE_PRICE3x">
+			<Russian>Ставка 2400 %1, Множитель 3x</Russian>
+		</Key>
+		<Key ID="STR_CL_GAMBLE_GAMBLING_FOR_X_COINS">
+			<Russian>Вы ставите на %1 %2!</Russian>
+		</Key>
+		<Key ID="STR_CL_GAMBLE_GAMBLING_FOR_FREE">
+			<Russian>Вы делаете бесплатную попытку!</Russian>
+		</Key>
+		<Key ID="STR_CL_GAMBLE_NO_MONEY">
+			<Russian>У вас недостаточно %1 для игры!</Russian>
+		</Key>
+		<Key ID="STR_CL_GAMBLE_NO_LUCK">
+			<Russian>Ебанный рот этого казино блять, повезет в другой раз!</Russian>
+		</Key>
+		<Key ID="STR_CL_GAMBLE_WON">
+			<Russian>Вы выиграли %1x %2.</Russian>
+		</Key>
+		<Key ID="STR_CL_GAMBLE_WON_COINS">
+			<Russian>Вы выиграли %1 %2.</Russian>
+		</Key>
+		<Key ID="STR_CL_GAMBLE_WON_COINS_JACKPOT">
+			<Russian>О повезло, повезло! Вы выиграли Джекпот %1 %2!</Russian>
+		</Key>
+		<Key ID="STR_CL_GAMBLE_ALREADY">
+			<Russian>Помедленнее, Королева Азартных игр!</Russian>
+		</Key>
+	</Package>
+
+	<Package name="AnimatedCrashSpawner 1">
+		<Key ID="STR_CL_ACS_TITLE">
+			<Russian>Крушение</Russian>
+		</Key>
+		<Key ID="STR_CL_ACS_ANNOUNCE">
+			<Russian>%1 начал терять управление! Следите за ним и идите к месту крушения чтобы найти интересные припасы!</Russian>
+		</Key>
+		<Key ID="STR_CL_ACS_WATERCRASH">
+			<Russian>%1 потерпел крушение на воду. Увы, лут утонул.</Russian>
+		</Key>
+		<Key ID="STR_CL_ACS_CRASH">
+			<Russian>%1 потерпел крушение. Захватите лут.</Russian>
+		</Key>
+		<Key ID="STR_CL_ACS_TIMEOUT">
+			<Russian>Выжившие не смогли захватить %1 потерпевший крушение!</Russian>
+		</Key>
+		<Key ID="STR_CL_ACS_SUCCESS">
+			<Russian>Выжившие захватили %1 потерпевший крушение!</Russian>
+		</Key>
+	</Package>
+
+	<Package name="DZMS 1">
+		<Key ID="STR_CL_DZMS_AN2_TITLE">
+			<Russian>АН-2 с припасами</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_AN2_START">
+			<Russian>АН-2 с припасами движется к отмеченной позиции!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_AN2_DEST">
+			<Russian>АН-2 разбился, припасы уничтожены!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_AN2_CLOSE">
+			<Russian>АН-2 в 1200м от точки выброса!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_AN2_DROP">
+			<Russian>АН-2 успешно сбросил ящик с припасами!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_AN2_FAIL">
+			<Russian>Время миссии 'АН-2 с припасами' истекло!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_AN2_WIN">
+			<Russian>Миссия 'АН-2 с припасами' успешно завершена!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_APC_TITLE">
+			<Russian>Броневики</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_APC_START">
+			<Russian>Военные охраняют 3 броневика!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_APC_WIN">
+			<Russian>Броневики захвачены!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_APC_FAIL">
+			<Russian>Время миссии 'Броневики' истекло!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_AV_TITLE">
+			<Russian>Вооружённая техника</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_AV_START">
+			<Russian>Охраняются два вооружёных транспорта!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_AV_WIN">
+			<Russian>Вооружённая техника захвачена!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_AV_FAIL">
+			<Russian>Время миссии 'Вооружённая техника' истекло!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_C130_TITLE">
+			<Russian>Крушение C130</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_C130_START">
+			<Russian>Запрещенная группировка действующая на острове сбила C130!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_C130_WIN">
+			<Russian>Место крушения C130 было захвачено!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_C130_FAIL">
+			<Russian>Время миссии 'Крушение C130' истекло!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_CONST_TITLE">
+			<Russian>Стройка</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_CONST_START">
+			<Russian>Обнаружена строительная площадка!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_CONST_WIN">
+			<Russian>Стройка захвачена!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_CONST_FAIL">
+			<Russian>Время миссии 'Стройка' истекло!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_FB_TITLE">
+			<Russian>Военная база</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_FB_START">
+			<Russian>Обнаружено строительство военной базы!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_FB_WIN">
+			<Russian>Военная база захвачена!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_FB_FAIL">
+			<Russian>Время миссии 'Военная база' истекло!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_GS_TITLE">
+			<Russian>Универмаг</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_GS_START">
+			<Russian>Универмаг открыт для бизнеса!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_GS_WIN">
+			<Russian>Весь персонал универмага уничтожен!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_GS_FAIL">
+			<Russian>Время миссии 'Универмаг' истекло!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_HC_TITLE">
+			<Russian>Крушение вертолёта</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_HC_START">
+			<Russian>Вертолёт потерпел крушение!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_HC_WIN">
+			<Russian>Место крушения вертолёта захвачено!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_HC_FAIL">
+			<Russian>Время миссии 'Крушение вертолёта' истекло!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_HL_TITLE">
+			<Russian>Вынужденная посадка</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_HL_START">
+			<Russian>Вертолёт с припасами совершил вынужденную посадку!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_HL_WIN">
+			<Russian>Вертолёт захвачен!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_HL_FAIL">
+			<Russian>Вертолёт улетел!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_HUM_TITLE">
+			<Russian>Разбитый Хамви</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_HUM_START">
+			<Russian>Хамви попал в ДТП!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_HUM_WIN">
+			<Russian>Хамви был захвачен!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_HUM_FAIL">
+			<Russian>Время миссии 'Разбитый Хамви' истекло!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_MCACHE_TITLE">
+			<Russian>Медицинский склад</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_MCACHE_START">
+			<Russian>Обнаружен медицинский склад!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_MCACHE_WIN">
+			<Russian>Медицинский склад захвачен!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_MCACHE_FAIL">
+			<Russian>Время миссии 'Медицинский склад' истекло!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_MCAMP_TITLE">
+			<Russian>Медицинский лагерь</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_MCAMP_START">
+			<Russian>Медицинский лагерь принимает пациентов!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_MCAMP_WIN">
+			<Russian>Медицинский лагерь захвачен!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_MCAMP_FAIL">
+			<Russian>Время миссии 'Медицинский лагерь' истекло!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_MOP_TITLE">
+			<Russian>Медицинский аванпост</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_MOP_START">
+			<Russian>Медицинский аванпост пополняет запасы!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_MOP_WIN">
+			<Russian>Медицинский аванпост захвачен!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_MOP_FAIL">
+			<Russian>Время миссии 'Медицинский аванпост' истекло!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_WCACHE_TITLE">
+			<Russian>Тайник с оружием</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_WCACHE_START">
+			<Russian>Тайник с оружием был переполнен!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_WCACHE_WIN">
+			<Russian>Тайник с оружием захвачен!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_WCACHE_FAIL">
+			<Russian>Время миссии 'Тайник с оружием' истекло!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_PS_TITLE">
+			<Russian>Патруль</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_PS_START">
+			<Russian>Обнаружен патруль!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_PS_WIN">
+			<Russian>Патруль уничтожен!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_PS_FAIL">
+			<Russian>Время миссии 'Патруль' истекло!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_STASH_TITLE">
+			<Russian>Склад</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_STASH_START">
+			<Russian>Был обнаружен тайный склад с оружием!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_STASH_WIN">
+			<Russian>Склад захвачен!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_STASH_FAIL">
+			<Russian>Время миссии 'Склад' истекло!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_URAL_TITLE">
+			<Russian>Засада</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_URAL_START">
+			<Russian>Перевозящий припасы Урал попал в засаду!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_URAL_WIN">
+			<Russian>Урал захвачен!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_URAL_FAIL">
+			<Russian>Время миссии 'Засада' истекло!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_WT_TITLE">
+			<Russian>Грузовик с оружием</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_WT_START">
+			<Russian>Грузовик с оружием попал в ДТП!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_WT_WIN">
+			<Russian>Грузовик с оружием захвачен!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_WT_FAIL">
+			<Russian>Время миссии 'Грузовик с оружием' истекло!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_VEH1">
+			<Russian>Транспорт сохранён. Ключ в инвентаре!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_VEH2">
+			<Russian>Транспорт сохранён!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_VEH3">
+			<Russian>Перегоните автомобиль в безопасное место! Он будет сохранён, когда вы выйдете из него.</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_VEH4">
+			<Russian>Местоположение автомобиля сохранено! Всё содержимое в нём будет удалено после рестарта!</Russian>
+		</Key>
+		<Key ID="STR_CL_DZMS_VEH5">
+			<Russian>Внимание! Этот транспорт будет удалён после рестарта!</Russian>
+		</Key>
+	</Package>
+</Project>
