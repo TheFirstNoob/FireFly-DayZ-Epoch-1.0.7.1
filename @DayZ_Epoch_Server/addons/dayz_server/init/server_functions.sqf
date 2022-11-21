@@ -283,4 +283,3 @@ array_reduceSize 	=
 call compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\kk_functions.sqf";
 call compile preprocessFileLineNumbers "\z\addons\dayz_server\eventHandlers\server_eventHandler.sqf";
 call compile preprocessFileLineNumbers "\z\addons\dayz_server\WAI\init.sqf";
-call compile preprocessFileLineNumbers "\z\addons\dayz_server\DZMS\DZMSInit.sqf";
