@@ -703,6 +703,7 @@ if (!isDedicated) then
 	DZE_bottleBreakChance 		= 	0.10; 	// Шанс поломки фляги при кипечении (В процентах)
 	DZE_toolBreakChance 		= 	0.04;	// Шанс поломки инструмента при разборе постройки (В процентах)
 	
+	TFN_DuctTapeRemoveChance 	=	0.15;
 	// Захоронение и Разделка трупов
 	if (DZE_Bury_Body) then
 	{
@@ -738,6 +739,7 @@ if (!isDedicated) then
 		["ItemGPS",localize "STR_CL_CA_RANGE_UP",		"if(isNil 'CA_GPS_RANGE') then {CA_GPS_RANGE = 1500;};CA_GPS_RANGE = (CA_GPS_RANGE + 100) min 2500; format[localize 'STR_CL_CA_RANGE_GPS',CA_GPS_RANGE] call dayz_rollingMessages;","true"],
 		["ItemGPS",localize "STR_CL_CA_RANGE_DOWN",		"if(isNil 'CA_GPS_RANGE') then {CA_GPS_RANGE = 1500;};CA_GPS_RANGE = (CA_GPS_RANGE - 100) max 1000; format[localize 'STR_CL_CA_RANGE_GPS',CA_GPS_RANGE] call dayz_rollingMessages;","true"]
 	*/
+		//["30Rnd_545x39_AK","Склеить обоймы","execVM 'Scripts\RightClickAdditional\AK.sqf';","true"]
 	];	
 
 	// Удаленное управление техникой

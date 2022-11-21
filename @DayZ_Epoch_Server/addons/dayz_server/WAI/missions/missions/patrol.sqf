@@ -3,7 +3,7 @@ local _aiType = _this select 0; // "Hero" or "Bandit"
 local _hero = (_aiType == "Hero");
 local _loot = if (_aiType == "Hero") then {Loot_Patrol select 0;} else {Loot_Patrol select 1;};
 local _localName = "STR_CL_WAIPATROL_TITLE";
-local _difficulty = "Medium";
+local _difficulty = "Easy";
 local _completionType = ["kill"];
 
 //Armed Land Vehicle

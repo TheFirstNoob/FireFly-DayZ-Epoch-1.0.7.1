@@ -1,74 +1,95 @@
 /* ******************************************************* */
-/*             Created for the Epoch Community             */
-/*                By BigEgg and Movinggun                  */
+/*         Создано специально для Epoch Community          */
+/*               Авторы: BigEgg и Movinggun                */
 /* ******************************************************* */
 
-/* ***************** Staff Configuration ***************** */
+// ВНИМАНИЕ: Для уточнения информации используйте примеры ниже или гайдом с GitHub автора.
+// https://github.com/BigEgg17/Epoch-Antihack-Admin-Tools#documentation
 
-local _menuKey = 0x3C; //---Key that will open the menu.
+local _menuKey = 0x3C; // Кнопка открытия меню. https://community.bistudio.com/wiki/DIK_KeyCodes
 
-local _mod = []; //---Add moderators here - don't forget commas!
-local _admin = []; //---Add admins here - don't forget commas!
-local _headAdmin = []; //---Add head admins here - don't forget commas!
-local _owner = [
-					 ["", "76561198072428132", true, false, true, ""]
-					,["", "76561197993933487", true, false, true, ""]
-					,["", "76561198062527122", true, false, true, ""]
-	//["", "76561198115492831", true, false, true, "Test"],
-	//[["BigEgg", "FatEgg", "TwinkieDestroyer"], "76561198115492831", true, false, true, ""]
-]; //---Add owners here - don't forget commas!
+/* ***************** Конфигурация персонала **************** */
+//["", "76561198115492831", true, false, true, "Test"],
+//[["BigEgg", "FatEgg", "TwinkieDestroyer"], "76561198115492831", true, false, true, ""]
 
-/* ***************** Server Configuration **************** */
+local _mod 			= 	[]; 	// Укажите здесь Модераторов.
+local _admin 		= 	[]; 	// Укажите здесь Администраторов.
+local _headAdmin 	= 	[]; 	// Укажите здесь Главных Администраторов.
 
-local _diag_prefix = "[СЕРВЕР]: [EPOCH ANTIHACK]: "; //---This prefix will appear before all diag_log messages on all clients and the server
-local _rptall = false; //---If true, all logs will be sent to the rpt as well as their respective designations
+// Укажтите здесь Владельца сервера.
+local _owner 		= 
+[
+	 ["", "76561198072428132", true, false, true, ""]
+	,["", "76561197993933487", true, false, true, ""]
+	,["", "76561198003167891", true, false, true, ""]
+];
 
-local _headless = []; //---List UIDs of headless clients here. They will be sent no client code and global code will be terminated
+/* ***************** Конфигурация Сервера **************** */
 
-local _apj = true; //---If true, announces when a player has connected or disconnected in systemChat
-local _bvc = false; //---If true, will delete any vehicles not in server traders or the whitelist below
-local _wai = true; //---If true, enables compatibility with Wicked AI version 2.3 (https://github.com/worldwidesorrow/WICKED-AI)
+local _diag_prefix 	= 	"[СЕРВЕР]: [EPOCH ANTIHACK]: "; 	// Префикс используемый для любых логов. Данный префикс идет первым - после идет лог.
+local _rptall 		= 	false; 								// Отправлять все логи в RPT. Если True, тогда любые действия всего персонала выше, а так же прочие моменты будут логгироваться в RPT. Если False, то только приоритетные.
 
-local _vehWhiteList = []; //---Add any additional vehicles that shouldn't be deleted here (special mission vehicles etc...). Only used if _bvc = true
+local _headless 	= 	[]; 	// Укажите UID Headless клиентов здесь. Им не будет отправлен клиентский код, а глобальный код будет прекращен.
 
-//---Note: "day/night" must be in _chatcmds in order for these work
-local _voteplayers = 100; //---Number of players that must be online before a vote can be held.
-local _votedelay = 900; //---Amount of time (in seconds) to wait between day/night votes.
-local _votetime = 180; //---Amount of time to wait before cancelling a vote due to lack of majority.
-local _votepercent = 0.5; //---Percentage of the server population that must vote before a decision is reached (0-1).
+local _apj 	= 	true; 	// Оповещать в SystemChat вход и выход игрока с сервера.
+local _bvc 	= 	false; 	// Удалять технику которая не находится в Торговом меню. (Внимание. Техника которая имеет DZE1-2-3-4 модификации не требуется вносить в список. Достаточно проверки только базовый ID в торговле!)
+local _wai 	= 	true; 	// Совместимость с Wicked AI version 2.3 (https://github.com/worldwidesorrow/WICKED-AI)
 
-/* **************** Client Configuration ***************** */
+local _vehWhiteList = []; 	// Только если _bvc = true. Массив техники который будет исключен из проверки параметром _bvc. Например Спец.Техника с миссий и так далее.
 
-local _chat_prefix = "[FireFly Server]: "; //---This prefix will appear before all systemChat messages on clients
+// ВАЖНО: "day/night" должны быть в _chatcmds чтобы они работали.
+local _voteplayers 	= 	100; 	// Минимальное число игроков которое должно быть на сервере, чтобы можно было использовать голосование.
+local _votedelay 	= 	900; 	// Время (В секундах) между голосованиями за День/Ночь.
+local _votetime 	= 	180; 	// Время (В секундах) ожидания до отмены голосования из-за отсутствия большинства.
+local _votepercent 	= 	0.5; 	// Процент игроков, которые должны проголосовать, прежде чем будет принято решение (Значения: 0-1).
 
-local _viewDistance = 3000; //---Default view distance. This will only be set on login (set to -1 to disable)
-local _grassLevel = 3.125; //---Default grass level. Options are: 3.125 (Highest performance hit), 6.25, 12.5, 25 (multiplayer default), and 50 (No grass). This will only be set on login (set to -1 to disable)
+/* **************** Конфигурация Клиента (Для игроков) ***************** */
 
-local _bfs = true; //---If true, scans the client's game directory for the files listed in _badFiles below
-local _bvs = true; //---If true, checks for bad variables listed in _badVars below
-local _oef = true; //---If true, makes sure that onEachFrame isn't modified (esp scripts sometimes use this)
-local _bdc = true; //---If true, checks for bad displays listed in _badDisplays
-local _bsc = true; //---If true, makes sure the player isn't wearing a forbidden skin listed in _badSkins
-local _upc = true; //---If true, prevents urban prone actions near plot poles
-local _mic = true; //---If true, checks the integrity of the mission file. If a file is modified, the player is banned
-local _bwc = true; //---If true, makes sure the player doesn't have an illegal weapon listed in _badWeapons
-local _sev = true; //---If true, switches client to 3rd person automatically upon login
+local _chat_prefix 	= 	"[FireFly Server]: "; 	// Префикс который будет выводиться в SystemChat у игроков.
 
-local _badDisplays = [30, 32, 45, 125, 140, 155, 156, 1001, 2929, 3030, 6969, 6970, 6971]; //---List of bad displays
-local _badSkins = ["InvisibleManW_EP1", "GoInvisible"]; //---List of forbidden skins
-local _badWeapons = ["GAU8", "MaverickLauncher", "SidewinderLaucher_AH1Z", "57mmLauncher", "GSh23L_L39", "ZiS_S_53", "M256", "MLRS", "M134", "AGS30", "MK19BC", "M2"]; //---List of illegal weapons
+local _viewDistance 	= 	3000; 	// Дальность прорисовки. Выставляется 1 раз при авторизации игрока. (-1 чтобы отключить).
+local _grassLevel 		= 	3.125; 	// Уровень травы (Влияет на отображение гор и "летающих объектов" на них). Параметры: 3.125 (Больше и лучше отображение, но больше всего ест FPS), 6.25, 12.5, 25 (Рекомендуемые для Мультиплеера), и 50 (Отключить траву). Выставляется 1 раз при авторизации игрока. (-1 чтобы отключить)
 
-local _discord = ""; //---This will be displayed when a player types !discord or /discord in chat. Leave empty to disable
-local _teamspeak = ""; //---This will be displayed when a player types !teamspeak or /teamspeak in chat. Leave empty to disable
-local _website = ""; //---This will be displayed when a player types !website or /website in chat. Leave empty to disable
+local _bfs 	= 	true; 	// Сканировать запрещенные Файлы из массива _badFiles (ниже) внутри директории игры игроков.
+local _bvs 	= 	true; 	// Сканировать запрещенные Перменные из массива _badVars (ниже).
+local _oef 	= 	true; 	// Сканировать что onEachFrame не были модифицированы (esp, они же ВХ, скрипты используют это).
+local _bdc 	= 	true; 	// Сканировать запрещенные Дисплей Окна из массива _badDisplays.
+local _bsc 	= 	true; 	// Сканировать запрещенные Скины игроков из массива _badSkins.
+local _upc 	= 	true; 	// Блокировать возможность использовать определенные анимации рядом с ЗНАК-ПЛОТ территориями.
+local _mic 	= 	true; 	// Сканировать файлы миссии у игроков (Которые качает игрок при входе на сервер). Если файл будет не совпадать с серверным, то игрок получит бан.
+local _bwc 	= 	true; 	// Список запрещенного Оружия из массива _badWeapons.
+local _sev 	= 	false; 	// Включать сразу вид от 3-его лица при авторизации.
 
-local _chatcmds = ["day/night", "suicide"]; //---List of chat scripts players can use
+// Массив запрещенных Дисплей Окон.
+local _badDisplays 	=
+[
+	30, 32, 45, 125, 140, 155, 156, 1001, 2929, 3030, 6969, 6970, 6971
+];
+
+// Массив запрещенных скинов.
+local _badSkins 	=
+[
+	"InvisibleManW_EP1", "GoInvisible"
+];
+
+// Массив запрещенного оружия
+local _badWeapons 	= 
+[
+	 "GAU8", "MaverickLauncher", "SidewinderLaucher_AH1Z", "57mmLauncher", "GSh23L_L39"
+	,"ZiS_S_53", "M256", "MLRS", "M134", "AGS30", "MK19BC", "M2"
+];
+
+local _discord 		= 	""; //---This will be displayed when a player types !discord or /discord in chat. Leave empty to disable
+local _teamspeak 	= 	""; //---This will be displayed when a player types !teamspeak or /teamspeak in chat. Leave empty to disable
+local _website 		= 	""; //---This will be displayed when a player types !website or /website in chat. Leave empty to disable
+
+local _chatcmds = ["discord", "website", "suicide"]; //---List of chat scripts players can use
 local _chatbanned = [ //---List of UIDs that are banned from chatting in any channel
 	//"76561198115492831", //---BigEgg
 	"0"
 ];
 
-/* ********************* Safe Zones ********************** */
+/* ********************* Сейв-Зоны (Торговые зоны) ********************** */
 
 local _safezones = true; //---If true, enables safe zones
 local _bubbles = true; //---If true, marks safe zone boundaries with bubbles
@@ -84,7 +105,7 @@ local _dropWeps = [ //---Will remove these weapons from the player if they try t
 	"RPG18", "MeleeHatchet", "MeleeCrowbar","MeleeMachete", "MeleeFishingPole", "MeleeSledge", "MeleeBaseBallBatNails", "MeleeBaseBallBatBarbed", "MeleeBaseBallBat"
 ];
 
-/* ********************* Escape Menu ********************* */
+/* ********************* (ESC) Escape Меню ********************* */
 
 local _escTopT = "FireFly Server"; //---Text at the top of the escape menu
 local _escTopC = [1,1,1,1]; //---Color of the text at the top of the escape menu
@@ -101,7 +122,9 @@ local _missionFiles = [ //---List of files within your mission. Antihack will ma
 	"description.ext", "init.sqf", "mission.sqm", "rules.sqf"
 ];
 
-local _badChat = [ //---List of chat commands that will be logged in surveillance log
+// Список запрещенных чат команд (Логгируются в surveillance log - Наблюдений)
+local _badChat 	=
+[
 	".ban",".sqf","/2ndtp","/backpack","/ban","/banall","/bigbullets","/bot","/bot1brief","/bot50brief","/botbuilding","/botcheytac","/botcustom","/botdmr","/botm107","/ccgcode","/code","/delete","/destroy","/esp","/exec","/fini",
 	"/finiactivatere","/finialldance","/finiinfistar","/finikillall","/finitpall","/fixvehicle","/getfile","/getvehkey","/giveammo","/givecoins","/god","/gunbox","/heal","/humanityminus","/humanityminuscurs","/humanityplus",
 	"/humanitypluscurs","/infniteammo","/item","/itemmassspawn","/itemspawn","/keybind","/kickall","/menu","/morph","/nuke","/pammo","/pdel","/pepochbox","/pesp","/pgod","/pgunbox","/playermarker","/pmarkers","/pnuke",
@@ -111,7 +134,9 @@ local _badChat = [ //---List of chat commands that will be logged in surveillanc
 	"v3hj3sus","z3dz"
 ];
 
-local _badFiles = [ //---List of bad files that will be scanned for in client game directories
+// Список запрещенных файлов (Сканирование проводится только внутри клиента игрока)
+local _badFiles 	=
+[
 	"!Scripts\de_cba.sqf", "#119.sqf", "#cexeetomer.sqf", "#ekun.sqf", "#gathsah.sqf", "#llabmob.sqf", "#llatropelet.sqf", "#nepo.sqf", "#pse.sqf", "#srekrampam.sqf", "#tegrat.sqf", "#tegratbmob.sqf", "#txet.sqf",
 	"#yekteg.sqf", "001.sqf", "0100100110\start.sqf", "0100100110\Starts.sqf", "1.sqf", "1Brief.sqf", "2.pbo", "2dmap.sqf", "3desp.sqf", "50Brief.sqf", "@Dayz_Namalsk\HP.sqf", "@Dayz_Namalsk\menu.sqf",
 	"@Hak_script\1.GLAVNOYE\000.sqf", "@Hak_script\1.Teleport.sqf", "@mHlopchik\Menu_Scripts\menu\keybind\funmenu", "@mymod\Scripts\ajmenu.sqf", "@SPX\3b.sqf", "@SPX\Spawn Weapon.sqf", "@SPX\SpawnWeapon.sqf",
@@ -198,7 +223,9 @@ local _badFiles = [ //---List of bad files that will be scanned for in client ga
 	"Z__i_n_f_i_S_T_A_R__Z\Run.sqf"
 ];
 
-local _badVars = [ //---List of bad files to be checked for
+// Список запрещенных переменных
+local _badVars 	=
+[
 	"A11","abcd","abcdefGEH","absol","actid1","activeITEMlist","activeITEMlistanzahl","actualunit","actualunit_vec","ad44234efdzsf","adadadad23444","adadawer24_1337","adadgvdthw54y64","adasdawer4w3r","adawdawe21",
 	"adawedr3q4r3w2qr4","adawredzfdsf","adddaaaaaaaaa","addedPlayers","addgun","AddPlayersToMap","adgnafgnasfnadfgnafgn","admin_animate1","admin_d0","admin_dbclick_ori","admin_debug","Admin_Layout","Admin_Lite_Menu",
 	"admin_low_terrain","admin_toggled","admin_vehicleboost","adminadd","adminAntiAggro","admincrate","AdminDialogList","adminESPicons","admingod","adminicons","adminKeybinds","adminlite","adminlitez","AdminLoadOK",

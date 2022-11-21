@@ -19,7 +19,7 @@ local _nameMarker 		= 	false; 			// Center marker with the name of the mission.
 local _type 			= 	"titleText"; 	// Тип вывода оповещения. Параметры: "Hint","TitleText". ***ВНИМАНИЕ: Hint появляется в том же месте экрана, что и обычные Hint где Дебаг монитор.
 local _spawn_fire 		= 	true;			// Создать Дым/Огонь после Взрыва? (True - Да/False - Нет)
 local _fade_fire 		= 	false;			// Дым/Огонь исчезнет со временем?
-local _disableDMGPump 	= 	false;			// Отключать урон по Заправочным колонкам? (True - Да. Игроки смогут заправляться и т.п./False - Нет. Игроки смогут заправляться и т.п.)
+local _disableDMGPump 	= 	false;			// Отключать урон по Заправочным колонкам? (True - Да. Игроки смогут заправляться и т.п./False - Нет. Игроки не смогут заправляться и т.п.)
 
 #define TITLE_COLOR "#00FF11" 	// Hint параметры: Цвет верхней линии
 #define TITLE_SIZE "2" 			// Hint параметры: Размер верхней линии

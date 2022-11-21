@@ -35,23 +35,23 @@ DZMSAnnounceType = "TitleText";
 DZMSDebug = false;
 
 // Do you want your players to gain or lose humanity from killing mission AI?
-DZMSMissHumanity = true;
+DZMSMissHumanity = false;
 
 // How much humanity should a player lose for killing a hero AI?
-DZMSHeroHumanity = 25;
+DZMSHeroHumanity = 0;
 
 // How much humanity should a player gain for killing a bandit AI?
-DZMSBanditHumanity = 25;
+DZMSBanditHumanity = 0;
 
 // Do you want the players to get AI kill messages?
 DZMSKillFeed = false;
 
 // Do You Want AI to use NVGs?
 //(They are deleted on death)
-DZMSUseNVG = true;
+DZMSUseNVG = false;
 
 // Do you want bandit or hero AI kills to count towards player total?
-DZMSCntKills = true;
+DZMSCntKills = false;
 
 // Do you want AI to disappear instantly when killed?
 DZMSCleanDeath = false;
@@ -113,7 +113,7 @@ DZMSStaticSpawn = [
 DZMSSaveVehicles = false;
 
 // Setting this to true will prevent the mission vehicles from taking damage during the mission.
-DZMSVehDamageOff = true;
+DZMSVehDamageOff = false;
 
 /*///////////////////////////////////////////////////////////////////////////////////////////
 There are two types of missions that run simultaneously on a the server.
@@ -148,19 +148,19 @@ DZMSMissionArray = [
 /////////////////////////////////////////////////////////////////////////////////////////////
 // The Minumum time in minutes before a bandit mission will run.
 // At least this much time will pass between bandit missions. Default = 5 minutes.
-DZMSBanditMin = 5;
+DZMSBanditMin = 10;
 
 // Maximum time in seconds before a bandit mission will run.
 // A bandit mission will always run before this much time has passed. Default = 10 minutes.
-DZMSBanditMax = 10;
+DZMSBanditMax = 30;
 
 // Time in seconds before a hero mission will run.
 // At least this much time will pass between hero missions. Default = 5 minutes.
-DZMSHeroMin = 5;
+DZMSHeroMin = 10;
 
 // Maximum time in seconds before a hero mission will run.
 // A hero mission will always run before this much time has passed. Default = 10 minutes.
-DZMSHeroMax = 10;
+DZMSHeroMax = 30;
 
 // Blacklist Zone Array -- missions will not spawn in these areas
 // format: [[x,y,z],[x,y,z]]
@@ -170,7 +170,7 @@ DZMSBlacklistZones = [
 	//[[0,0,0],[0,0,0]]
 ];
 
-DZMSDistanceBetweenMissions = 1200; // Minimum distance in meters to check for other missions.
+DZMSDistanceBetweenMissions = 1000; // Minimum distance in meters to check for other missions.
 
 // Autoclaim is a PVE feature that lets players know who is currently engaged in a mission.
 DZMSAutoClaim = false;

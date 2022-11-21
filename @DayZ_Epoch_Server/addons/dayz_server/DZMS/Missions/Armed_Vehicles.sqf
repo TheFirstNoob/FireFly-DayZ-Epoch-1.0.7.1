@@ -53,8 +53,8 @@ if (_timeout) exitWith {
 //////////////////////////////// End //////////////////////////////////////
 
 //We create the vehicles like normal
-[_mission,_coords,["Offroad_DSHKM_INS",(["HMMWV_GPK_M2_WINTER_DZE","ArmoredSUV_PMC_DZE","LandRover_MG_TK_EP1_DZE","HMMWV_M1114_DSHKM_ACR_DZE"] call BIS_fnc_selectRandom)] select DZMSEpoch,[-6.8,-3.2],-61] call DZMSSpawnVeh;
-[_mission,_coords,["Pickup_PK_INS",(["GAZ_Vodnik_DZE","BTR40_MG_TK_INS_EP1_DZE","UAZ_MG_WINTER_DZE","HMMWV_M2_DZE"] call BIS_fnc_selectRandom)] select DZMSEpoch,[6.5,4.2],0] call DZMSSpawnVeh;
+[_mission,_coords,["Offroad_DSHKM_INS",(["LandRover_MG_TK_EP1_DZE"] call BIS_fnc_selectRandom)] select DZMSEpoch,[-6.8,-3.2],-61] call DZMSSpawnVeh;
+[_mission,_coords,["Pickup_PK_INS",(["GAZ_Vodnik_DZE","BTR40_MG_TK_INS_EP1_DZE","HMMWV_M2_DZE"] call BIS_fnc_selectRandom)] select DZMSEpoch,[6.5,4.2],0] call DZMSSpawnVeh;
 
 // Put a crate in the middle
 [_mission,_coords,"DZ_AmmoBoxMedium1US","ArmedVehicle",[0,0]] call DZMSSpawnCrate;

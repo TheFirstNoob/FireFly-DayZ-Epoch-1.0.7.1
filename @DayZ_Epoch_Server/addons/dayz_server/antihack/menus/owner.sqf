@@ -73,10 +73,13 @@ _AH_Admin 	= 	_AH_Admin + ("
 
 	_targ set [count _targ, ['===============================================================', 0, []]];
 	_targ set [count _targ, ['                      Действия с целью', 0, []]];
-	if (Z_SingleCurrency) then {
+	
+	if (Z_SingleCurrency) then
+	{
 		_targ set [count _targ, ['>> Изменить БАНК цели', 6, []]];
 		_targ set [count _targ, ['>> Изменить КОШЕЛЕК цели', 6, []]];
 	};
+
 	_targ set [count _targ, ['>> Изменить ХУМАНИТИ цели', 6, []]];
 	_targ set [count _targ, ['', 0, []]];
 	_targ set [count _targ, ['>> Телепортироваться к Цели', 6, []]];
@@ -113,14 +116,17 @@ _AH_Admin 	= 	_AH_Admin + ("
 	_logs set [count _logs, ['>> Логи Наблюдений', 7, []]];
 	_logs set [count _logs, ['>> Логи Торговли', 7, []]];
 
-	if (count "+str EpochEvents+" > 0) then {
+	if (count "+str EpochEvents+" > 0) then
+	{
 		_spwn set [count _spwn, ['===============================================================', 0, []]];
 		_spwn set [count _spwn, ['                            Создать Ивент', 0, []]];
 		{
 			_spwn set [count _spwn, [format['>> %1', _x select 5], 13, []]];
 		} count "+str EpochEvents+";
 	};
-	if ("+str _wai+") then {
+
+	if ("+str _wai+") then
+	{
 		_spwn set [count _spwn, ['===============================================================', 0, []]];
 		_spwn set [count _spwn, ['                           Создать Миссию', 0, []]];
 		_spwn set [count _spwn, ['Создать Бандитскую Миссию', 1, []]];
@@ -187,13 +193,13 @@ _AH_Admin 	= 	_AH_Admin + ("
 	admin_menus 	=
 	[
 		 ['Главное Меню', _main]
-		,['Меню Рюкзаков', admin_backpacks]
-		,['Меню Управления', _envi]
 		,['Меню Логов', _logs]
-		,['Меню Предметов', admin_magazines]
-		,['Меню Создания', _spwn]
 		,['Меню Цели', _targ]
-		,['Меню Техники', admin_vehicles]
+		,['Меню Управления', _envi]
+		,['Меню Создания', _spwn]
+		,['Меню Рюкзаков', admin_backpacks]
 		,['Меню Оружий', admin_weapons]
+		,['Меню Предметов', admin_magazines]
+		,['Меню Техники', admin_vehicles]
 	];
 ");

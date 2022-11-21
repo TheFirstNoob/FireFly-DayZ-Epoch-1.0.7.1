@@ -115,7 +115,7 @@ _prizeWeapons 	=
 
 _prizeTools 	=
 [
-	"ItemEtool","Binocular_Vector","NVGoggles","ItemShovel","ItemToolbox"
+	"ItemEtool","Binocular_Vector","NVGoggles_DZE","ItemShovel","ItemToolbox"
 	,"ItemCrowbar","ItemSledge","ItemKeyKit","ChainSawP"
 ];
 

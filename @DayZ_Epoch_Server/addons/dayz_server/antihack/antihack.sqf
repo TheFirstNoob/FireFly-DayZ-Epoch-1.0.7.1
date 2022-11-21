@@ -359,7 +359,7 @@ if (_safezones) then {_AH_Global = _AH_Global + ("
 					if (driver _veh == player && {count _owner == 0}) then {
 						_owner set [0, getPlayerUID player];
 						_veh setVariable ['Owner', _owner, true];
-						['Теперь вы владелец этой Техники.', 4] call "+_kfc_msg+";
+						['Теперь вы Владелец этой Техники.', 4] call "+_kfc_msg+";
 					};
 
 					if (count _owner > 0) then {
@@ -461,9 +461,9 @@ _AH_Global = _AH_Global + ("
 				for '_x' from 1 to 4 do {
 					player addMagazine (_param select 2);
 				};
-				[format['Вам дали один ""%1"" с патронами Администратором ""%2.""', _param select 1, _info], 4] call "+_kfc_msg+";
+				[format['Вам дали ""%1"" с патронами Администратором ""%2.""', _param select 1, _info], 4] call "+_kfc_msg+";
 			} else {
-				[format['Вам дали один ""%1"" Администратором ""%2.""', _param select 1, _info], 4] call "+_kfc_msg+";
+				[format['Вам дали ""%1"" Администратором ""%2.""', _param select 1, _info], 4] call "+_kfc_msg+";
 			};
 			call player_forceSave;
 		};
@@ -543,7 +543,7 @@ _AH_Global = _AH_Global + ("
 		if (_id == 'TAR_SENDUP') exitWith {
 			local _pos = [vehicle player] call FNC_getPos;
 			(vehicle player) setPos [_pos select 0, _pos select 1, (_pos select 2) + (_param select 1)];
-			[format['Вы были отправлены вверх на %1 метров Администратором ""%2.""', [_param select 1] call BIS_fnc_numberText, _info], 4] call "+_kfc_msg+";
+			[format['Вы были отправлены в небо на %1 метров Администратором ""%2.""', [_param select 1] call BIS_fnc_numberText, _info], 4] call "+_kfc_msg+";
 		};
 		if (_id == 'TAR_SENDOCEAN') exitWith {
 			player setPos [0,0,0];
@@ -557,7 +557,7 @@ _AH_Global = _AH_Global + ("
 			if ((_param select 2) == 'USEC_BloodQty') then {r_player_blood = _param select 1};
 			player setVariable [_param select 2, _param select 1, true];
 			call player_forceSave;
-			[format['Ваш %1 был скорректирован на %2 Администратором ""%3.""', _param select 3, [_param select 1] call BIS_fnc_numberText, _info], 4] call "+_kfc_msg+";
+			[format['Ваша %1 была скорректирована на %2 Администратором ""%3.""', _param select 3, [_param select 1] call BIS_fnc_numberText, _info], 4] call "+_kfc_msg+";
 		};
 	};
 ");
@@ -588,26 +588,26 @@ _AH_Global = _AH_Global + ("
 		if (_txt in ['!suicide', '/suicide', '!killme', '/killme']) then {
 			local _time = diag_tickTime - AH_Login;
 			_display closeDisplay 0;
-			if (_time < 180) exitWith {[format['Вам нужно подождать еще %1 секунд!', round(180 - _time)], 2] call "+_kfc_msg+"};
+			if (_time < 300) exitWith {[format['Вам нужно подождать еще %1 секунд!', round(300 - _time)], 2] call "+_kfc_msg+"};
 			if (isInTraderCity) exitWith {['Вы не можете сделать суицид в Торговой зоне!', 2] call "+_kfc_msg+"};
 			if (vehicle player != player) exitWith {['Вы не можете сделать суицид в Технике!', 2] call "+_kfc_msg+"};
 			[player, 'suicide'] call player_death;
 		};")}; if ("discord" in _chatcmds) then {_AH_Global = _AH_Global + ("
 		if (_txt in ['!discord', '/discord']) then {
-			['Discord information listed below.', 2] call "+_kfc_msg+";
-			['Select and press Ctrl + C to copy.', 2] call "+_kfc_msg+";
+			['Discord - информация запрошена.', 2] call "+_kfc_msg+";
+			['Выделите и нажмите Ctrl + C чтобы скопировать.', 2] call "+_kfc_msg+";
 			_display closeDisplay 0;
 			"+str _discord+" call AH_fnc_toChat;
 		};")}; if ("teamspeak" in _chatcmds) then {_AH_Global = _AH_Global + ("
 		if (_txt in ['!teamspeak', '/teamspeak']) then {
-			['TeamSpeak information listed below.', 2] call "+_kfc_msg+";
-			['Select and press Ctrl + C to copy.', 2] call "+_kfc_msg+";
+			['TeamSpeak - информация запрошена.', 2] call "+_kfc_msg+";
+			['Выделите и нажмите Ctrl + C чтобы скопировать.', 2] call "+_kfc_msg+";
 			_display closeDisplay 0;
 			"+str _teamspeak+" call AH_fnc_toChat;
 		};")}; if ("website" in _chatcmds) then {_AH_Global = _AH_Global + ("
 		if (_txt in ['!website', '/website']) then {
-			['Website information listed below.', 2] call "+_kfc_msg+";
-			['Select and press Ctrl + C to copy.', 2] call "+_kfc_msg+";
+			['Сборка - информация запрошена.', 2] call "+_kfc_msg+";
+			['Выделите и нажмите Ctrl + C чтобы скопировать.', 2] call "+_kfc_msg+";
 			_display closeDisplay 0;
 			"+str _website+" call AH_fnc_toChat;
 		};")}; _AH_Global = _AH_Global + ("
@@ -621,13 +621,13 @@ _AH_Global = _AH_Global + ("
 				['TeamSpeak: !teamspeak, /teamspeak', 2] call "+_kfc_msg+";
 			};
 			if ('website' in "+str _chatcmds+") then {
-				['Website: !website, /website', 2] call "+_kfc_msg+";
+				['Сбока сервера: !website, /website', 2] call "+_kfc_msg+";
 			};
 			if ('day/night' in "+str _chatcmds+") then {
-				['Voting: !day, /day, !night, /night', 2] call "+_kfc_msg+";
+				['Голосование: !day, /day, !night, /night', 2] call "+_kfc_msg+";
 			};
 			if ('suicide' in "+str _chatcmds+") then {
-				['Suicide: !suicide, /suicide, !killme, /killme', 2] call "+_kfc_msg+";
+				['Функция убить себя: !suicide, /suicide, !killme, /killme', 2] call "+_kfc_msg+";
 			};
 		};
 	}, 0.1, 0]];
@@ -1211,7 +1211,7 @@ _AH_Admin = _AH_Admin + ("
 				AHPV_Logs = nil; local _in = _this select 1; local _add = [];
 
 				_add set [count _add, ['===============================================================', 0, []]];
-				_add set [count _add, ['<< Back', 0, [], {'Log Menu' call admin_back}]];
+				_add set [count _add, ['<< Назад', 0, [], {'Log Menu' call admin_back}]];
 				_add set [count _add, ['>> Поиск', 0, [], admin_search]];
 				_add set [count _add, ['===============================================================', 0, []]];
 
@@ -2728,8 +2728,8 @@ _AH_Admin = _AH_Admin + ("
 	admin_spawnMission = {
 		_this = call AH_fnc_removePrefix;
 		['SPWN_WAI', [_this, admin_waibandit]] call AH_fnc_adminReq;
-		[format['You spawned %1 mission ""%2.""', if (admin_waibandit) then {'Bandit'} else {'Hero'}, _this], 4] call "+_kfc_msg+";
-		format['Spawned %1 mission ""%2"" @ %3', if (admin_waibandit) then {'Bandit'} else {'Hero'}, _this, mapGridPosition player] call AH_fnc_adminLog;
+		[format['Вы создали %1 миссию ""%2.""', if (admin_waibandit) then {'Bandit'} else {'Hero'}, _this], 4] call "+_kfc_msg+";
+		format['Создана %1 миссия ""%2"" @ %3', if (admin_waibandit) then {'Bandit'} else {'Hero'}, _this, mapGridPosition player] call AH_fnc_adminLog;
 	};
 
 	admin_spawnVeh = {
@@ -2744,14 +2744,14 @@ _AH_Admin = _AH_Admin + ("
 
 		if (admin_tempSpawn) then {
 			['VEH_TMPSPAWN', [toArray _this, _pos, _dir]] call AH_fnc_adminReq;
-			[format['You spawned temporary vehicle ""%1"" nearby.', _this], 4] call "+_kfc_msg+";
-			format['Spawned a temporary ""%1"" @ %2', _this, mapGridPosition player] call AH_fnc_adminLog;
+			[format['Вы создали временную технику ""%1"" рядом.', _this], 4] call "+_kfc_msg+";
+			format['Создал временную технику ""%1"" @ %2', _this, mapGridPosition player] call AH_fnc_adminLog;
 		} else {
 			local _key = call epoch_generateKey;
 			PVDZE_veh_Publish2 = [[0, _pos], _this, if (_this isKindOf 'Bicycle') then {true} else {false}, if (_this isKindOf 'Bicycle') then {'0'} else {_key select 1}, player, dayz_authKey];
 			publicVariableServer 'PVDZE_veh_Publish2';
-			[format['You spawned vehicle ""%1"" nearby.', _this], 4] call "+_kfc_msg+";
-			format['Spawned a ""%1"" @ %2', _this, mapGridPosition player] call AH_fnc_adminLog;
+			[format['Вы создали технику ""%1"" рядом.', _this], 4] call "+_kfc_msg+";
+			format['Создал технику ""%1"" @ %2', _this, mapGridPosition player] call AH_fnc_adminLog;
 		};
 	};
 
@@ -2762,11 +2762,11 @@ _AH_Admin = _AH_Admin + ("
 		if (admin_targetSpawn) then {
 			['WEP_GIVE', [admin_curTarget, _this, if (count _mags > 0) then {_mags select 0} else {'none'}, admin_wmags]] call AH_fnc_adminReq;
 			if (admin_wmags && {count _mags > 0}) then {
-				[format['You gave one ""%1"" with ammo to ""%2 (%3)"".', _this, name admin_curTarget, getPlayerUID admin_curTarget], 4] call "+_kfc_msg+";
-				format['Gave one ""%1"" with ammo to ""%2 (%3)""', _this, name admin_curTarget, getPlayerUID admin_curTarget] call AH_fnc_adminLog;
+				[format['Вы выдали ""%1"" с патронами к ""%2 (%3)"".', _this, name admin_curTarget, getPlayerUID admin_curTarget], 4] call "+_kfc_msg+";
+				format['Вам выдано ""%1"" с патронами к ""%2 (%3)""', _this, name admin_curTarget, getPlayerUID admin_curTarget] call AH_fnc_adminLog;
 			} else {
-				[format['You gave one ""%1"" to ""%2 (%3)"".', _this, name admin_curTarget, getPlayerUID admin_curTarget], 4] call "+_kfc_msg+";
-				format['Gave one ""%1"" to ""%2 (%3)""', _this, name admin_curTarget, getPlayerUID admin_curTarget] call AH_fnc_adminLog;
+				[format['Вы выдали ""%1"" к ""%2 (%3)"".', _this, name admin_curTarget, getPlayerUID admin_curTarget], 4] call "+_kfc_msg+";
+				format['Вам выдано ""%1"" к ""%2 (%3)""', _this, name admin_curTarget, getPlayerUID admin_curTarget] call AH_fnc_adminLog;
 			};
 		} else {
 			player addWeapon _this;
@@ -2774,11 +2774,11 @@ _AH_Admin = _AH_Admin + ("
 
 			if (admin_wmags && {count _mags > 0}) then {
 				for '_x' from 1 to 4 do {player addMagazine (_mags select 0)};
-				[format['You added weapon ""%1"" with mags to your inventory.', _this], 4] call "+_kfc_msg+";
-				format['Spawned weapon ""%1"" with mags @ %2', _this, mapGridPosition player] call AH_fnc_adminLog;
+				[format['Вы выдали себе оружие ""%1"" с патронами в ваш инвентарь.', _this], 4] call "+_kfc_msg+";
+				format['Создал оружие ""%1"" с патронами @ %2', _this, mapGridPosition player] call AH_fnc_adminLog;
 			} else {
-				[format['You added weapon ""%1"" to your inventory.', _this], 4] call "+_kfc_msg+";
-				format['Spawned weapon ""%1"" @ %2', _this, mapGridPosition player] call AH_fnc_adminLog;
+				[format['Вы выдали себе оружие ""%1"" в инвентарь.', _this], 4] call "+_kfc_msg+";
+				format['Создал оружие ""%1"" @ %2', _this, mapGridPosition player] call AH_fnc_adminLog;
 			};
 			call player_forceSave;
 		};
@@ -3141,7 +3141,7 @@ _AH_Server = _AH_Server + ("
 	onPlayerConnected {
 		if (_name == '__SERVER__') exitWith {};
 		[format['%1 (%2)', _name, _uid], 8, 'Присоединился на сервер'] call AH_fnc_log;"); if (_apj) then {_AH_Server = _AH_Server + ("
-		['ALL', format['%1 ПРИСОЕДИНИЛСЯ', toUpper _name]] call AH_fnc_msg;");}; _AH_Server = _AH_Server + ("
+		['ALL', format['%1 Присоединился на сервер', toUpper _name]] call AH_fnc_msg;");}; _AH_Server = _AH_Server + ("
 	};
 
 	"+_kfc_strd_cfg+" set [count "+_kfc_strd_cfg+", [{

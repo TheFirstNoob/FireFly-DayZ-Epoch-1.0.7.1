@@ -1,8 +1,12 @@
 local _mission = count WAI_MissionData -1;
 local _aiType = _this select 0; // "Bandit" or "Hero"
 local _name = "Wuhan Lab";
-local _supportedMaps = ["chernarus","chernarus_winter"]; // The default positions listed below are for Chernarus. If you wish to use this mission on another map then you must gather your own list of flat terrain positions.
-local _flatPositions = [[4277.94,9457.53],[4144.92,9439.12],[4229.24,9749.14],[3314.31,10614.7],[2152.91,10467.1],[1956.85,10338.3],[4138.71,12630.3],[3999.11,12659.3],[3733.19,14063.7],[3505.19,14168.2],[5191.49,13994.6],[5986.83,14403.1],[6282.33,14097.3],[6497.14,13582.8],[14255.6,14169.6],[13231.9,10718.3],[12080.6,9895.28],[10612.5,8441.86],[8737.68,9200.67],[7137.15,9483.91],[7406.85,3487.04],[7139.72,5321.27],[5227.21,2202.33],[4149.34,2772.77],[1143.01,2439.9],[1230.53,2526.4],[1157.66,4245.54],[1246.03,4612.52],[4436.68,8472.96],[4748.81,5867.21],[5852.48,11010.3]]; // Chernarus
+//local _supportedMaps = ["chernarus","chernarus_winter"]; // The default positions listed below are for Chernarus. If you wish to use this mission on another map then you must gather your own list of flat terrain positions.
+//local _flatPositions = [[4277.94,9457.53],[4144.92,9439.12],[4229.24,9749.14],[3314.31,10614.7],[2152.91,10467.1],[1956.85,10338.3],[4138.71,12630.3],[3999.11,12659.3],[3733.19,14063.7],[3505.19,14168.2],[5191.49,13994.6],[5986.83,14403.1],[6282.33,14097.3],[6497.14,13582.8],[14255.6,14169.6],[13231.9,10718.3],[12080.6,9895.28],[10612.5,8441.86],[8737.68,9200.67],[7137.15,9483.91],[7406.85,3487.04],[7139.72,5321.27],[5227.21,2202.33],[4149.34,2772.77],[1143.01,2439.9],[1230.53,2526.4],[1157.66,4245.54],[1246.03,4612.52],[4436.68,8472.96],[4748.81,5867.21],[5852.48,11010.3]]; // Chernarus
+
+local _supportedMaps = ["napf"]; // The default positions listed below are for Chernarus. If you wish to use this mission on another map then you must gather your own list of flat terrain positions.
+local _flatPositions = [[14665,16811],[4375,4549],[18462,2346]]; // Napf
+
 local _position = [_flatPositions] call isValidSpot;
 
 if (count _position < 1 || {!(toLower worldName in _supportedMaps)}) exitWith {
