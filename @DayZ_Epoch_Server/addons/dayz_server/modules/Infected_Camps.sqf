@@ -12,14 +12,14 @@ Author:
 #define CAMP_NUM 6
 
 //Minimum distance between camps
-#define CAMP_MIN_DIST 700
+#define CAMP_MIN_DIST 800
 
 //Base class of objects to add loot to
 #define CAMP_CONTAINER_BASE "IC_Tent"
 
 //Loot per tent
-#define LOOT_MIN 4
-#define LOOT_MAX 7
+#define LOOT_MIN 2
+#define LOOT_MAX 8
 
 //Random objects per camp
 #define OBJECT_MIN 4
@@ -81,7 +81,7 @@ for "_i" from 1 to (CAMP_NUM) do
 		if (count (_position nearObjects [CAMP_CONTAINER_BASE,CAMP_MIN_DIST]) < 1) exitWith {};
 	};
 	
-	diag_log format ["[СЕРВЕР]: [ЭВЕНТ]: [Зараженный лагерь]: Создаем зараженный лагерь (%1) на %2", _composition, _position];
+	diag_log format ["[СЕРВЕР]: [ЭВЕНТ]: [Зараженный лагерь]: Создаем (%1) на %2", _composition, _position];
 	
 	//Spawn composition
 	_compositionObjects = [_position, random 360,_composition] call spawnComposition;

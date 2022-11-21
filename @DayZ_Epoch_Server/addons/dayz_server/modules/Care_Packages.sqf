@@ -46,7 +46,7 @@ for "_i" from 1 to (SPAWN_NUM) do
 	uiSleep 1;
 	_refreshmarker = [_marker_position,_markerdot,_missiontype] execVM "\z\addons\dayz_server\modules\RefreshMarkers.sqf";
 	
-	diag_log format ["[СЕРВЕР]: [ЭВЕНТ]: [Брошенный ящик]: Создаем Брошенный ящик (%1) на %2 с %3 предметами.", _class, _position, _lootNum];
+	diag_log format ["[СЕРВЕР]: [ЭВЕНТ]: [Брошенный ящик]: Создаем (%1) на %2 с %3 предметами.", _class, _position, _lootNum];
 	
 	_vehicle 	= 	_class createVehicle _position;
 	dayz_serverObjectMonitor set [count dayz_serverObjectMonitor, _vehicle];
