@@ -43,12 +43,12 @@ FireFly - Это российский сервер со своим видень�
 > * Синхронизирован с GitHub
 * [DZAI](https://github.com/oiad/DZAI) Ver: 2.2.6 by oiad
 > Выведены параметры которые были скрыты или недоступны для конфигурации:
->> * DZAI_TransmitRange / DZAI_ReceiveDistance
+> * DZAI_TransmitRange / DZAI_ReceiveDistance
 > Новые функции:
->> * DZAI_GuaranteedBandage
+> * DZAI_GuaranteedBandage
 * [DZMS](https://github.com/worldwidesorrow/DZMS-DayZMissionSystem) Ver: 2.1+ Updates: worldwidesorrow
 > * Удален т.к. имеет куда меньше функции и возможностей по сравнению с WAI
->> P.S. Не имеет смысла ставить вместе с WAI т.к. все миссии были переконвертированы в WAI
+> * P.S. Не имеет смысла ставить вместе с WAI т.к. все миссии были переконвертированы в WAI
 * [WAI](https://github.com/worldwidesorrow/WICKED-AI) Ver: 2.3 Updates: worldwidesorrow
 * EVENT: [Анимированный ХелиКраш](https://github.com/worldwidesorrow/Animated-Crash-Spawner) by worldwidesorrow
 * EVENT: [Дополнительные Ивенты](https://github.com/worldwidesorrow/Epoch-Server-Events) by worldwidesorrow
