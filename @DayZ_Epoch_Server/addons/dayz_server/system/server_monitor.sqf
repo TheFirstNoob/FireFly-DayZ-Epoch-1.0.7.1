@@ -570,7 +570,10 @@ for "_i" from 0 to 10 do {
 
 diag_log format["[СЕРВЕР]: [server_monitor.sqf]: Общее количество точек возрождения: %1", actualSpawnMarkerCount];
 
-if (isDedicated) then {endLoadingScreen;};
+if (isDedicated) then
+{
+	endLoadingScreen;
+};
 
 [] call compile preprocessFileLineNumbers "\z\addons\dayz_server\DZAI\init\dzai_initserver.sqf";
 

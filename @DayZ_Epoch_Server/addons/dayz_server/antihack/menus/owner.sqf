@@ -134,6 +134,11 @@ _AH_Admin 	= 	_AH_Admin + ("
 			_spwn set [count _spwn, [format['>> %1', _x], 14, []]];
 		} count [
 			'patrol',
+			'cargo',
+			'fallen_satelite',
+			'gold_mine',
+			'oil_depot',
+			'refugee',
 			'black_hawk_crash',
 			'armed_vehicle',
 			'base',

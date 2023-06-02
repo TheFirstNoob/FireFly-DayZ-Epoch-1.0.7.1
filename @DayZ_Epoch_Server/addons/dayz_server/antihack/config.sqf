@@ -18,10 +18,8 @@ local _headAdmin 	= 	[]; 	// Укажите здесь Главных Админ
 
 // Укажтите здесь Владельца сервера.
 local _owner 		= 
-[
-	 ["", "76561198072428132", true, false, true, ""]
-	,["", "76561197993933487", true, false, true, ""]
-	,["", "76561198003167891", true, false, true, ""]
+[	// ИЗМЕНИТЕ UID НА СВОЙ И РАСКОММЕНТИРУЙТЕ СТРОЧКУ!
+	// ["", "76561198072428132", true, false, true, ""]
 ];
 
 /* ***************** Конфигурация Сервера **************** */
@@ -119,7 +117,7 @@ local _escLBOT = "Автор: [BE]First"; //---Lower-bottom text of the escape m
 local _escLBOC = [1,1,1,1]; //---Color of the lower-bottom text of the escape menu
 
 local _missionFiles = [ //---List of files within your mission. Antihack will make sure that none have been changed.
-	"description.ext", "init.sqf", "mission.sqm", "rules.sqf"
+	"configVariables.sqf","description.ext","init.sqf","loadingscreen.jpg","mission.sqm","rules.sqf","stringtable.xml","Traders_Menu.sqf","dayz_code\actions\virtualGarage\player_MaintainVG.sqf","dayz_code\compile\fn_isSheltered.sqf","dayz_code\compile\fn_selfActions.sqf","dayz_code\compile\keyboard.sqf","dayz_code\compile\player_upgradeVehicle.sqf","dayz_code\init\compiles.sqf","dayz_code\init\variables.sqf","Scripts\ClientMarkerSystem\ClientMarkerSystem.sqf","Scripts\DebugMonitor\player_debug.sqf","Scripts\DZAIClient\dzai_client_config.sqf","Scripts\DZAIClient\dzai_initclient.sqf","Scripts\Gamble\Gamble.sqf","Scripts\LogToServer\LogToServer.sqf","Scripts\RecipesPreview\RecipesPreview.sqf","Scripts\RightClickAdditional\AK.sqf","Scripts\RndLoadout\RndLoadout.sqf","Sounds\tada.ogg"
 ];
 
 // Список запрещенных чат команд (Логгируются в surveillance log - Наблюдений)

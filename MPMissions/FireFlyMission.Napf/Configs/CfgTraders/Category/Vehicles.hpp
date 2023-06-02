@@ -67,11 +67,11 @@ class Category_303
 	class hilux1_civil_3_open_DZE		{typeVeh	buyV 10750 worth 	sellV 2150 worth };
 	class LandRover_CZ_EP1_DZE			{typeVeh	buyV 11350 worth 	sellV 2270 worth };
 	class LandRover_TK_CIV_EP1_DZE		{typeVeh	buyV 11350 worth 	sellV 2270 worth };
-	class GAZ_Vodnik_MedEvac_DZE		{typeVeh	buyV -1 worth 		sellV 15000 worth };
 	class M113Ambul_TK_EP1_DZ			{typeVeh	buyV 50000 worth 	sellV 12500 worth };
 	class M113Ambul_UN_EP1_DZ			{typeVeh	buyV 50000 worth 	sellV 12500 worth };
 	class BTR40_TK_GUE_EP1_DZE			{typeVeh	buyV 10500 worth 	sellV 2100 worth };
 	class BTR40_TK_INS_EP1_DZE			{typeVeh	buyV 10500 worth 	sellV 2100 worth };
+	class GAZ_Vodnik_MedEvac_DZE		{typeVeh	buyV -1 worth 		sellV 15000 worth };
 	class SUV_Camo						{typeVeh	buyV -1 worth 		sellV 7000 worth };
 	class SUV_Blue						{typeVeh	buyV -1 worth 		sellV 7000 worth };
 	class SUV_Green						{typeVeh	buyV -1 worth 		sellV 7000 worth };
@@ -83,6 +83,7 @@ class Category_303
 	class SUV_Orange					{typeVeh	buyV -1 worth 		sellV 7000 worth };
 	class SUV_Silver					{typeVeh	buyV -1 worth 		sellV 7000 worth };
 	class SUV_TK_CIV_EP1_DZE			{typeVeh	buyV -1 worth 		sellV 7000 worth };
+	class M1133_MEV_EP1					{typeVeh	buyV -1 worth 		sellV 60000 worth };
 };
 
 // Внедорожники (с вооружением)
@@ -103,8 +104,10 @@ class Category_304
 	class LandRover_MG_TK_EP1_DZE		{typeVeh	buyV 21500 worth 	sellV 4300 worth };
 	class BRDM2_HQ_TK_GUE_EP1_DZE		{typeVeh	buyV -1 worth 	sellV 12000 worth };
 	class BRDM2_TK_GUE_EP1_DZE			{typeVeh	buyV -1 worth 	sellV 16000 worth };
-	class GAZ_Vodnik_DZE				{typeVeh	buyV -1 worth 	sellV 15000 worth };
-	class BTR60_Gue_DZE					{typeVeh	buyV -1 worth 	sellV 24000 worth };
+	class M113_UN_EP1_DZE				{typeVeh	buyV -1 worth 	sellV 15000 worth };
+	class M113_TK_EP1_DZE				{typeVeh	buyV -1 worth 	sellV 15000 worth };
+	class GAZ_Vodnik_DZE				{typeVeh	buyV -1 worth 	sellV 22000 worth };
+	class BTR60_Gue_DZE					{typeVeh	buyV -1 worth 	sellV 30000 worth };
 };
 
 // Грузовики и Автобусы

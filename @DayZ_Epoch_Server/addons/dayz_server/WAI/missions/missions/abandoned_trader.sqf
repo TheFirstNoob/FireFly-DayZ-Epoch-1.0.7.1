@@ -1,5 +1,5 @@
 local _mission 		= 	count WAI_MissionData -1;
-local _aiType 		= 	_this select 0; // "Bandit" or "Hero"
+local _aiType 		= 	_this select 0; // "Bandit" или "Hero"
 local _position 	= 	[30] call WAI_FindPos;
 local _name 		= 	"Заброшенный базар";
 local _startTime 	= 	diag_tickTime;
@@ -16,7 +16,7 @@ local _messages 	=
 ];
 
 local _markers 	= 	[1,1,1,1];
-_markers set [0, [_position, "WAI" + str(_mission), "ColorBlue", "", "ELLIPSE", "Solid", [600,600], [], 0]];
+_markers set [0, [_position, "WAI" + str(_mission), "ColorBlue", "", "ELLIPSE", "Solid", [500,500], [], 0]];
 _markers set [1, [_position, "WAI" + str(_mission) + "dot", "ColorBlack", "mil_dot", "", "", [], [_localName], 0]];
 
 if (WAI_AutoClaim) then
@@ -46,6 +46,7 @@ while {WAI_WaitForPlayer && !_timeout && {isNull _claimPlayer}} do {
 	{
 		_timeout 	= 	true;
 	};
+
 	uiSleep 1;
 };
 
@@ -54,7 +55,7 @@ if (_timeout) exitWith
 	[_mission, _aiType, _markerIndex, _posIndex] call WAI_AbortMission;
 	[_difficulty,(_messages select 2)] call WAI_Message;
 
-	diag_log format["[WAI]: [abadoned_trader.sqf]: %1 %2 Время вышло.",_aiType,_name,_position];
+	diag_log format["[WAI]: [abadoned_trader.sqf]: %1 %2 Время вышло.",_difficulty,_name];
 };
 
 
@@ -112,13 +113,13 @@ if (random 1 <= WAI_ChanceForRandomStaticGun) then
 };
 
 
-// Добавим прожектора если время темное
+// Добавим прожектора если время вечер/ночь
 if ((daytime > 18) || (daytime < 6)) then
 {
 	[
 		[
-			[(_position select 0) + 0.1, (_position select 1) + 30, 0],
-			[(_position select 0) + 0.1, (_position select 1) - 30, 0]
+			[(_position select 0) + 5, (_position select 1) + 30, 0],
+			[(_position select 0) + 10, (_position select 1) - 30, 0]
 		],"SearchLight_RUS",_difficulty,_aiType,_aiType,"random","random","random",_mission
 	] call WAI_SpawnStatic;
 };

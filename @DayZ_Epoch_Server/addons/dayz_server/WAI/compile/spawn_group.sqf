@@ -135,6 +135,9 @@ for "_x" from 1 to _unitnumber do {
 				if (_gear == 0) exitWith {WAI_Gear0;};
 				if (_gear == 1) exitWith {WAI_Gear1;};
 				if (_gear == 2) exitWith {WAI_Gear2;};
+				//if (_gear == 3) exitWith {WAI_Gear3;};
+				//if (_gear == 4) exitWith {WAI_Gear4;};
+				//if (_gear == 5) exitWith {WAI_Gear5;};
 				[];
 			}
 			else
@@ -177,7 +180,7 @@ for "_x" from 1 to _unitnumber do {
 
 			if (random 1 <= (_aigear select 4)) then
 			{
-				_unit addMagazine "ItemDocument";
+				//_para addMagazine (WAI_Unique call BIS_fnc_selectRandom);
 			};
 		};
 	};

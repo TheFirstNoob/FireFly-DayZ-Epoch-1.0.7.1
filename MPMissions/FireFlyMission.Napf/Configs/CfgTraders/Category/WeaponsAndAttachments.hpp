@@ -531,7 +531,6 @@ class Category_1206
 	class MP7_ACOG_SD_DZ		{typeW		buyWA 850 worth 		sellWA 170 worth };
 	class MP7_ACOG_SD_FL_DZ		{typeW		buyWA 885 worth 		sellWA 177 worth };
 	class MP7_ACOG_SD_MFL_DZ	{typeW		buyWA 885 worth 		sellWA 177 worth };
-
 };
 
 // Пист.Пулеметы TMP

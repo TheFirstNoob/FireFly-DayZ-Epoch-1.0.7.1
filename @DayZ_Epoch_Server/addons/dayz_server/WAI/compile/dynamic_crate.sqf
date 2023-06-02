@@ -82,7 +82,7 @@ if (typeName (_loot select 3) == "ARRAY") then
 else
 {
 	_numPistols 	= 	_loot select 3;
-	_pistolsArray 	= 	WAI_Pistol;
+	_pistolsArray 	= 	WAI_AllPistols;
 };
 
 if (typeName (_loot select 4) == "ARRAY") then

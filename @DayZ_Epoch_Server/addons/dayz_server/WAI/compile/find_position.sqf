@@ -152,7 +152,10 @@ while {!_validspot} do {
 
 	if (_validspot) then
 	{
-		if (WAI_DebugMode) then {diag_log format ["[WAI]: [ОТЛАДКА]: [find_position.sqf]: Loop complete, valid position %1 in %2 attempts.",_position,_i];};
+		if (WAI_DebugMode) then
+		{
+			diag_log format ["[WAI]: [ОТЛАДКА]: [find_position.sqf]: Цикл выполнен. Доступных позиций найдено: %1 за %2 попыток.",_position,_i];
+		};
 	};
 };
 

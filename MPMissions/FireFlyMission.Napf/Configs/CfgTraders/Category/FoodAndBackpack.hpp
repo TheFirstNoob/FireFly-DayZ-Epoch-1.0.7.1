@@ -113,6 +113,7 @@ class Category_402
 // Рюкзаки - 1 слот (375)
 class Category_403
 {
+	// Малой вместимости
 	class GymBag_Camo_DZE1			{typeB	buyFB 3750 worth 	sellFB 750 worth };		// 10
 	class Patrol_Pack_DZE1			{typeB	buyFB 3750 worth 	sellFB 750 worth };		// 10
 	class Czech_Vest_Pouch_DZE1		{typeB	buyFB 4500 worth 	sellFB 900 worth };		// 12
@@ -120,6 +121,8 @@ class Category_403
 	class TerminalPack_DZE1			{typeB	buyFB 6375 worth 	sellFB 1275 worth };	// 17
 	class TinyPack_DZE1				{typeB	buyFB 6750 worth 	sellFB 1350 worth };	// 17
 	class ALICE_Pack_DZE1			{typeB	buyFB 7500 worth 	sellFB 1500 worth };	// 20
+
+	// Средней вместимости
 	class TK_Assault_Pack_DZE1		{typeB	buyFB 8250 worth 	sellFB 1650 worth };	// 22
 	class School_Bag_DZE1			{typeB	buyFB 9000 worth 	sellFB 1800 worth };	// 24
 	class CompactPack_DZE1			{typeB	buyFB 9375 worth 	sellFB 1875 worth };	// 25
@@ -128,6 +131,8 @@ class Category_403
 	class GunBag_DZE1				{typeB	buyFB 13125 worth 	sellFB 2625 worth };	// 35
 	class NightPack_DZE1			{typeB	buyFB 13125 worth 	sellFB 2625 worth };	// 35
 	class PartyPack_DZE1			{typeB	buyFB 13500 worth 	sellFB 2700 worth };	// 36
+
+	// Большой вместимости
 	class SurvivorPack_DZE1			{typeB	buyFB 15000 worth 	sellFB 3000 worth };	// 40
 	class CzechBackpack_DZE1		{typeB	buyFB 16875 worth 	sellFB 3375 worth };	// 45
 	class WandererBackpack_DZE1		{typeB	buyFB 18750 worth 	sellFB 3750 worth };	// 50

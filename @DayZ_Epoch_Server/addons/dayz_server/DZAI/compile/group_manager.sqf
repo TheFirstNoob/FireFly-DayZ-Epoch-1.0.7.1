@@ -2,77 +2,124 @@ private ["_unitGroup","_weapongrade","_vehicle","_lastRearmTime","_useLaunchers"
 
 if (!isServer) exitWith {};
 
-_unitGroup = _this select 0;
-_weapongrade = _this select 1;
+_unitGroup 		= 	_this select 0;
+_weapongrade 	= 	_this select 1;
 
 if (_unitGroup getVariable ["rearmEnabled",false]) exitWith {};
 _unitGroup setVariable ["rearmEnabled",true];
 
-_vehicle = if ((_unitGroup getVariable ["unitType",""]) in ["static","dynamic"]) then {objNull} else {(vehicle (leader _unitGroup))};
-_useLaunchers = (((count DZAI_launcherTypes) > 0) && {(_weapongrade in DZAI_launcherLevels)});
-_isArmed = _vehicle getVariable ["isArmed",false];
-_antistuckPos = (getWPPos [_unitGroup,(currentWaypoint _unitGroup)]);
-if (isNil {_unitGroup getVariable "GroupSize"}) then {_unitGroup setVariable ["GroupSize",(count (units _unitGroup))]};
-_vehicleMoved = true;
+_vehicle 	= 	if ((_unitGroup getVariable ["unitType",""]) in ["static","dynamic"]) then
+				{
+					objNull
+				}
+				else
+				{
+					(vehicle (leader _unitGroup))
+				};
 
-//set up debug variables
-_debugMarkers = ((!isNil "DZAI_debugMarkersEnabled") && {DZAI_debugMarkersEnabled});
-_marker = "";
-_marker2 = "";
+_useLaunchers 	= 	(((count DZAI_launcherTypes) > 0) && {(_weapongrade in DZAI_launcherLevels)});
+_isArmed 		= 	_vehicle getVariable ["isArmed",false];
+_antistuckPos 	= 	(getWPPos [_unitGroup,(currentWaypoint _unitGroup)]);
 
-//Set up timer variables
-_lastRearmTime = diag_tickTime;
-_antistuckTime = diag_tickTime + 900;
-_lastReinforceTime = diag_tickTime + 600;
-
-//Set up individual group units
+if (isNil {_unitGroup getVariable "GroupSize"}) then
 {
-	if (isNil {_x getVariable "unithealth"}) then {_x setVariable ["unithealth",[((9000 + (random 3000)) min 12000),0,false]]};
-	if (isNil {_x getVariable "unconscious"}) then {_x setVariable ["unconscious",false]};
+	_unitGroup setVariable ["GroupSize",(count (units _unitGroup))]
+};
+_vehicleMoved 	= 	true;
+
+// Переменные для Отладки
+_debugMarkers 	= 	((!isNil "DZAI_debugMarkersEnabled") && {DZAI_debugMarkersEnabled});
+_marker 		= 	"";
+_marker2 		= 	"";
+
+// Переменные таймера
+_lastRearmTime 		= 	diag_tickTime;
+_antistuckTime 		= 	diag_tickTime + 900;
+_lastReinforceTime 	= 	diag_tickTime + 600;
+
+// Настройка отдельных групп ИИ
+{
+	if (isNil {_x getVariable "unithealth"}) then
+	{
+		_x setVariable ["unithealth",[((9000 + (random 3000)) min 12000),0,false]]
+	};
+
+	if (isNil {_x getVariable "unconscious"}) then
+	{
+		_x setVariable ["unconscious",false]
+	};
+
 	_x setVariable ["bandageAmount",((_weapongrade + 1) min 3)];
 	_x setVariable ["lastBandage",0];
 	_x setVariable ["needsHeal",false];
-	_x setVariable ["rearmEnabled",true]; //prevent DZAI_autoRearm loop from executing on unit.
-	_loadout = _x getVariable "loadout";
+	_x setVariable ["rearmEnabled",true];
+	_loadout 	= 	_x getVariable "loadout";
 	
-	if (isNil "_loadout") then {
-		_weapon = primaryWeapon _x;
-		_magazine = getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines") select 0;
-		_loadout = [[_weapon],[_magazine]];
+	if (isNil "_loadout") then
+	{
+		_weapon 	= 	primaryWeapon _x;
+		_magazine 	= 	getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines") select 0;
+		_loadout 	= 	[[_weapon],[_magazine]];
 		_x setVariable ["loadout",_loadout];
 	};
 	
-	if ((getNumber (configFile >> "CfgMagazines" >> ((_loadout select 1) select 0) >> "count")) <= 8) then {_x setVariable ["extraMag",true]};
+	if ((getNumber (configFile >> "CfgMagazines" >> ((_loadout select 1) select 0) >> "count")) <= 8) then
+	{
+		_x setVariable ["extraMag",true]
+	};
 	
-	if (_useLaunchers) then {
-		_maxLaunchers = (DZAI_launchersPerGroup min _weapongrade);
-		if (_forEachIndex < _maxLaunchers) then {
-			_launchWeapon = DZAI_launcherTypes call BIS_fnc_selectRandom2;
-			_launchAmmo = [] + getArray (configFile >> "CfgWeapons" >> _launchWeapon >> "magazines") select 0;
+	if (_useLaunchers) then
+	{
+		_maxLaunchers 	= 	(DZAI_launchersPerGroup min _weapongrade);
+
+		if (_forEachIndex < _maxLaunchers) then
+		{
+			_launchWeapon 	= 	DZAI_launcherTypes call BIS_fnc_selectRandom2;
+			_launchAmmo 	= 	[] + getArray (configFile >> "CfgWeapons" >> _launchWeapon >> "magazines") select 0;
 			_x addMagazine _launchAmmo; (_loadout select 1) set [1,_launchAmmo];
 			_x addWeapon _launchWeapon; (_loadout select 0) set [1,_launchWeapon];
 		};
 	};
-	if (DZAI_debugLevel > 0) then {diag_log format ["DZAI Debug: Unit %1 loadout: %2. Weapongrade %3. Blood: %4.",_x,_x getVariable ["loadout",[]],_weapongrade,((_x getVariable ["unithealth",[12000,0,false]]) select 0)];};
+
+	if (DZAI_debugLevel > 0) then
+	{
+		diag_log format ["[DZAI]: [group_manager.sqf]: [ОТЛАДКА]: Юнит: %1 Пресет: %2. Weapongrade: %3. Кровь: %4.",_x,_x getVariable ["loadout",[]],_weapongrade,((_x getVariable ["unithealth",[12000,0,false]]) select 0)];
+	};
 } forEach (units _unitGroup);
 
-if (_debugMarkers) then {
-	_markername = format ["%1-1",_unitGroup];
-	if ((getMarkerColor _markername) != "") then {deleteMarker _markername; uiSleep 0.5};	//Delete the previous marker if it wasn't deleted for some reason.
-	_marker = createMarker [_markername,getPosASL (leader _unitGroup)];
+if (_debugMarkers) then
+{
+	_markername 	= 	format ["%1-1",_unitGroup];
+
+	if ((getMarkerColor _markername) != "") then
+	{
+		deleteMarker _markername; 	// Удалим предыдущий маркер, если он не был удален по какой-либо причине.
+		uiSleep 0.5
+	};
+
+	_marker 	= 	createMarker [_markername,getPosASL (leader _unitGroup)];
 	_marker setMarkerType "Attack";
 	_marker setMarkerBrush "Solid";
 	_marker setMarkerColor "ColorBlack";
 	
-	if (isNull _vehicle) then {
-		_marker setMarkerText format ["%1 (AI L%2)",_unitGroup,_weapongrade];
-	} else {
-		_marker setMarkerText format ["%1 (AI L%2 %3)",_unitGroup,_weapongrade,(typeOf (vehicle (leader _unitGroup)))];
+	if (isNull _vehicle) then
+	{
+		_marker setMarkerText format ["%1 (ИИ L%2)",_unitGroup,_weapongrade];
+	}
+	else
+	{
+		_marker setMarkerText format ["%1 (ИИ L%2 %3)",_unitGroup,_weapongrade,(typeOf (vehicle (leader _unitGroup)))];
 	};
 	
-	_markername2 = format ["%1-2",_unitGroup];
-	if ((getMarkerColor _markername2) != "") then {deleteMarker _markername2; uiSleep 0.5;};	//Delete the previous marker if it wasn't deleted for some reason.
-	_marker2 = createMarker [_markername2,(getWPPos [_unitGroup,(currentWaypoint _unitGroup)])];
+	_markername2 	= 	format ["%1-2",_unitGroup];
+
+	if ((getMarkerColor _markername2) != "") then
+	{
+		deleteMarker _markername2; 	// Удалим предыдущий маркер, если он не был удален по какой-либо причине.
+		uiSleep 0.5
+	};
+
+	_marker2 	= 	createMarker [_markername2,(getWPPos [_unitGroup,(currentWaypoint _unitGroup)])];
 	_marker2 setMarkerText format ["%1 WP",_unitGroup];
 	_marker2 setMarkerType "Waypoint";
 	_marker2 setMarkerColor "ColorBlue";
@@ -81,52 +128,84 @@ if (_debugMarkers) then {
 	{
 		_x spawn {
 			private ["_mark","_markname"];
-			_markname = str(_this);
-			if ((getMarkerColor _markname) != "") then {deleteMarker _markname; uiSleep 0.5};
-			_mark = createMarker [_markname,getPosASL _this];
+			_markname 	= 	str(_this);
+
+			if ((getMarkerColor _markname) != "") then
+			{
+				deleteMarker _markname;
+				uiSleep 0.5
+			};
+
+			_mark 	= 	createMarker [_markname,getPosASL _this];
 			_mark setMarkerShape "ELLIPSE";
 			_mark setMarkerType "Dot";
 			_mark setMarkerColor "ColorRed";
 			_mark setMarkerBrush "SolidBorder";
 			_mark setMarkerSize [3,3];
 			waitUntil {uiSleep 15; (!(alive _this))};
-			//diag_log format ["DEBUG :: Deleting unit marker %1.",_mark];
+
 			deleteMarker _mark;
 		};
+
 		uiSleep 0.1;
 	} count (units _unitGroup);
-} else {
-	_marker = nil;
-	_marker2 = nil;
+}
+else
+{
+	_marker 	= 	nil;
+	_marker2 	= 	nil;
 };
 
-//Main loop
+// Основной цикл
 while {(!isNull _unitGroup) && {(_unitGroup getVariable ["GroupSize",-1]) > 0}} do {
 	private ["_unitType"];
-	_unitType = (_unitGroup getVariable ["unitType",""]);
+	_unitType 	= 	(_unitGroup getVariable ["unitType",""]);
 	
 	call {
-		//Zed hostility check
-		if (_unitType in ["static","dynamic"]) exitWith {
-			if (DZAI_zombieEnemy) then {
-				if (_unitGroup getVariable ["detectReady",true]) then {
+		// Проверим что Зомби враги
+		if (_unitType in ["static","dynamic"]) exitWith
+		{
+			if (DZAI_zombieEnemy) then
+			{
+				if (_unitGroup getVariable ["detectReady",true]) then
+				{
 					_unitGroup setVariable ["detectReady",false];
-					_nul = _unitGroup spawn {
-						_unitGroup = _this;
-						if !(isNull _unitGroup) then {
-							_detectRange = if ((_unitGroup getVariable ["pursuitTime",0]) == 0) then {DZAI_zDetectRange} else {DZAI_zDetectRange/2};	//Reduce detection range of new zombies while searching for killer unit
-							_leader = (leader _unitGroup);
-							if (alive _leader) then {
-								_nearbyZeds = _leader nearEntities ["zZombie_Base",_detectRange];
-								_hostileZedsNew = [];
+
+					_nul 	= 	_unitGroup spawn {
+						_unitGroup 	= 	_this;
+
+						if !(isNull _unitGroup) then
+						{
+							_detectRange 	= 	if ((_unitGroup getVariable ["pursuitTime",0]) == 0) then
+												{
+													DZAI_zDetectRange
+												}
+												else
+												{
+													DZAI_zDetectRange/2 	// Уменьшим поиск зомби пока ИИ ищут убийцу
+												};
+
+							_leader 		= 	(leader _unitGroup);
+
+							if (alive _leader) then
+							{
+								_nearbyZeds 		= 	_leader nearEntities ["zZombie_Base",_detectRange];
+								_hostileZedsNew 	= 	[];
 								{
-									if (rating _x > -30000) then {
+									if (rating _x > -30000) then
+									{
 										_hostileZedsNew set [count _hostileZedsNew,_x];
 									};
-									if ((_forEachIndex % 5) == 0) then {uiSleep 0.05};
+
+									if ((_forEachIndex % 5) == 0) then
+									{
+										uiSleep 0.1
+									};
 								} forEach _nearbyZeds;
-								if ((count _hostileZedsNew) > 0) then {
-									DZAI_ratingModify = [_hostileZedsNew,-30000];
+
+								if ((count _hostileZedsNew) > 0) then
+								{
+									DZAI_ratingModify 	= 	[_hostileZedsNew,-30000];
 									(owner (_hostileZedsNew select 0)) publicVariableClient "DZAI_ratingModify";
 								};
 							};
@@ -136,64 +215,97 @@ while {(!isNull _unitGroup) && {(_unitGroup getVariable ["GroupSize",-1]) > 0}} 
 				};
 			};
 		};
-		//If any units have left vehicle then allow re-entry
-		if (_unitType in ["land","landcustom"]) exitWith {
-			if (alive _vehicle) then {
-				if (_unitGroup getVariable ["regrouped",true]) then {
-					if (({(_x distance _vehicle) > 175} count (assignedCargo _vehicle)) > 0) then {
+
+		// Если любой ИИ вышел из техники. Разрешим войти заново
+		if (_unitType in ["land","landcustom"]) exitWith
+		{
+			if (alive _vehicle) then
+			{
+				if (_unitGroup getVariable ["regrouped",true]) then
+				{
+					if (({(_x distance _vehicle) > 175} count (assignedCargo _vehicle)) > 0) then
+					{
 						_unitGroup setVariable ["regrouped",false];
 						[_unitGroup,_vehicle] call DZAI_vehRegroup;
 					};
 				};
 			};
 		};
-		if (_unitType == "air") exitWith {
-			if ((alive _vehicle) && {!(_vehicle getVariable ["heli_disabled",false])}) then {
-				if (((diag_tickTime - _lastReinforceTime) > 900) && {((count DZAI_reinforcePlaces) > 0)}) then {
+
+		if (_unitType == "air") exitWith
+		{
+			if ((alive _vehicle) && {!(_vehicle getVariable ["heli_disabled",false])}) then
+			{
+				if (((diag_tickTime - _lastReinforceTime) > 900) && {((count DZAI_reinforcePlaces) > 0)}) then
+				{
 					[_unitGroup,_vehicle] call DZAI_heliReinforce;
-					_lastReinforceTime = diag_tickTime;
+					_lastReinforceTime 	= 	diag_tickTime;
 				};
 			};
 		};
 	};
 	
 	{
-		//Check infantry-type units
-		if (((vehicle _x) == _x) && {!(_x getVariable ["unconscious",false])} && {_x getVariable ["canCheckUnit",true]}) then {
+		// Проверим пеших ИИ
+		if (((vehicle _x) == _x) && {!(_x getVariable ["unconscious",false])} && {_x getVariable ["canCheckUnit",true]}) then
+		{
 			_x setVariable ["canCheckUnit",false];
-			_nul = _x spawn {
+
+			_nul 	= 	_x spawn {
 				if (!alive _this) exitWith {};
-				_unit = _this;
-				_loadout = _unit getVariable ["loadout",[[],[]]];
-				if (!isNil "_loadout") then {
-					_currentMagazines = (magazines _unit);
+
+				_unit 		= 	_this;
+				_loadout 	= 	_unit getVariable ["loadout",[[],[]]];
+
+				if (!isNil "_loadout") then
+				{
+					_currentMagazines 	= 	(magazines _unit);
+
 					for "_i" from 0 to ((count (_loadout select 0)) - 1) do {
-						if (((_unit ammo ((_loadout select 0) select _i)) == 0) || {!((((_loadout select 1) select _i) in _currentMagazines))}) then {
+						if (((_unit ammo ((_loadout select 0) select _i)) == 0) || {!((((_loadout select 1) select _i) in _currentMagazines))}) then
+						{
 							_unit removeMagazines ((_loadout select 1) select _i);
 							_unit addMagazine ((_loadout select 1) select _i);
-							if ((_i == 0) && {_unit getVariable ["extraMag",false]}) then {_unit addMagazine ((_loadout select 1) select _i)};
+
+							if ((_i == 0) && {_unit getVariable ["extraMag",false]}) then
+							{
+								_unit addMagazine ((_loadout select 1) select _i)
+							};
 						};
 					};
 				};
 				
-				_bandages = _unit getVariable ["bandageAmount",0];
-				if (_bandages > 0) then {
-					_health = _unit getVariable ["unithealth",[12000,0,false]];
-					if (_unit getVariable ["needsHeal",false]) then {
-						_nearestEnemy = _unit findNearestEnemy _unit;
-						_isSafe = ((_unit distance _nearestEnemy) > 35);
-						if (_isSafe) then {
-							_bandages = _bandages - 1;
+				_bandages 	= 	_unit getVariable ["bandageAmount",0];
+
+				if (_bandages > 0) then
+				{
+					_health 	= 	_unit getVariable ["unithealth",[12000,0,false]];
+
+					if (_unit getVariable ["needsHeal",false]) then
+					{
+						_nearestEnemy 	= 	_unit findNearestEnemy _unit;
+						_isSafe 		= 	((_unit distance _nearestEnemy) > 35);
+
+						if (_isSafe) then
+						{
+							_bandages 	= 	_bandages - 1;
 							_unit setVariable ["bandageAmount",_bandages];
-							{_unit disableAI _x} forEach ["TARGET","MOVE","FSM"];
+							{
+								_unit disableAI _x
+							} forEach ["TARGET","MOVE","FSM"];
 							_unit playActionNow "Medic";
-							_healTimes = 0;
+							_healTimes 	= 	0;
+
 							while {(!(_unit getVariable ["unconscious",false])) && {(_healTimes < 3)}} do {
 								uiSleep 3;
-								if (!(_unit getVariable ["unconscious",false])) then {
+
+								if (!(_unit getVariable ["unconscious",false])) then
+								{
 									_health set [0,(((_health select 0) + (DZAI_unitHealAmount/3)) min 12000)];
 									_healTimes = _healTimes + 1;
-									if ((alive _unit) && {(_healTimes == 3)}) then {
+
+									if ((alive _unit) && {(_healTimes == 3)}) then
+									{
 										_health set [1,0];
 										_health set [2,false];
 										_unit setHit ["legs",0];
@@ -203,12 +315,19 @@ while {(!isNull _unitGroup) && {(_unitGroup getVariable ["GroupSize",-1]) > 0}} 
 							_unit setVariable ["lastBandage",diag_tickTime];
 							_unit setVariable ["needsHeal",false];
 							uiSleep 1.75;
-							{_unit enableAI _x} forEach ["TARGET","MOVE","FSM"];
+
+							{
+								_unit enableAI _x
+							} forEach ["TARGET","MOVE","FSM"];
 						};
-					} else {
-						_lowblood = ((_health select 0) < DZAI_lowBloodLevel);
-						_brokenbones = (_health select 2);
-						if ((_lowblood or _brokenbones) && {((diag_tickTime - (_unit getVariable ["lastBandage",diag_tickTime])) > 60)}) then {
+					}
+					else
+					{
+						_lowblood 		= 	((_health select 0) < DZAI_lowBloodLevel);
+						_brokenbones 	= 	(_health select 2);
+
+						if ((_lowblood || _brokenbones) && {((diag_tickTime - (_unit getVariable ["lastBandage",diag_tickTime])) > 60)}) then
+						{
 							_unit setVariable ["needsHeal",true];
 						};
 					};
@@ -217,17 +336,23 @@ while {(!isNull _unitGroup) && {(_unitGroup getVariable ["GroupSize",-1]) > 0}} 
 			};
 		};
 		uiSleep 0.1;
+
 	} forEach (units _unitGroup);
 
-	//Vehicle ammo/fuel check
-	if (alive _vehicle) then {	//If _vehicle is objNull (if no vehicle was assigned to the group) then nothing in this bracket should be executed
-		if ((_isArmed) && {someAmmo _vehicle}) then {	//Note: someAmmo check is not reliable for vehicles with multiple turrets
-			_lastRearmTime = diag_tickTime;	//Reset rearm timestamp if vehicle still has some ammo
-		} else {
+	// Проверика Патрон/Топлива у Техники
+	if (alive _vehicle) then 	// //Если _vehicle равен objNull (если в группу не было включено ни одной Техники), то ничего в этой скобке выполняться не должно
+	{
+		if ((_isArmed) && {someAmmo _vehicle}) then 	// Пометка: Проверка некоторых боеприпасов не всегда хорошо работает для техники с несколькими турелями
+		{
+			_lastRearmTime = diag_tickTime;		// Сбросим время перезарядки если в технике еще есть патроны
+		}
+		else
+		{
 			if ((diag_tickTime - _lastRearmTime) > 180) then {	//If ammo is depleted, wait 3 minutes until rearm is possible.
-				_vehicle setVehicleAmmo 1;				//Rearm vehicle. Rearm timestamp will be reset durng the next loop cycle.
+				_vehicle setVehicleAmmo 1;
 			};
 		};
+
 		if ((fuel _vehicle) < 0.25) then {_vehicle setFuel 1};
 	};
 
@@ -324,8 +449,7 @@ while {(!isNull _unitGroup) && {(_unitGroup getVariable ["GroupSize",-1]) > 0}} 
 			if ((_forEachIndex % 3) == 0) then {uiSleep 0.05};
 		} forEach (units _unitGroup);
 	};
-	
-	//diag_log format ["DEBUG: Group Manager cycle time for group %1: %2 seconds.",_unitGroup,(diag_tickTime - _debugStartTime)];
+
 	if ((_unitGroup getVariable ["GroupSize",0]) > 0) then {uiSleep 15};
 };
 

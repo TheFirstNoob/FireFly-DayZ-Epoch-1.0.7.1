@@ -8,7 +8,7 @@
 			<Russian>Бомба на заправке</Russian>
 		</Key>
 		<Key ID="STR_CL_ESE_FUELBOMB_START">
-			<Russian>На автозаправочной станции %1, на грузовике установлена бомба. Она взорвётся через %2 мин.</Russian>
+			<Russian>При сливе топлива на автозаправочной станции %1, на грузовик бандиты установили бомбу. Она взорвётся через %2 мин.</Russian>
 		</Key>
 		<Key ID="STR_CL_ESE_FUELBOMB_END">
 			<Russian>Взрыв на заправке %1! Заберите оставшиеся припасы!</Russian>
@@ -22,47 +22,36 @@
 		<Key ID="STR_CL_ESE_MECHANIC_START">
 			<Russian>Механик оставил свой транспорт, полный деталей для улучшения, в большом гараже около %1.</Russian>
 		</Key>
-		<Key ID="STR_CL_CLAIM_MARKER">
-			<Russian>Миссия занята %1</Russian>
-		</Key>
-		<Key ID="STR_CL_TIMEOUT_MARKER">
-			<Russian>%1: время на возврат %2 сек.</Russian>
-		</Key>
-		<Key ID="STR_CL_CLAIM_WARNING">
-			<Russian>Эту миссию занял %1. Спросите у него разрешения!</Russian>
-		</Key>
-		<Key ID="STR_CL_CLEARED_MARKER">
-			<Russian>Зачистил %1</Russian>
-		</Key>
-		<Key ID="STR_CL_MISSION_HERO">
-			<Russian>[Герои] %1</Russian>
-		</Key>
-		<Key ID="STR_CL_MISSION_BANDIT">
-			<Russian>[Бандиты] %1</Russian>
-		</Key>
-		<Key ID="STR_CL_MISSION_HEROS">
-			<Russian>Герои</Russian>
-		</Key>
-		<Key ID="STR_CL_MISSION_BANDITS">
-			<Russian>Бандиты</Russian>
-		</Key>
-		<Key ID="STR_CL_MISSION_HERO_COUNT">
-			<Russian>[Герои] %1 (Осталось: %2)</Russian>
-		</Key>
-		<Key ID="STR_CL_MISSION_BANDIT_COUNT">
-			<Russian>[Бандиты] %1 (Осталось: %2)</Russian>
-		</Key>
+
 		<Key ID="STR_CL_BASE_TITLE">
 			<Russian>Военная база</Russian>
 		</Key>
 		<Key ID="STR_CL_ABANDONEDTRADER_TITLE">
 			<Russian>Торговый город</Russian>
 		</Key>
+		<Key ID="STR_CL_APC_TITLE">
+			<Russian>Поврежденный %1</Russian>
+		</Key>
 		<Key ID="STR_CL_ARMEDVEHICLE_TITLE">
 			<Russian>Разбитый %1</Russian>
 		</Key>
 		<Key ID="STR_CL_ARMYBASE_TITLE">
 			<Russian>Армейская база</Russian>
+		</Key>
+		<Key ID="STR_CL_CARGO_TITLE">
+			<Russian>Нелегальный склад</Russian>
+		</Key>
+		<Key ID="STR_CL_FALLENSATELLITE_TITLE">
+			<Russian>Упавший спутник</Russian>
+		</Key>
+		<Key ID="STR_CL_GOLDMINE_TITLE">
+			<Russian>Рудник</Russian>
+		</Key>
+		<Key ID="STR_CL_OILDEPOT_TITLE">
+			<Russian>Нефтяной склад</Russian>
+		</Key>
+		<Key ID="STR_CL_REFUGEE_TITLE">
+			<Russian>Лагерь беженцев</Russian>
 		</Key>
 		<Key ID="STR_CL_BHCRASH_TITLE">
 			<Russian>Падение Чёрного Ястреба</Russian>
@@ -158,7 +147,7 @@
 			<Russian>ОПАСНОСТЬ! Вы приближаетесь к минному полю!</Russian>
 		</Key>
 		<Key ID="STR_CL_ABANDONEDTRADER_ANNOUNCE">
-			<Russian>Разведка обнаружила нелегальную торговлю на заброшенном базаре.</Russian>
+			<Russian>Разведка обнаружила нелегальную торговлю на заброшенном базаре. Проверьте что там.</Russian>
 		</Key>
 		<Key ID="STR_CL_ABANDONEDTRADER_WIN">
 			<Russian>Выжившие захватили заброшенный базар. Вы можете забрать себе все нелегальное.</Russian>
@@ -166,24 +155,79 @@
 		<Key ID="STR_CL_ABANDONEDTRADER_FAIL">
 			<Russian>Выжившим не удалось узнать что было на заброшенном базаре. Все сбежали.</Russian>
 		</Key>
-		<Key ID="STR_CL_HERO_ARMEDVEHICLE_ANNOUNCE">
-			<Russian>Герои захватили у бандитов вооруженный транспорт.</Russian>
+		<Key ID="STR_CL_APC_ANNOUNCE">
+			<Russian>Конвой неизвестных ЧВК разбился. Убейте всех ЧВК и захватите транспорт пока они не починились.</Russian>
 		</Key>
-		<Key ID="STR_CL_HERO_ARMEDVEHICLE_WIN">
-			<Russian>Бандиты отбили вооруженный транспорт.</Russian>
+		<Key ID="STR_CL_APC_WIN">
+			<Russian>Выжившие убили всех ЧВК и захватили конвой.</Russian>
 		</Key>
-		<Key ID="STR_CL_HERO_ARMEDVEHICLE_FAIL">
-			<Russian>Бандиты не смогли отбить вооруженный транспорт.</Russian>
+		<Key ID="STR_CL_APC_FAIL">
+			<Russian>Конвой ЧВК починился и уехал в неизвестном направлении. Вы не успели.</Russian>
+		</Key>
+		<Key ID="STR_CL_ARMEDVEHICLE_ANNOUNCE">
+			<Russian>Бухие бандюганы решили пошугать нас, но сами же попали в аварию. Разберитесь с ними пока они не оклемались.</Russian>
+		</Key>
+		<Key ID="STR_CL_ARMEDVEHICLE_WIN">
+			<Russian>Выжившие успокоили бухих бандюганов, выписав им огромную дозу нашатыря.</Russian>
+		</Key>
+		<Key ID="STR_CL_ARMEDVEHICLE_FAIL">
+			<Russian>Бухие Бандюганы оклемались и свалили или поймали белку и свалили куда подальше. Вы не успели.</Russian>
 		</Key>
 		<Key ID="STR_CL_ARMYBASE_ANNOUNCE">
-			<Russian>Обнаружена армейская база под усиленной охраной!</Russian>
+			<Russian>По некоторым слухам была обнаружена активная Армейская база! В ней явно много чего вкусного для нас, но риск очень высок.</Russian>
 		</Key>
 		<Key ID="STR_CL_ARMYBASE_WIN">
-			<Russian>Выжившие захватили армейскую базу.</Russian>
+			<Russian>Выжившие захватили армейскую базу. Отличная работа!</Russian>
 		</Key>
 		<Key ID="STR_CL_ARMYBASE_FAIL">
-			<Russian>Выжившие не смогли захватить армейскую базу.</Russian>
+			<Russian>Выжившие не стали захватывать армейскую базу. Может оно и правильно.</Russian>
 		</Key>
+		<Key ID="STR_CL_CARGO_ANNOUNCE">
+			<Russian>Дезертиры решили порыться на старом складу. Учитывая размеры склада лучше не подпускать их к нему. Разберитесь с этим.</Russian>
+		</Key>
+		<Key ID="STR_CL_CARGO_WIN">
+			<Russian>Выжившие проверили и зачистили старый склад. Заберите все до единой вещи!</Russian>
+		</Key>
+		<Key ID="STR_CL_CARGO_FAIL">
+			<Russian>Дезертиры обчистили склад. Остается только гадать что они там нашли.</Russian>
+		</Key>
+		<Key ID="STR_CL_FALLENSATELLITE_ANNOUNCE">
+			<Russian>Неизвестная вспышка была замечена на нашем острове. Что это?</Russian>
+		</Key>
+		<Key ID="STR_CL_FALLENSATELLITE_WIN">
+			<Russian>Выжившие узнали что была за вспышка. Упавший спутник, который явно был, кое-кому, интересен.</Russian>
+		</Key>
+		<Key ID="STR_CL_FALLENSATELLITE_FAIL">
+			<Russian>Никто так и не узнал что была за вспышка. На месте уже ничего не осталось кроме кратора.</Russian>
+		</Key>
+		<Key ID="STR_CL_GOLDMINE_ANNOUNCE">
+			<Russian>Неизвестные начали стягиваться к горной местности с горнорудной техникой.</Russian>
+		</Key>
+		<Key ID="STR_CL_GOLDMINE_WIN">
+			<Russian>Выжившие захватили рудник и все добытое.</Russian>
+		</Key>
+		<Key ID="STR_CL_GOLDMINE_FAIL">
+			<Russian>Неизвестные уехали из горной местности. Не уж то все добыли?</Russian>
+		</Key>
+		<Key ID="STR_CL_OILDEPOT_ANNOUNCE">
+			<Russian>Бандиты решили поживиться топливом на нефтяном складе.</Russian>
+		</Key>
+		<Key ID="STR_CL_OILDEPOT_WIN">
+			<Russian>Выжившие уничтожили всех бандитов на нефтяном складе. Хорошо сработано.</Russian>
+		</Key>
+		<Key ID="STR_CL_OILDEPOT_FAIL">
+			<Russian>Бандиты полностью опустошили нефтяной склад. Даже капли не оставили.</Russian>
+		</Key>
+		<Key ID="STR_CL_REFUGEE_ANNOUNCE">
+			<Russian>Беженцы развернули лагерь и ждут в гости.</Russian>
+		</Key>
+		<Key ID="STR_CL_REFUGEE_WIN">
+			<Russian>Выжившие сделали теплый прием беженцам в один конец за их, в ковычках, доброту. Хорошая бдительность.</Russian>
+		</Key>
+		<Key ID="STR_CL_REFUGEE_FAIL">
+			<Russian>Беженцы сворачивают лагерь и уходят. Интересно какие они были... Уже не узнаем.</Russian>
+		</Key>
+		
 		<Key ID="STR_CL_HERO_URAL_ANNOUNCE">
 			<Russian>Герои охраняют сломанный Урал!</Russian>
 		</Key>
@@ -390,15 +434,6 @@
 		</Key>
 		<Key ID="STR_CL_HEROPATROL_FAIL">
 			<Russian>Бандиты не смогли уничтожить Геройских разведчиков.</Russian>
-		</Key>
-		<Key ID="STR_CL_BANDIT_ARMEDVEHICLE_ANNOUNCE">
-			<Russian>Бандиты захватили вооруженный транспорт!</Russian>
-		</Key>
-		<Key ID="STR_CL_BANDIT_ARMEDVEHICLE_WIN">
-			<Russian>Герои отбили вооруженный транспорт.</Russian>
-		</Key>
-		<Key ID="STR_CL_BANDIT_ARMEDVEHICLE_FAIL">
-			<Russian>Герои не смогли отбить вооруженный транспорт.</Russian>
 		</Key>
 		<Key ID="STR_CL_BANDIT_BASE_ANNOUNCE">
 			<Russian>Обнаружен временный военный лагерь!</Russian>
@@ -882,249 +917,6 @@
 		</Key>
 		<Key ID="STR_CL_ACS_SUCCESS">
 			<Russian>Выжившие захватили %1 потерпевший крушение!</Russian>
-		</Key>
-	</Package>
-
-	<Package name="DZMS 1">
-		<Key ID="STR_CL_DZMS_AN2_TITLE">
-			<Russian>АН-2 с припасами</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_AN2_START">
-			<Russian>АН-2 с припасами движется к отмеченной позиции!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_AN2_DEST">
-			<Russian>АН-2 разбился, припасы уничтожены!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_AN2_CLOSE">
-			<Russian>АН-2 в 1200м от точки выброса!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_AN2_DROP">
-			<Russian>АН-2 успешно сбросил ящик с припасами!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_AN2_FAIL">
-			<Russian>Время миссии 'АН-2 с припасами' истекло!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_AN2_WIN">
-			<Russian>Миссия 'АН-2 с припасами' успешно завершена!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_APC_TITLE">
-			<Russian>Броневики</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_APC_START">
-			<Russian>Военные охраняют 3 броневика!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_APC_WIN">
-			<Russian>Броневики захвачены!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_APC_FAIL">
-			<Russian>Время миссии 'Броневики' истекло!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_AV_TITLE">
-			<Russian>Вооружённая техника</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_AV_START">
-			<Russian>Охраняются два вооружёных транспорта!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_AV_WIN">
-			<Russian>Вооружённая техника захвачена!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_AV_FAIL">
-			<Russian>Время миссии 'Вооружённая техника' истекло!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_C130_TITLE">
-			<Russian>Крушение C130</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_C130_START">
-			<Russian>Запрещенная группировка действующая на острове сбила C130!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_C130_WIN">
-			<Russian>Место крушения C130 было захвачено!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_C130_FAIL">
-			<Russian>Время миссии 'Крушение C130' истекло!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_CONST_TITLE">
-			<Russian>Стройка</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_CONST_START">
-			<Russian>Обнаружена строительная площадка!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_CONST_WIN">
-			<Russian>Стройка захвачена!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_CONST_FAIL">
-			<Russian>Время миссии 'Стройка' истекло!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_FB_TITLE">
-			<Russian>Военная база</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_FB_START">
-			<Russian>Обнаружено строительство военной базы!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_FB_WIN">
-			<Russian>Военная база захвачена!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_FB_FAIL">
-			<Russian>Время миссии 'Военная база' истекло!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_GS_TITLE">
-			<Russian>Универмаг</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_GS_START">
-			<Russian>Универмаг открыт для бизнеса!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_GS_WIN">
-			<Russian>Весь персонал универмага уничтожен!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_GS_FAIL">
-			<Russian>Время миссии 'Универмаг' истекло!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_HC_TITLE">
-			<Russian>Крушение вертолёта</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_HC_START">
-			<Russian>Вертолёт потерпел крушение!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_HC_WIN">
-			<Russian>Место крушения вертолёта захвачено!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_HC_FAIL">
-			<Russian>Время миссии 'Крушение вертолёта' истекло!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_HL_TITLE">
-			<Russian>Вынужденная посадка</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_HL_START">
-			<Russian>Вертолёт с припасами совершил вынужденную посадку!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_HL_WIN">
-			<Russian>Вертолёт захвачен!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_HL_FAIL">
-			<Russian>Вертолёт улетел!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_HUM_TITLE">
-			<Russian>Разбитый Хамви</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_HUM_START">
-			<Russian>Хамви попал в ДТП!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_HUM_WIN">
-			<Russian>Хамви был захвачен!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_HUM_FAIL">
-			<Russian>Время миссии 'Разбитый Хамви' истекло!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_MCACHE_TITLE">
-			<Russian>Медицинский склад</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_MCACHE_START">
-			<Russian>Обнаружен медицинский склад!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_MCACHE_WIN">
-			<Russian>Медицинский склад захвачен!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_MCACHE_FAIL">
-			<Russian>Время миссии 'Медицинский склад' истекло!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_MCAMP_TITLE">
-			<Russian>Медицинский лагерь</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_MCAMP_START">
-			<Russian>Медицинский лагерь принимает пациентов!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_MCAMP_WIN">
-			<Russian>Медицинский лагерь захвачен!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_MCAMP_FAIL">
-			<Russian>Время миссии 'Медицинский лагерь' истекло!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_MOP_TITLE">
-			<Russian>Медицинский аванпост</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_MOP_START">
-			<Russian>Медицинский аванпост пополняет запасы!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_MOP_WIN">
-			<Russian>Медицинский аванпост захвачен!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_MOP_FAIL">
-			<Russian>Время миссии 'Медицинский аванпост' истекло!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_WCACHE_TITLE">
-			<Russian>Тайник с оружием</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_WCACHE_START">
-			<Russian>Тайник с оружием был переполнен!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_WCACHE_WIN">
-			<Russian>Тайник с оружием захвачен!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_WCACHE_FAIL">
-			<Russian>Время миссии 'Тайник с оружием' истекло!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_PS_TITLE">
-			<Russian>Патруль</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_PS_START">
-			<Russian>Обнаружен патруль!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_PS_WIN">
-			<Russian>Патруль уничтожен!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_PS_FAIL">
-			<Russian>Время миссии 'Патруль' истекло!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_STASH_TITLE">
-			<Russian>Склад</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_STASH_START">
-			<Russian>Был обнаружен тайный склад с оружием!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_STASH_WIN">
-			<Russian>Склад захвачен!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_STASH_FAIL">
-			<Russian>Время миссии 'Склад' истекло!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_URAL_TITLE">
-			<Russian>Засада</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_URAL_START">
-			<Russian>Перевозящий припасы Урал попал в засаду!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_URAL_WIN">
-			<Russian>Урал захвачен!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_URAL_FAIL">
-			<Russian>Время миссии 'Засада' истекло!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_WT_TITLE">
-			<Russian>Грузовик с оружием</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_WT_START">
-			<Russian>Грузовик с оружием попал в ДТП!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_WT_WIN">
-			<Russian>Грузовик с оружием захвачен!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_WT_FAIL">
-			<Russian>Время миссии 'Грузовик с оружием' истекло!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_VEH1">
-			<Russian>Транспорт сохранён. Ключ в инвентаре!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_VEH2">
-			<Russian>Транспорт сохранён!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_VEH3">
-			<Russian>Перегоните автомобиль в безопасное место! Он будет сохранён, когда вы выйдете из него.</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_VEH4">
-			<Russian>Местоположение автомобиля сохранено! Всё содержимое в нём будет удалено после рестарта!</Russian>
-		</Key>
-		<Key ID="STR_CL_DZMS_VEH5">
-			<Russian>Внимание! Этот транспорт будет удалён после рестарта!</Russian>
 		</Key>
 	</Package>
 </Project>

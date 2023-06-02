@@ -1,11 +1,8 @@
 /*
-	Napf static spawn configuration 
-	
-	
-	
+	Napf Статичные параметры спавна 
 */
 
-#include "spawn_markers\markers_napf.sqf"	//Load manual spawn point definitions file.
+#include "spawn_markers\markers_napf.sqf"
 
 if ((DZAI_maxHeliPatrols > 0) or {(DZAI_maxLandPatrols > 0)}) then
 {
@@ -13,15 +10,23 @@ if ((DZAI_maxHeliPatrols > 0) or {(DZAI_maxLandPatrols > 0)}) then
 	"DZAI_centerMarker" setMarkerSize [8500, 8500];
 };
 
-waitUntil {sleep 0.1; !isNil "DZAI_classnamesVerified"};	//Wait for DZAI to finish verifying classname arrays or finish building classname arrays if verification is disabled.
+waitUntil {uiSleep 0.1; !isNil "DZAI_classnamesVerified"};
 
 if (DZAI_staticAI) then
 {
-		//Generic Napf static spawns begin here
-		#include "spawn_areas\areas_napf.sqf"		//Load spawn area definitions file.
+		#include "spawn_areas\areas_napf.sqf"
 		
-		//marker name, [minimum AI, max additional AI], [markers for manual spawn points] (leave as empty array to use nearby buildings as spawn points), equipType (optional, required if number of AI groups is defined), number of AI groups (optional)
-		//Auto Generated
+		/*
+			МАССИВ:
+
+			Имя Маркера,
+			[Мин ИИ, Макс. Доп. ИИ], 
+			[Маркеры для самостоятельных точек спавна] (оставьте пустой массив, чтобы использовать близлежащие здания в качестве точек возрождения),
+			equipType (Необязательно. Требуется если определено количество групп ИИ),
+			Кол-во групп ИИ (Необязательно)
+		*/
+
+		// Автоматически сгеренировано
 		['DZAI_Lenzburg',[1,1],[],0] call DZAI_static_spawn;
 		['DZAI_Trueb',[2,1],[],0] call DZAI_static_spawn;
 		['DZAI_Seltisberg',[1,1],[],0] call DZAI_static_spawn;
@@ -62,7 +67,8 @@ if (DZAI_staticAI) then
 		['DZAI_South_Airstrip',[1,1],[],2] call DZAI_static_spawn;
 		['DZAI_Froburg',[2,1],[],2] call DZAI_static_spawn;
 		['DZAI_Brienz',[1,1],[],0] call DZAI_static_spawn;
-		//Manually added
+
+		// Добавлено вручную
 		['DZAI_WorbE',[2,1],[],1] call DZAI_static_spawn;
 		['DZAI_WorbN',[1,1],[],0] call DZAI_static_spawn;
 		['DZAI_WorbIndustrial',[0,2],[],0] call DZAI_static_spawn;
@@ -89,8 +95,5 @@ if (DZAI_staticAI) then
 		['DZAI_SuhrenfeldHotels',[1,1],[],2] call DZAI_static_spawn;
 };
 
-#include "custom_markers\cust_markers_napf.sqf"
-#include "custom_spawns\cust_spawns_napf.sqf"
-//----------------------------Do not edit anything below this line -----------------------------------------
-DZAI_customSpawnsReady = true;
-diag_log "Napf static spawn configuration loaded.";
+DZAI_customSpawnsReady 	= 	true;
+diag_log "[DZAI]: [world_napf.sqf]: Napf конфигурация статичных точек спавна загружена.";

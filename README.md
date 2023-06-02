@@ -42,8 +42,10 @@ FireFly - Это российский сервер со своим видень�
 > * Пересортировано меню (Для удобства)
 > * Синхронизирован с GitHub
 * [DZAI](https://github.com/oiad/DZAI) Ver: 2.2.6 by oiad
-> Выведены параметры которые были скрыты или недоступны для конфигурации:
+> Добавлены параметры которые были скрыты или недоступны для конфигурации:
 > * DZAI_TransmitRange / DZAI_ReceiveDistance
+> * DZAI_PursuitTimer / DZAI_AddPursuitTimer
+> * DZAI_FreshSpawnRaduis / DZAI_SeekRange
 > Новые функции:
 > * DZAI_GuaranteedBandage
 * [DZMS](https://github.com/worldwidesorrow/DZMS-DayZMissionSystem) Ver: 2.1+ Updates: worldwidesorrow
@@ -56,7 +58,7 @@ FireFly - Это российский сервер со своим видень�
 * SCRIPT: [Client Side Markers](https://github.com/worldwidesorrow/Client-Side-Marker-Manager/) by worldwidesorrow
 * SCRIPT: [Gambling](https://github.com/AirwavesMan/O9-Gambling-Script) by AirwavesMan
 * SCRIPT HPP: [Debug Monitor HPP](https://github.com/ch0c/debug-monitor-display) by ch0c
-* SCRIPT HPP: [Preview Building/Recipes](https://github.com/ch0c/epoch-recipes) by ch0c
+* SCRIPT HPP: [Preview Building/Recipes](https://github.com/ZzBombardierzZ/epoch-recipes) by ch0c
 * CUSTOM: [Новогодние елочки](https://github.com/MigSDev5/chrismasTree) by MigSDev5
 * CUSTOM: Торговля и Лут (Config/CfgTrader | Config/CfgLoot)
 * CUSTOM: Переделанные точки спавна (Mission.sqm)
